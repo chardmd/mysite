@@ -6,7 +6,7 @@ const Metadata = () => (
     <span>
       Handcrafted by{' '}
       <a href="#" target="_blank">
-        Richard
+        Richard 😎
       </a>
     </span>
   </div>
