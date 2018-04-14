@@ -14,3 +14,18 @@
 .Navigation a {
   border-bottom: 1px solid black;
 }
+
+@media (max-width: 800px) {
+  .Navigation ul {
+    max-width: 252px;
+    justify-content: center;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .Navigation li {
+    margin: 0 8px;
+  }
+  .Navigation a {
+    font-weight: normal;
+  }
+}
