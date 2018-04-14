@@ -11,6 +11,7 @@ class Terminal extends React.Component {
     this.runTaskSelection = this.runTaskSelection.bind(this)
     this.createLogs = this.createLogs.bind(this)
     this.addLogItems = this.addLogItems.bind(this)
+    this.scrollToBottom = this.scrollToBottom.bind(this)
 
     this.state = {
       runTaskHidden: true,
@@ -99,7 +100,17 @@ class Terminal extends React.Component {
       },
       {
         label: '[install]',
-        desc: '::date of work::',
+        desc: 'hijack module',
+        class: 'purple',
+      },
+      {
+        label: '[install]',
+        desc: 'absorbpower.js',
+        class: 'purple',
+      },
+      {
+        label: '[install]',
+        desc: 'ultimateworld-creator.ts',
         class: 'purple',
       },
       {
@@ -139,7 +150,9 @@ class Terminal extends React.Component {
         this.setState({
           logs: this.state.logs.concat(logs[i]),
         })
-      }, i * 200)
+
+        this.scrollToBottom()
+      }, i * 140)
     }
   }
 
@@ -155,11 +168,13 @@ class Terminal extends React.Component {
     return template
   }
 
+  scrollToBottom() {
+    this.logRef.scrollIntoView()
+  }
+
   render() {
     const taskList = this.createRunTask()
     const logs = this.createLogs()
-
-    console.log(logs)
 
     return (
       <div className="Terminal">
@@ -193,7 +208,14 @@ class Terminal extends React.Component {
                       &gt;&nbsp;All (Install all options)
                     </div>
                   </div>
-                  <div>{logs}</div>
+                  <div
+                    className="logs"
+                    ref={el => {
+                      this.logRef = el
+                    }}
+                  >
+                    {logs}
+                  </div>
                 </div>
               ) : null}
             </div>
