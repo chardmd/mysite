@@ -16,7 +16,7 @@ const Terminal = () => (
         </li>
       </ul>
       <div className="screen">
-        <p className="font">chardmd.com@10.0.0.1:~$</p>
+        <p className="font">chardmd.com@192.168.8.5:~$</p>
       </div>
     </div>
   </div>
