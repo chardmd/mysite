@@ -1,10 +1,6 @@
 import React from 'react'
 import Contact from '../components/Contact'
 
-const ToolboxPage = () => (
-  <main>
-    <Contact />
-  </main>
-)
+const ToolboxPage = () => <Contact />
 
 export default ToolboxPage

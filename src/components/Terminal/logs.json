@@ -1,0 +1,82 @@
+[
+  {
+    "label": "[All]",
+    "desc": "option selected. Please wait..",
+    "class": "yellow"
+  },
+  {
+    "label": "[connect]",
+    "desc": "192.168.1.231:8080",
+    "class": "green"
+  },
+  {
+    "label": "[connect]",
+    "desc": "192.100.23.45:3000",
+    "class": "green"
+  },
+  {
+    "label": "[connect]",
+    "desc": "11.123.99.45:555",
+    "class": "green"
+  },
+  {
+    "label": "[connect]",
+    "desc": "ultimate-data-compilation.tor.proxy.server",
+    "class": "green"
+  },
+  {
+    "label": "[connect]",
+    "desc": "spacex.outerspace.mars",
+    "class": "green"
+  },
+  {
+    "label": "[connect]",
+    "desc": "area51.alien.co",
+    "class": "green"
+  },
+  {
+    "label": "[install]",
+    "desc": "hijack module",
+    "class": "purple"
+  },
+  {
+    "label": "[install]",
+    "desc": "absorbpower.js",
+    "class": "purple"
+  },
+  {
+    "label": "[install]",
+    "desc": "ultimateworld-creator.ts",
+    "class": "purple"
+  },
+  {
+    "label": "[install]",
+    "desc": "::company position::",
+    "class": "purple"
+  },
+  {
+    "label": "[install]",
+    "desc": "::roles and responsibilities::",
+    "class": "purple"
+  },
+  {
+    "label": "[validate]",
+    "desc": "https://www.cabcharge.com.au",
+    "class": "green"
+  },
+  {
+    "label": "[validate]",
+    "desc": "http://www.simulation.com.sg",
+    "class": "green"
+  },
+  {
+    "label": "[validate]",
+    "desc": "http://www.skplanet.com/eng/aboutus/skplanet_is.aspx",
+    "class": "green"
+  },
+  {
+    "label": "[validate]",
+    "desc": "http://www.twistresources.com",
+    "class": "green"
+  }
+]

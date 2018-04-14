@@ -1,10 +1,6 @@
 import React from 'react'
 import Terminal from '../components/Terminal'
 
-const IndexPage = () => (
-  <main>
-    <Terminal />
-  </main>
-)
+const IndexPage = () => <Terminal />
 
 export default IndexPage
