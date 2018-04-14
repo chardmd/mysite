@@ -4,12 +4,9 @@ import './Metadata.css'
 const Metadata = () => (
   <div className="Metadata">
     <span>
-      Currently based in{' '}
-      <a
-        href="https://www.australia.com/en/places/sydney-and-surrounds/guide-to-sydney.html"
-        target="_blank"
-      >
-        Sydney, Australia.
+      Handcrafted by{' '}
+      <a href="#" target="_blank">
+        😎 Richard Dimalanta
       </a>
     </span>
   </div>

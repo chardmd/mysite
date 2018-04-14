@@ -5,6 +5,9 @@ const Social = () => (
   <div className="Social">
     <ul>
       <li>
+        <h3>You can also find me in </h3>
+      </li>
+      <li>
         <a href="https://github.com/chardmd" target="_blank">
           <i className="fa fa-github" />
         </a>

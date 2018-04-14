@@ -1,0 +1,16 @@
+.Navigation ul {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  font-size: 20px;
+}
+
+.Navigation li {
+  margin-right: 16px;
+}
+
+.Navigation a {
+  border-bottom: 1px solid black;
+}
