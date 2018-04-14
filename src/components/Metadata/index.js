@@ -5,7 +5,10 @@ const Metadata = () => (
   <div className="Metadata">
     <span>
       Currently based in{' '}
-      <a href="http://www.cityofsydney.nsw.gov.au/" target="_blank">
+      <a
+        href="https://www.australia.com/en/places/sydney-and-surrounds/guide-to-sydney.html"
+        target="_blank"
+      >
         Sydney, Australia.
       </a>
     </span>
