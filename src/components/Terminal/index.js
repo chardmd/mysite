@@ -1,4 +1,5 @@
 import React from 'react'
+import Typist from 'react-typist'
 import './Terminal.css'
 
 const Terminal = () => (
@@ -16,7 +17,16 @@ const Terminal = () => (
         </li>
       </ul>
       <div className="screen">
-        <p className="font">chardmd.com@192.168.8.5:~$</p>
+        <div className="font">
+          <span className="name">chardmd.com</span>@192.168.8.5:~$
+          <Typist className="type">
+            <Typist.Delay ms={2000} />
+            <span className="typeLine">
+              npm install work-experience --global
+            </span>
+            <br />
+          </Typist>
+        </div>
       </div>
     </div>
   </div>
