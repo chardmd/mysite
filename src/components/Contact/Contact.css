@@ -1,15 +1,15 @@
-.Info {
+.Contact {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 100vh;
-    background: #00c3ff;
+    background: #FEAC5E;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #ffff1c, #00c3ff);
+    background: -webkit-linear-gradient(to left, #4BC0C8, #C779D0, #FEAC5E);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #ffff1c, #00c3ff);
+    background: linear-gradient(to left, #4BC0C8, #C779D0, #FEAC5E);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     overflow: hidden;
 }
@@ -21,7 +21,7 @@
     }
 }
 
-.Info>div {
+.Contact>div {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -35,7 +35,7 @@
 
 @media (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
-    .Info>div {
+    .Contact>div {
         /* background: url('/static/images/app@2x.png'); */
         background-size: 320px 314px;
     }
