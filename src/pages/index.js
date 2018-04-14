@@ -1,9 +1,9 @@
 import React from 'react'
-import Info from '../components/Info'
+import Terminal from '../components/Terminal'
 
 const IndexPage = () => (
   <main>
-    <Info />
+    <Terminal />
   </main>
 )
 
