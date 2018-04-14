@@ -1,0 +1,34 @@
+.About {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 50%;
+    height: 100vh;
+}
+
+@media (max-width: 800px) {
+    .About {
+        padding: 0;
+        width: 100%;
+        height: calc(100% - 444px);
+        text-align: center;
+    }
+}
+
+@media (max-height: 800px) {
+    .About {
+        overflow: auto;
+    }
+}
+
+.About>div {
+    margin: auto;
+    padding: 60px;
+    max-width: 640px;
+}
+
+.About p {
+    color: #524e4e;
+}
