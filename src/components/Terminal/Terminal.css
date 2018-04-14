@@ -25,16 +25,28 @@
     text-align: center;
 }
 
-.Terminal .red {
+.Terminal .redBg {
     background-color: #e94b35;
 }
 
-.Terminal .yellow {
+.Terminal .yellowBg {
     background-color: #f0f000;
 }
 
-.Terminal .green {
+.Terminal .greenBg {
     background-color: #1aaf5c;
+}
+
+.Terminal .yellow {
+    color: #f0f000;
+}
+
+.Terminal .red {
+    color: #e94b35;
+}
+
+.Terminal .green {
+    color: #2eda7a;
 }
 
 .Terminal .bar {
@@ -66,10 +78,6 @@
     height: 450px;
     margin: 0 auto;
     padding: 1px;
-}
-
-.Terminal .screen .name {
-    color: #f0f000;
 }
 
 .Terminal .font {
