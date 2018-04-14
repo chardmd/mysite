@@ -2,6 +2,9 @@ import React from 'react'
 import Typist from 'react-typist'
 import 'babel-polyfill'
 import './Terminal.css'
+import jsonLogs from './logs.json'
+import jsonOutput from './output.json'
+import jsonCompanies from './companies.json'
 
 class Terminal extends React.Component {
   constructor(props) {
@@ -12,23 +15,18 @@ class Terminal extends React.Component {
     this.createLogs = this.createLogs.bind(this)
     this.addLogItems = this.addLogItems.bind(this)
     this.scrollToBottom = this.scrollToBottom.bind(this)
+    this.createFinalOutput = this.createFinalOutput.bind(this)
 
     this.state = {
       runTaskHidden: true,
       selectOptionClass: '',
       logs: [],
+      finalOutput: false,
     }
   }
 
   createRunTask() {
-    const companies = [
-      'Cabcharge Australia Limited - Sydney',
-      'Simulation Software and Technology Pte Ltd - Singapore',
-      'SK Planet Global Pte Ltd - Singapore',
-      'Twist Resources Inc. - Clark, PH',
-    ]
-
-    const template = companies.map((company, index) => {
+    const template = jsonCompanies.map((company, index) => {
       return <div key={`${index}-company`}>&gt;&nbsp;{company}</div>
     })
 
@@ -62,98 +60,50 @@ class Terminal extends React.Component {
   }
 
   addLogItems() {
-    const logs = [
-      {
-        label: '[All]',
-        desc: 'option selected. Please wait..',
-        class: 'yellow',
-      },
-      {
-        label: '[connect]',
-        desc: '192.168.1.231:8080',
-        class: 'green',
-      },
-      {
-        label: '[connect]',
-        desc: '192.100.23.45:3000',
-        class: 'green',
-      },
-      {
-        label: '[connect]',
-        desc: '11.123.99.45:555',
-        class: 'green',
-      },
-      {
-        label: '[connect]',
-        desc: 'ultimate-data-compilation.tor.proxy.server',
-        class: 'green',
-      },
-      {
-        label: '[connect]',
-        desc: 'spacex.outerspace.mars',
-        class: 'green',
-      },
-      {
-        label: '[connect]',
-        desc: 'area51.alien.co',
-        class: 'green',
-      },
-      {
-        label: '[install]',
-        desc: 'hijack module',
-        class: 'purple',
-      },
-      {
-        label: '[install]',
-        desc: 'absorbpower.js',
-        class: 'purple',
-      },
-      {
-        label: '[install]',
-        desc: 'ultimateworld-creator.ts',
-        class: 'purple',
-      },
-      {
-        label: '[install]',
-        desc: '::company position::',
-        class: 'purple',
-      },
-      {
-        label: '[install]',
-        desc: '::roles and responsibilities::',
-        class: 'purple',
-      },
-      {
-        label: '[validate]',
-        desc: 'https://www.cabcharge.com.au',
-        class: 'green',
-      },
-      {
-        label: '[validate]',
-        desc: 'http://www.simulation.com.sg',
-        class: 'green',
-      },
-      {
-        label: '[validate]',
-        desc: 'http://www.skplanet.com/eng/aboutus/skplanet_is.aspx',
-        class: 'green',
-      },
-      {
-        label: '[validate]',
-        desc: 'http://www.twistresources.com',
-        class: 'green',
-      },
-    ]
-
-    for (let i = 0; i < logs.length; i++) {
+    for (let i = 0; i < jsonLogs.length; i++) {
       setTimeout(() => {
         this.setState({
-          logs: this.state.logs.concat(logs[i]),
+          logs: this.state.logs.concat(jsonLogs[i]),
         })
 
+        //call final output
+        if (i === jsonLogs.length - 1) {
+          this.setState({
+            finalOutput: true,
+          })
+        }
         this.scrollToBottom()
       }, i * 140)
     }
+  }
+
+  createFinalOutput() {
+    const template = jsonOutput.map((item, index) => {
+      return (
+        <div key={`${index}-company-output`}>
+          <div>
+            <span className="tortoise">Company&nbsp;</span>
+            <span>{item.company}</span>
+          </div>
+          <div>
+            <span className="tortoise">Position&nbsp;</span>
+            <span>{item.position}</span>
+          </div>
+          <div>
+            <span className="tortoise">Duration&nbsp;</span>
+            <span>{item.duration}</span>
+          </div>
+          <div>=======================================</div>
+        </div>
+      )
+    })
+
+    return (
+      <div>
+        <div className="yellow">[All data downloaded] info --print && exit</div>
+        {template}
+      </div>
+    )
   }
 
   createLogs() {
@@ -169,13 +119,10 @@ class Terminal extends React.Component {
   }
 
   scrollToBottom() {
-    this.logRef.scrollIntoView()
+    this.logRef.scrollIntoView({ block: 'end' })
   }
 
   render() {
-    const taskList = this.createRunTask()
-    const logs = this.createLogs()
-
     return (
       <div className="Terminal">
         <div className="content">
@@ -194,7 +141,7 @@ class Terminal extends React.Component {
             <div className="font">
               <span className="yellow">chardmd.com</span>@192.168.8.5:~$
               <Typist className="type" onTypingDone={this.displayRunTask}>
-                <Typist.Delay ms={1500} />
+                <Typist.Delay ms={1200} avgTypingSpeed={40} />
                 <span className="typeLine">
                   npm install work-experience --global
                 </span>
@@ -203,7 +150,7 @@ class Terminal extends React.Component {
               {!this.state.runTaskHidden ? (
                 <div>
                   <div className="task">
-                    {taskList}
+                    {this.createRunTask()}
                     <div className={this.state.selectOptionClass}>
                       &gt;&nbsp;All (Install all options)
                     </div>
@@ -214,7 +161,8 @@ class Terminal extends React.Component {
                       this.logRef = el
                     }}
                   >
-                    {logs}
+                    {this.createLogs()}
+                    {this.state.finalOutput && this.createFinalOutput()}
                   </div>
                 </div>
               ) : null}

@@ -12,7 +12,7 @@ const Navigation = () => (
         <Link to="/toolbox">Toolbox</Link>
       </li>
       <li>
-        <Link to="/contact">Contact</Link>
+        <Link to="/contact">Let's work together</Link>
       </li>
     </ul>
   </div>
