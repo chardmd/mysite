@@ -14,9 +14,10 @@ const About = () => (
       <p>
         Richard is skilled in building SaaS solutions using high performance web
         technologies. He is well versed in front-end, middleware, and back-end
-        development. With experience in various markets such as Australia,
-        Singapore, and the Philippines, it is guaranteed that he will build the
-        best solutions in less time.
+        development. With experience in various markets such as Australia
+        <span>&nbsp;🇦🇺</span> Singapore<span>&nbsp;🇸🇬</span>, and the
+        Philippines<span>&nbsp;🇵🇭</span>, it is guaranteed that he will build
+        the best solutions in less time.
       </p>
       <Footer />
     </div>
