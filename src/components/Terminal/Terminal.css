@@ -27,37 +27,14 @@
 
 .Terminal .red {
   background-color: #e94b35;
-  border-radius: 100%;
-  width: 15px;
-  height: 15px;
-  margin: 0 auto;
-  left: -47%;
-  bottom: -20%;
-  position: relative;
 }
 
 .Terminal .yellow {
   background-color: #f0f000;
-  border-radius: 100%;
-  width: 15px;
-  height: 15px;
-  margin: 0 auto;
-  left: -44%;
-  bottom: 40%;
-  position: relative;
-  display: block;
 }
 
 .Terminal .green {
   background-color: #1aaf5c;
-  border-radius: 100%;
-  width: 15px;
-  height: 15px;
-  margin: 0 auto;
-  left: -41%;
-  bottom: 99%;
-  position: relative;
-  display: block;
 }
 
 .Terminal .bar {
@@ -67,6 +44,20 @@
   background-color: #dad9d9;
   margin: 0 auto;
   font-family: monospace;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.Terminal .bar li {
+  margin: 5px;
+}
+
+.Terminal .bar li > div {
+  border-radius: 100%;
+  width: 15px;
+  height: 15px;
+  position: relative;
 }
 
 .Terminal .screen {
