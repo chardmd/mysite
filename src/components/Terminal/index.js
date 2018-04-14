@@ -7,20 +7,160 @@ class Terminal extends React.Component {
   constructor(props) {
     super(props)
     this.displayRunTask = this.displayRunTask.bind(this)
+    this.createRunTask = this.createRunTask.bind(this)
+    this.runTaskSelection = this.runTaskSelection.bind(this)
+    this.createLogs = this.createLogs.bind(this)
+    this.addLogItems = this.addLogItems.bind(this)
+
     this.state = {
       runTaskHidden: true,
+      selectOptionClass: '',
+      logs: [],
     }
+  }
+
+  createRunTask() {
+    const companies = [
+      'Cabcharge Australia Limited - Sydney',
+      'Simulation Software and Technology Pte Ltd - Singapore',
+      'SK Planet Global Pte Ltd - Singapore',
+      'Twist Resources Inc. - Clark, PH',
+    ]
+
+    const template = companies.map((company, index) => {
+      return <div key={`${index}-company`}>&gt;&nbsp;{company}</div>
+    })
+
+    return template
   }
 
   displayRunTask() {
     setTimeout(() => {
-      this.setState({
-        runTaskHidden: false,
-      })
+      this.setState(
+        {
+          runTaskHidden: false,
+        },
+        () => {
+          this.runTaskSelection()
+        }
+      )
     }, 500)
   }
 
+  runTaskSelection() {
+    setTimeout(() => {
+      this.setState(
+        {
+          selectOptionClass: 'green',
+        },
+        () => {
+          this.addLogItems()
+        }
+      )
+    }, 500)
+  }
+
+  addLogItems() {
+    const logs = [
+      {
+        label: '[All]',
+        desc: 'option selected. Please wait..',
+        class: 'yellow',
+      },
+      {
+        label: '[connect]',
+        desc: '192.168.1.231:8080',
+        class: 'green',
+      },
+      {
+        label: '[connect]',
+        desc: '192.100.23.45:3000',
+        class: 'green',
+      },
+      {
+        label: '[connect]',
+        desc: '11.123.99.45:555',
+        class: 'green',
+      },
+      {
+        label: '[connect]',
+        desc: 'ultimate-data-compilation.tor.proxy.server',
+        class: 'green',
+      },
+      {
+        label: '[connect]',
+        desc: 'spacex.outerspace.mars',
+        class: 'green',
+      },
+      {
+        label: '[connect]',
+        desc: 'area51.alien.co',
+        class: 'green',
+      },
+      {
+        label: '[install]',
+        desc: '::date of work::',
+        class: 'purple',
+      },
+      {
+        label: '[install]',
+        desc: '::company position::',
+        class: 'purple',
+      },
+      {
+        label: '[install]',
+        desc: '::roles and responsibilities::',
+        class: 'purple',
+      },
+      {
+        label: '[validate]',
+        desc: 'https://www.cabcharge.com.au',
+        class: 'green',
+      },
+      {
+        label: '[validate]',
+        desc: 'http://www.simulation.com.sg',
+        class: 'green',
+      },
+      {
+        label: '[validate]',
+        desc: 'http://www.skplanet.com/eng/aboutus/skplanet_is.aspx',
+        class: 'green',
+      },
+      {
+        label: '[validate]',
+        desc: 'http://www.twistresources.com',
+        class: 'green',
+      },
+    ]
+
+    for (let i = 0; i < logs.length; i++) {
+      setTimeout(() => {
+        this.setState({
+          logs: this.state.logs.concat(logs[i]),
+        })
+      }, i * 200)
+    }
+  }
+
+  createLogs() {
+    const template = this.state.logs.map((log, index) => {
+      return (
+        <div key={`${index}-company`}>
+          <span className={log.class}>{log.label}&nbsp;</span>
+          {log.desc}
+        </div>
+      )
+    })
+    return template
+  }
+
   render() {
+    const taskList = this.createRunTask()
+    const logs = this.createLogs()
+
+    console.log(logs)
+
     return (
       <div className="Terminal">
         <div className="content">
@@ -46,18 +186,14 @@ class Terminal extends React.Component {
                 <br />
               </Typist>
               {!this.state.runTaskHidden ? (
-                <div className="task">
-                  <div>Run a task:</div>
-                  <div>>&nbsp;Cabcharge Australia Limited - Sydney</div>
-                  <div>
-                    &gt;&nbsp;Simulation Software and Technology Pte Ltd -
-                    Singapore
+                <div>
+                  <div className="task">
+                    {taskList}
+                    <div className={this.state.selectOptionClass}>
+                      &gt;&nbsp;All (Install all options)
+                    </div>
                   </div>
-                  <div>&gt;&nbsp;SK Planet Global Pte Ltd - Singapore</div>
-                  <div>&gt;&nbsp;Twist Resources Inc. - Clark, PH</div>
-                  <div className="green">
-                    &gt;&nbsp;All (Install all options)
-                  </div>
+                  <div>{logs}</div>
                 </div>
               ) : null}
             </div>
