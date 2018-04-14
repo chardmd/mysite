@@ -1,5 +1,9 @@
 .Metadata span {
-  font-size: 14px;
-  color: #666;
-  list-style: none;
+    font-size: 14px;
+    color: #666;
+    list-style: none;
+}
+
+.Metadata a {
+    color: #007aff;
 }
