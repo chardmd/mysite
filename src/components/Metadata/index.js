@@ -6,8 +6,10 @@ const Metadata = () => (
     <span>
       Handcrafted by{' '}
       <a href="#" target="_blank">
-        Richard 😎
+        Richard 😎{' '}
       </a>
+      <br />
+      Currently based in Sydney, Australia.
     </span>
   </div>
 )
