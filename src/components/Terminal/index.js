@@ -20,7 +20,7 @@ const Terminal = () => (
         <div className="font">
           <span className="name">chardmd.com</span>@192.168.8.5:~$
           <Typist className="type">
-            <Typist.Delay ms={2000} />
+            <Typist.Delay ms={2000} avgTypingDelay={50} />
             <span className="typeLine">
               npm install work-experience --global
             </span>
