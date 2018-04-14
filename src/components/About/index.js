@@ -1,5 +1,6 @@
 import React from 'react'
 import ContactButton from '../ContactButton'
+import Navigation from '../Navigation'
 import Footer from '../Footer'
 
 import './About.css'
@@ -9,6 +10,7 @@ const About = () => (
     <div>
       <h1>Software Engineer</h1>
       <h2>Richard Dimalanta</h2>
+      <Navigation />
       <p>
         Richard is skilled in building SaaS solutions using high performance web
         technologies. He is well versed in front-end, middleware, and back-end
@@ -16,7 +18,6 @@ const About = () => (
         Singapore, and the Philippines, it is guaranteed that he will build the
         best solutions in less time.
       </p>
-      <ContactButton />
       <Footer />
     </div>
   </section>

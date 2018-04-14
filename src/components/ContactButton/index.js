@@ -10,7 +10,7 @@ class ContactButton extends React.Component {
     return (
       <div className="ContactButton">
         <div className="button-wrapper">
-          <button onBlur={() => this.setState({ show: false })}>
+          <button>
             <a href="#">
               <i className="icon fa fa-envelope" />
               <span className="name">Get In Touch</span>
