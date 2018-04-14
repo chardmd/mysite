@@ -27,15 +27,12 @@
 
 @media (max-width: 800px) {
     .Social ul {
-        max-width: 252px;
         justify-content: center;
         margin-right: 0;
     }
-
     .Social li {
         margin: 0 8px;
     }
-
     .Social a {
         font-weight: normal;
     }
