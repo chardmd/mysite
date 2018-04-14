@@ -1,8 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import 'font-awesome/css/font-awesome.css'
+import About from '../components/About'
 
+import 'font-awesome/css/font-awesome.css'
 import './index.css'
 
 const Layout = ({ children, data }) => (
@@ -14,7 +15,11 @@ const Layout = ({ children, data }) => (
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
-    <div>{children()}</div>
+
+    <main>
+      <About />
+      {children()}
+    </main>
   </div>
 )
 
