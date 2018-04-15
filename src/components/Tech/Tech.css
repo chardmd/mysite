@@ -1,38 +1,39 @@
 .Tech {
-  width: 100%;
-  height: 100vh;
-  background: #00c3ff;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #ffff1c, #00c3ff);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #ffff1c, #00c3ff);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    background: #ADA996;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    overflow: hidden;
 }
 
 .Tech .grid {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 10px;
-  height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    height: 100%;
 }
 
 .Tech .grid img {
-  width: 100px;
-  height: 100px;
-  margin: 5px;
-  display: block;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    display: block;
 }
 
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .Tech > div {
-    /* background: url('/static/images/app@2x.png'); */
-    background-size: 320px 314px;
-  }
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    .Tech>div {
+        /* background: url('/static/images/app@2x.png'); */
+        background-size: 320px 314px;
+    }
 }
 
 @media (max-width: 800px) {
-  .Tech {
-    width: 100%;
-  }
+    .Tech {
+        width: 100%;
+    }
 }
