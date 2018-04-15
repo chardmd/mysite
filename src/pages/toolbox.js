@@ -1,6 +1,6 @@
 import React from 'react'
-import Info from '../components/Info'
+import Tech from '../components/Tech'
 
-const ToolboxPage = () => <Info />
+const ToolboxPage = () => <Tech />
 
 export default ToolboxPage
