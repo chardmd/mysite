@@ -6,13 +6,40 @@ const Navigation = () => (
   <div className="Navigation">
     <ul>
       <li>
-        <Link to="/">Experience</Link>
+        <Link
+          exact
+          to="/"
+          activeStyle={{
+            borderBottom: '2px solid #33485e',
+            paddingBottom: '2px',
+          }}
+        >
+          Experience
+        </Link>
       </li>
       <li>
-        <Link to="/toolbox">Toolbox</Link>
+        <Link
+          exact
+          to="/toolbox"
+          activeStyle={{
+            borderBottom: '2px solid #33485e',
+            paddingBottom: '2px',
+          }}
+        >
+          Toolbox
+        </Link>
       </li>
       <li>
-        <Link to="/contact">Let's work together</Link>
+        <Link
+          exact
+          to="/contact"
+          activeStyle={{
+            borderBottom: '2px solid #33485e',
+            paddingBottom: '2px',
+          }}
+        >
+          Let's work together
+        </Link>
       </li>
     </ul>
   </div>
