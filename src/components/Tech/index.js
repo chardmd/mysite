@@ -7,7 +7,6 @@ import aws from '../../assets/aws.svg'
 import css3 from '../../assets/css-3.svg'
 import git from '../../assets/git.svg'
 import googleAnalytics from '../../assets/google-analytics.svg'
-import grunt from '../../assets/grunt.svg'
 import html5 from '../../assets/html-5.svg'
 import java from '../../assets/java.svg'
 import javascript from '../../assets/javascript.svg'
@@ -34,6 +33,7 @@ import material from '../../assets/material.svg'
 import gatsby from '../../assets/gatsby.svg'
 import netlify from '../../assets/netlify.svg'
 import redux from '../../assets/redux.svg'
+import webpack from '../../assets/webpack.svg'
 
 class Tech extends React.Component {
   render() {
@@ -54,6 +54,7 @@ class Tech extends React.Component {
             <img src={azure} alt="azure" />
             <img src={vscode} alt="vscode" />
             <img src={docker} alt="docker" />
+            <img src={webpack} alt="webpack" />
             <img src={firebase} alt="firebase" />
             <img src={material} alt="material" />
             <img src={gatsby} alt="gatsby" />
@@ -66,7 +67,6 @@ class Tech extends React.Component {
             <img src={aws} alt="aws" />
             <img src={git} alt="git" />
             <img src={googleAnalytics} alt="googleAnalytics" />
-            <img src={grunt} alt="grunt" />
             <img src={java} alt="java" />
             <img src={jenkins} alt="jenkins" />
             <img src={macOs} alt="macOs" />
