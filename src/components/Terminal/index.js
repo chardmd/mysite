@@ -163,7 +163,7 @@ class Terminal extends React.Component {
             <div className="font">
               <span className="yellow">chardmd.com</span>@192.168.8.5:~$
               <Typist className="type" onTypingDone={this.displayRunTask}>
-                <Typist.Delay ms={1200} avgTypingSpeed={40} />
+                <Typist.Delay ms={700} avgTypingSpeed={40} />
                 <span className="typeLine">
                   npm install work-experience --global
                 </span>
