@@ -85,10 +85,9 @@ class Terminal extends React.Component {
           this.setState({
             finalOutput: true,
           })
-
-          this.scrollToBottom()
         }
-      }, i * 140)
+        this.scrollToBottom()
+      }, i * 160)
       this.timeouts = this.timeouts.concat(timeout)
     }
   }
