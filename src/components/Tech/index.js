@@ -6,23 +6,19 @@ import angularIcon from '../../assets/angular-icon.svg'
 import aws from '../../assets/aws.svg'
 import css3 from '../../assets/css-3.svg'
 import git from '../../assets/git.svg'
-import googleAnalytics from '../../assets/google-analytics.svg'
 import html5 from '../../assets/html-5.svg'
 import java from '../../assets/java.svg'
 import javascript from '../../assets/javascript.svg'
 import jenkins from '../../assets/jenkins.svg'
-import macOs from '../../assets/macosx.svg'
 import mongodb from '../../assets/mongodb.svg'
 import mysql from '../../assets/mysql.svg'
 import nodejs from '../../assets/nodejs.svg'
 import npm from '../../assets/npm.svg'
 import postgresql from '../../assets/postgresql.svg'
 import redis from '../../assets/redis.svg'
-import require from '../../assets/require.svg'
 import spring from '../../assets/spring.svg'
 import terminal from '../../assets/terminal.svg'
 import tomcat from '../../assets/tomcat.svg'
-import yeoman from '../../assets/yeoman.svg'
 
 import azure from '../../assets/azure.svg'
 import react from '../../assets/react.svg'
@@ -40,12 +36,7 @@ class Tech extends React.Component {
     return (
       <section className="Tech">
         <div>
-          <StackGrid
-            columnWidth={140}
-            className="grid"
-            gutterWidth={10}
-            gutterHeight={10}
-          >
+          <StackGrid columnWidth={140} className="grid">
             <img src={react} alt="react" />
             <img src={redux} alt="redux" />
             <img src={javascript} alt="javascript" />
@@ -66,13 +57,10 @@ class Tech extends React.Component {
             <img src={netlify} alt="netlify" />
             <img src={aws} alt="aws" />
             <img src={git} alt="git" />
-            <img src={googleAnalytics} alt="googleAnalytics" />
             <img src={java} alt="java" />
             <img src={jenkins} alt="jenkins" />
-            <img src={macOs} alt="macOs" />
             <img src={mysql} alt="mysql" />
             <img src={postgresql} alt="postgresql" />
-            <img src={require} alt="require" />
             <img src={spring} alt="spring" />
             <img src={terminal} alt="terminal" />
             <img src={tomcat} alt="tomcat" />

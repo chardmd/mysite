@@ -18,15 +18,13 @@
 
 .Tech .grid {
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin: 20px;
+  margin: 20px 10px;
 }
 
 .Tech .grid img {
   width: 100px;
   height: 100px;
-  margin: 5px;
   display: block;
 }
 
