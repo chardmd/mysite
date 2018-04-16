@@ -1,7 +1,4 @@
 .Tech {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 100%;
   height: 100vh;
   background: #ada996;
@@ -22,19 +19,8 @@
 .Tech .grid {
   display: flex;
   justify-content: center;
-  /* You can set flex-wrap and
-       flex-direction individually */
-  flex-direction: row;
-  flex-wrap: wrap;
-  /* Or do it all in one line
-      with flex flow */
-  flex-flow: row wrap;
-  /* tweak where items line
-       up on the row
-       valid values are: flex-start,
-       flex-end, space-between,
-       space-around, stretch */
-  align-content: flex-end;
+  align-items: center;
+  margin: 20px;
 }
 
 .Tech .grid img {
@@ -42,13 +28,6 @@
   height: 100px;
   margin: 5px;
   display: block;
-}
-
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .Tech > div {
-    /* background: url('/static/images/app@2x.png'); */
-    background-size: 320px 314px;
-  }
 }
 
 @media (max-width: 800px) {
