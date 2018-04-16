@@ -16,6 +16,7 @@ class Terminal extends React.Component {
     this.addLogItems = this.addLogItems.bind(this)
     this.scrollToBottom = this.scrollToBottom.bind(this)
     this.createFinalOutput = this.createFinalOutput.bind(this)
+    this.clearTimeouts = this.clearTimeouts.bind(this)
 
     this.state = {
       runTaskHidden: true,
@@ -23,6 +24,15 @@ class Terminal extends React.Component {
       logs: [],
       finalOutput: false,
     }
+    this.timeouts = []
+  }
+
+  clearTimeouts() {
+    this.timeouts.forEach(clearTimeout)
+  }
+
+  componentWillUnmount() {
+    this.clearTimeouts()
   }
 
   createRunTask() {
@@ -34,7 +44,7 @@ class Terminal extends React.Component {
   }
 
   displayRunTask() {
-    setTimeout(() => {
+    const timeout = setTimeout(() => {
       this.setState(
         {
           runTaskHidden: false,
@@ -44,10 +54,12 @@ class Terminal extends React.Component {
         }
       )
     }, 500)
+
+    this.timeouts = this.timeouts.concat(timeout)
   }
 
   runTaskSelection() {
-    setTimeout(() => {
+    const timeout = setTimeout(() => {
       this.setState(
         {
           selectOptionClass: 'green',
@@ -57,11 +69,13 @@ class Terminal extends React.Component {
         }
       )
     }, 500)
+    this.timeouts = this.timeouts.concat(timeout)
   }
 
   addLogItems() {
+    let timeout = null
     for (let i = 0; i < jsonLogs.length; i++) {
-      setTimeout(() => {
+      timeout = setTimeout(() => {
         this.setState({
           logs: this.state.logs.concat(jsonLogs[i]),
         })
@@ -74,6 +88,7 @@ class Terminal extends React.Component {
         }
         this.scrollToBottom()
       }, i * 140)
+      this.timeouts = this.timeouts.concat(timeout)
     }
   }
 
@@ -119,7 +134,9 @@ class Terminal extends React.Component {
   }
 
   scrollToBottom() {
-    this.logRef.scrollIntoView({ block: 'end' })
+    if (this.logRef) {
+      this.logRef.scrollIntoView({ block: 'end' })
+    }
   }
 
   render() {
