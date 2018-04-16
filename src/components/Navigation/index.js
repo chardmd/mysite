@@ -38,7 +38,7 @@ const Navigation = () => (
             paddingBottom: '2px',
           }}
         >
-          Let's work together
+          Contact
         </Link>
       </li>
     </ul>
