@@ -85,8 +85,9 @@ class Terminal extends React.Component {
           this.setState({
             finalOutput: true,
           })
+
+          this.scrollToBottom()
         }
-        this.scrollToBottom()
       }, i * 140)
       this.timeouts = this.timeouts.concat(timeout)
     }
@@ -134,8 +135,8 @@ class Terminal extends React.Component {
   }
 
   scrollToBottom() {
-    if (this.logRef) {
-      this.logRef.scrollIntoView({ block: 'end' })
+    if (this.screenRef) {
+      this.screenRef.scrollTop = this.screenRef.scrollHeight
     }
   }
 
@@ -154,7 +155,12 @@ class Terminal extends React.Component {
               <div className="greenBg" />
             </li>
           </ul>
-          <div className="screen">
+          <div
+            className="screen"
+            ref={el => {
+              this.screenRef = el
+            }}
+          >
             <div className="font">
               <span className="yellow">chardmd.com</span>@192.168.8.5:~$
               <Typist className="type" onTypingDone={this.displayRunTask}>
@@ -172,15 +178,8 @@ class Terminal extends React.Component {
                       &gt;&nbsp;All (Install all options)
                     </div>
                   </div>
-                  <div
-                    className="logs"
-                    ref={el => {
-                      this.logRef = el
-                    }}
-                  >
-                    {this.createLogs()}
-                    {this.state.finalOutput && this.createFinalOutput()}
-                  </div>
+                  {this.createLogs()}
+                  {this.state.finalOutput && this.createFinalOutput()}
                 </div>
               ) : null}
             </div>
