@@ -164,9 +164,7 @@ class Terminal extends React.Component {
               <span className="yellow">chardmd.com</span>@192.168.8.5:~$
               <Typist className="type" onTypingDone={this.displayRunTask}>
                 <Typist.Delay ms={700} avgTypingSpeed={40} />
-                <span className="typeLine">
-                  npm install work-experience --global
-                </span>
+                <span className="typeLine">npm install work --global</span>
                 <br />
               </Typist>
               {!this.state.runTaskHidden ? (
