@@ -2,7 +2,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
   background: #1fa2ff;
   /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #a6ffcb, #12d8fa, #1fa2ff);
