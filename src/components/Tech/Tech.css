@@ -1,6 +1,4 @@
 .Tech {
-  width: 100%;
-  height: 100vh;
   background: #ada996;
   /* fallback for old browsers */
   background: -webkit-linear-gradient(
@@ -17,12 +15,11 @@
 }
 
 .Tech .grid {
-  display: flex;
-  align-items: center;
-  margin: 20px 10px;
+  height: 100%;
+  margin: 10px;
 }
 
-.Tech .grid img {
+.Tech img {
   width: 100px;
   height: 100px;
   display: block;

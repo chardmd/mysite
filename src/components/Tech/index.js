@@ -35,8 +35,8 @@ class Tech extends React.Component {
   render() {
     return (
       <section className="Tech">
-        <div>
-          <StackGrid columnWidth={140} className="grid">
+        <div className="grid">
+          <StackGrid columnWidth={140}>
             <img src={react} alt="react" />
             <img src={redux} alt="redux" />
             <img src={javascript} alt="javascript" />
