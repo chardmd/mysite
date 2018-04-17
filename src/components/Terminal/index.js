@@ -141,7 +141,7 @@ class Terminal extends React.Component {
 
   render() {
     return (
-      <section className="Terminal">
+      <div className="Terminal">
         <div className="content">
           <ul className="bar">
             <li>
@@ -184,7 +184,7 @@ class Terminal extends React.Component {
             </div>
           </div>
         </div>
-      </section>
+      </div>
     )
   }
 }

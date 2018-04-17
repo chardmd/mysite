@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
     background: #feac5e;
+    height: 100%;
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to left, #4bc0c8, #c779d0, #feac5e);
     /* Chrome 10-25, Safari 5.1-6 */
