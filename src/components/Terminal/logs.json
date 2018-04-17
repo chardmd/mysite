@@ -35,6 +35,11 @@
     "class": "green"
   },
   {
+    "label": "[connect]",
+    "desc": "willy.wonka.chocolate.factory.com",
+    "class": "green"
+  },
+  {
     "label": "[install]",
     "desc": "hijack module",
     "class": "purple"
