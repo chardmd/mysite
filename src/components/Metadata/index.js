@@ -10,7 +10,7 @@ const Metadata = () => (
         Richard <span>😎</span>
       </Link>
       <br />
-      Currently based in Sydney, Australia.
+      Currently based in Sydney, Australia. <span>🇦🇺</span>
     </span>
   </div>
 )
