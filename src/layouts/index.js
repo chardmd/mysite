@@ -18,8 +18,10 @@ const Layout = ({ children, data }) => (
     />
 
     <main>
-      <About />
-      {children()}
+      <section>
+        <About />
+      </section>
+      <section>{children()}</section>
     </main>
   </div>
 )

@@ -6,7 +6,7 @@ import Footer from '../Footer'
 import './About.css'
 
 const About = () => (
-  <section className="About">
+  <div className="About">
     <div>
       <h1>Software Engineer</h1>
       <h2>Richard Dimalanta</h2>
@@ -21,7 +21,7 @@ const About = () => (
       </p>
       <Footer />
     </div>
-  </section>
+  </div>
 )
 
 export default About
