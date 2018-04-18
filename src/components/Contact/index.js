@@ -72,10 +72,10 @@ class Contact extends React.Component {
           </button>
         </div>
         <Spring
-          from={{ color: '#247BA0' }}
+          from={{ color: '#ada996' }}
           to={{
             color: toggle ? '#247BA0' : '#70C1B3',
-            start: toggle ? '#B2DBBF' : '#B2DBBF',
+            start: toggle ? '#ada996' : '#B2DBBF',
             end: toggle ? '#247BA0' : '#F3FFBD',
             scale: toggle ? 0.6 : 4.5,
             shape: toggle ? RECTANGLE : RECTANGLE,
