@@ -68,7 +68,7 @@ class Contact extends React.Component {
           </h1>
           <br />
           <button className="button" onClick={this.handleClick}>
-            Get In Touch
+            Drop me a message
           </button>
         </div>
         <Spring
