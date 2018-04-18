@@ -6,13 +6,6 @@ import './Contact.css'
 const TRIANGLE = 'M20,380 L380,380 L380,380 L200,20 L20,380 Z'
 const RECTANGLE = 'M20,20 L20,380 L380,380 L380,20 L20,20 Z'
 const styles = {
-  container: {
-    height: '100%',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    willChange: 'background',
-  },
   shape: { width: 400, height: 400, willChange: 'transform' },
 }
 
@@ -26,12 +19,7 @@ const Content = ({
   stop,
   rotation,
 }) => (
-  <div
-    style={{
-      ...styles.container,
-      background: `linear-gradient(to bottom, ${start} ${stop}, ${end} 100%)`,
-    }}
-  >
+  <div>
     <svg
       style={{
         ...styles.shape,
@@ -59,24 +47,38 @@ class Contact extends React.Component {
   }
 
   componentDidMount() {
-    this.setState({
-      toggle: !this.state.toggle,
-    })
+    setTimeout(() => {
+      this.setState({
+        toggle: !this.state.toggle,
+      })
+    }, 100)
   }
 
-  toggle = () => this.setState(state => ({ toggle: !state.toggle }))
+  handleClick = () => {
+    window.location.href = `mailto:test@email.com`
+  }
   render() {
     const toggle = this.state.toggle
     return (
       <div className="Contact">
+        <div className="content">
+          <h1>
+            Let's build software that solves business problems, increase
+            revenue, and reduce costs.
+          </h1>
+          <br />
+          <button className="button" onClick={this.handleClick}>
+            Get In Touch
+          </button>
+        </div>
         <Spring
-          from={{ color: 'white' }}
+          from={{ color: '#247BA0' }}
           to={{
             color: toggle ? '#247BA0' : '#70C1B3',
             start: toggle ? '#B2DBBF' : '#B2DBBF',
             end: toggle ? '#247BA0' : '#F3FFBD',
-            scale: toggle ? 0.6 : 1.5,
-            shape: toggle ? TRIANGLE : RECTANGLE,
+            scale: toggle ? 0.6 : 4.5,
+            shape: toggle ? RECTANGLE : RECTANGLE,
             stop: toggle ? '0%' : '50%',
             rotation: toggle ? '0deg' : '45deg',
           }}
