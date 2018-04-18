@@ -1,27 +1,33 @@
 .Tech {
-    background: #ada996;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient( to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    overflow: hidden;
-    height: 100%;
+  background: #ada996;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #eaeaea,
+    #dbdbdb,
+    #f2f2f2,
+    #ada996
+  );
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  overflow: hidden;
+  height: 100%;
 }
 
 .Tech .grid {
-    height: 100%;
-    margin: 10% 3%;
+  height: 100%;
+  margin: 10% 2%;
 }
 
 .Tech img {
-    width: 100px;
-    height: 100px;
-    display: block;
+  width: 100px;
+  height: 100px;
+  display: block;
 }
 
 @media (max-width: 800px) {
-    .Tech {
-        width: 100%;
-    }
+  .Tech {
+    width: 100%;
+  }
 }
