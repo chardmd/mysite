@@ -12,8 +12,6 @@
     "gatsby-plugin-google-analytics": "^1.0.30",
     "gatsby-plugin-react-helmet": "^2.0.10",
     "react-helmet": "^5.2.0",
-    "react-spring": "^4.1.8",
-    "react-stack-grid": "^0.7.1",
     "react-typist": "^2.0.4"
   },
   "keywords": [

@@ -1,33 +1,31 @@
 .Tech {
-  background: #ada996;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #eaeaea,
-    #dbdbdb,
-    #f2f2f2,
-    #ada996
-  );
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  overflow: hidden;
-  height: 100%;
+    background: #ada996;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient( to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 100%;
 }
 
 .Tech .grid {
-  height: 100%;
-  margin: 10% 2%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding-top: 5%;
 }
 
 .Tech img {
-  width: 100px;
-  height: 100px;
-  display: block;
+    width: 10%;
+    height: 10%;
+    display: block;
+    margin: 0.5rem 1rem;
 }
 
 @media (max-width: 800px) {
-  .Tech {
-    width: 100%;
-  }
+    .Tech {
+        width: 100%;
+    }
 }
