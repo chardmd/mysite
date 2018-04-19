@@ -1,5 +1,5 @@
 import React from 'react'
-import StackGrid from 'react-stack-grid'
+//import StackGrid from 'react-stack-grid'
 import './Tech.css'
 
 import angularIcon from '../../assets/angular-icon.svg'
@@ -36,35 +36,33 @@ class Tech extends React.Component {
     return (
       <div className="Tech">
         <div className="grid">
-          <StackGrid columnWidth={140}>
-            <img src={react} alt="react" />
-            <img src={redux} alt="redux" />
-            <img src={javascript} alt="javascript" />
-            <img src={css3} alt="css3" />
-            <img src={html5} alt="html5" />
-            <img src={azure} alt="azure" />
-            <img src={vscode} alt="vscode" />
-            <img src={docker} alt="docker" />
-            <img src={webpack} alt="webpack" />
-            <img src={firebase} alt="firebase" />
-            <img src={material} alt="material" />
-            <img src={gatsby} alt="gatsby" />
-            <img src={nodejs} alt="nodejs" />
-            <img src={redis} alt="redis" />
-            <img src={mongodb} alt="mongodb" />
-            <img src={npm} alt="npm" />
-            <img src={angularIcon} alt="angular" />
-            <img src={netlify} alt="netlify" />
-            <img src={aws} alt="aws" />
-            <img src={git} alt="git" />
-            <img src={java} alt="java" />
-            <img src={jenkins} alt="jenkins" />
-            <img src={mysql} alt="mysql" />
-            <img src={postgresql} alt="postgresql" />
-            <img src={spring} alt="spring" />
-            <img src={terminal} alt="terminal" />
-            <img src={tomcat} alt="tomcat" />
-          </StackGrid>
+          <img src={react} alt="react" />
+          <img src={redux} alt="redux" />
+          <img src={javascript} alt="javascript" />
+          <img src={css3} alt="css3" />
+          <img src={html5} alt="html5" />
+          <img src={azure} alt="azure" />
+          <img src={vscode} alt="vscode" />
+          <img src={docker} alt="docker" />
+          <img src={webpack} alt="webpack" />
+          <img src={firebase} alt="firebase" />
+          <img src={material} alt="material" />
+          <img src={gatsby} alt="gatsby" />
+          <img src={nodejs} alt="nodejs" />
+          <img src={redis} alt="redis" />
+          <img src={mongodb} alt="mongodb" />
+          <img src={npm} alt="npm" />
+          <img src={angularIcon} alt="angular" />
+          <img src={netlify} alt="netlify" />
+          <img src={aws} alt="aws" />
+          <img src={git} alt="git" />
+          <img src={java} alt="java" />
+          <img src={jenkins} alt="jenkins" />
+          <img src={mysql} alt="mysql" />
+          <img src={postgresql} alt="postgresql" />
+          <img src={spring} alt="spring" />
+          <img src={terminal} alt="terminal" />
+          <img src={tomcat} alt="tomcat" />
         </div>
       </div>
     )
