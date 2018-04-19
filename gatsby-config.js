@@ -4,7 +4,6 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-netlify',
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -13,5 +12,6 @@ module.exports = {
         head: false,
       },
     },
+    'gatsby-plugin-netlify',
   ],
 }
