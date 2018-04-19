@@ -34,7 +34,7 @@ import webpack from '../../assets/webpack.svg'
 class Tech extends React.Component {
   render() {
     return (
-      <section className="Tech">
+      <div className="Tech">
         <div className="grid">
           <StackGrid columnWidth={140}>
             <img src={react} alt="react" />
@@ -66,7 +66,7 @@ class Tech extends React.Component {
             <img src={tomcat} alt="tomcat" />
           </StackGrid>
         </div>
-      </section>
+      </div>
     )
   }
 }
