@@ -1,4 +1,5 @@
 import React from 'react'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import './Social.css'
 
 const Social = () => (
@@ -8,14 +9,17 @@ const Social = () => (
         <h3>You can also find him in </h3>
       </li>
       <li>
-        <a href="https://github.com/chardmd" target="_blank">
+        <OutboundLink href="https://github.com/chardmd" target="_blank">
           <i className="fa fa-github" />
-        </a>
+        </OutboundLink>
       </li>
       <li>
-        <a href="https://www.linkedin.com/in/chardmd" target="_blank">
+        <OutboundLink
+          href="https://www.linkedin.com/in/chardmd"
+          target="_blank"
+        >
           <i className="fa fa-linkedin" />
-        </a>
+        </OutboundLink>
       </li>
     </ul>
   </div>
