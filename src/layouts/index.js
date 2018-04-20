@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import About from '../components/About'
 
+import logo from '../assets/logo.png'
+
 import './index.css'
 
 const Layout = ({ children, data }) => (
@@ -13,7 +15,9 @@ const Layout = ({ children, data }) => (
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
       ]}
-    />
+    >
+      <link rel="icon" href={logo} />
+    </Helmet>
 
     <main>
       <section>
