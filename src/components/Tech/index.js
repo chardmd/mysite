@@ -36,9 +36,9 @@ class Tech extends React.Component {
     return (
       <div className="Tech">
         <div className="grid">
+          <img src={javascript} alt="javascript" />
           <img src={react} alt="react" />
           <img src={redux} alt="redux" />
-          <img src={javascript} alt="javascript" />
           <img src={css3} alt="css3" />
           <img src={html5} alt="html5" />
           <img src={azure} alt="azure" />
