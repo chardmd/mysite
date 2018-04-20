@@ -14,4 +14,4 @@
 
 ## Live Site
 
-https://www.chardmd.com
+<a href="https://www.chardmd.com" target="_blank">https://www.chardmd.com</a>
