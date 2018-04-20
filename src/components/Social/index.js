@@ -9,7 +9,7 @@ const Social = () => (
   <div className="Social">
     <ul>
       <li>
-        <h3>You can also find him in </h3>
+        <h3>You can also find me in </h3>
       </li>
       <li>
         <OutboundLink href="https://github.com/chardmd" target="_blank">
