@@ -7,7 +7,7 @@ class Contact extends React.Component {
   }
 
   handleClick = () => {
-    window.location.href = `mailto:test@email.com`
+    window.location.href = `mailto:iamchardmd@gmail.com`
   }
   render() {
     return (
