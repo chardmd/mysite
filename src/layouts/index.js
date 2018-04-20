@@ -19,7 +19,7 @@ const Layout = ({ children, data }) => (
         {
           name: 'keywords',
           content:
-            'Skilled in building SaaS solutions using high performance web technologies.',
+            'Javascript,React,Angular,Vue,Typescript,Node.js,React.js,ES6',
         },
       ]}
     >
