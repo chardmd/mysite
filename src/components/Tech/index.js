@@ -37,18 +37,18 @@ class Tech extends React.Component {
       <div className="Tech">
         <div className="grid">
           <img src={javascript} alt="javascript" />
-          <img src={react} alt="react" />
           <img src={redux} alt="redux" />
+          <img src={nodejs} alt="nodejs" />
+          <img src={vscode} alt="vscode" />
           <img src={css3} alt="css3" />
+          <img src={react} alt="react" />
           <img src={html5} alt="html5" />
           <img src={azure} alt="azure" />
-          <img src={vscode} alt="vscode" />
           <img src={docker} alt="docker" />
           <img src={webpack} alt="webpack" />
           <img src={firebase} alt="firebase" />
           <img src={material} alt="material" />
           <img src={gatsby} alt="gatsby" />
-          <img src={nodejs} alt="nodejs" />
           <img src={redis} alt="redis" />
           <img src={mongodb} alt="mongodb" />
           <img src={npm} alt="npm" />
