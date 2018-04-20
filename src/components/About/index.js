@@ -1,5 +1,4 @@
 import React from 'react'
-import ContactButton from '../ContactButton'
 import Navigation from '../Navigation'
 import Footer from '../Footer'
 

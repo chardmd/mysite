@@ -1,5 +1,8 @@
 import React from 'react'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
+
+import githubIcon from '../../assets/github.svg'
+import linkedinIcon from '../../assets/linkedin.svg'
 import './Social.css'
 
 const Social = () => (
@@ -10,7 +13,7 @@ const Social = () => (
       </li>
       <li>
         <OutboundLink href="https://github.com/chardmd" target="_blank">
-          <i className="fa fa-github" />
+          <img src={githubIcon} />
         </OutboundLink>
       </li>
       <li>
@@ -18,7 +21,7 @@ const Social = () => (
           href="https://www.linkedin.com/in/chardmd"
           target="_blank"
         >
-          <i className="fa fa-linkedin" />
+          <img src={linkedinIcon} />
         </OutboundLink>
       </li>
     </ul>

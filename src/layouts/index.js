@@ -3,8 +3,6 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import About from '../components/About'
 
-import 'font-awesome/css/font-awesome.css'
-import 'animate.css/animate.min.css'
 import './index.css'
 
 const Layout = ({ children, data }) => (

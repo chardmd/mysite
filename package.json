@@ -4,7 +4,6 @@
   "version": "1.0.0",
   "author": "Richard Dimalanta <richard.dimalanta@gmail.com>",
   "dependencies": {
-    "animate.css": "^3.6.1",
     "babel-polyfill": "^6.26.0",
     "font-awesome": "^4.7.0",
     "gatsby": "^1.9.247",
