@@ -1,51 +1,48 @@
 .About {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
-  height: 100vh;
-  overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
 }
 
 @media (max-width: 800px) {
-  .About {
-    padding: 0;
-    width: 100%;
-    height: calc(100% - 444px);
-    text-align: center;
-  }
+    .About {
+        padding: 0;
+        width: 100%;
+        height: calc(100% - 444px);
+        text-align: center;
+    }
 }
 
-.About > div {
-  margin: auto;
-  padding: 60px;
-  max-width: 640px;
+.About>div {
+    padding: 60px;
+    max-width: 640px;
 }
 
 .About p {
-  color: #524e4e;
+    color: #524e4e;
 }
 
 .About h1 {
-  margin: 0 0 0.4rem 0;
-  padding: 0;
-  color: #007aff;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
-  text-rendering: optimizeLegibility;
-  font-size: 1.7rem;
-  line-height: 1.1;
+    margin: 0 0 0.4rem 0;
+    padding: 0;
+    color: #007aff;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+    font-size: 1.7rem;
+    line-height: 1.1;
 }
 
 .About h2 {
-  margin: 0 0 0.45rem 0;
-  padding: 0;
-  color: #000;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: 800;
-  text-rendering: optimizeLegibility;
-  font-size: 3.1rem;
-  letter-spacing: -0.027rem;
+    margin: 0 0 0.45rem 0;
+    padding: 0;
+    color: #000;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-weight: 800;
+    text-rendering: optimizeLegibility;
+    font-size: 3.1rem;
+    letter-spacing: -0.027rem;
 }
