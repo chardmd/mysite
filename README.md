@@ -1,7 +1,5 @@
 # Personal Site
 
-## My Personal site built using GatsbyJS
-
 ## Installation
 
 `npm install`
@@ -10,6 +8,10 @@
 
 `gatsby develop`
 
-## Production Deployment
+## Build
 
 `gastby build`
+
+## Live Site
+
+https://www.chardmd.com
