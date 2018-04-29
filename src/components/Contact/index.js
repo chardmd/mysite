@@ -14,12 +14,12 @@ class Contact extends React.Component {
       <div className="Contact">
         <div className="content">
           <h1 className="animated fadeIn">
-            Let's build software that solves business problems, increase
-            revenue, and reduce costs.
+            Richard will help you build software that solves business problems,
+            increase revenue, and reduce costs.
           </h1>
           <br />
           <button className="button animated tada" onClick={this.handleClick}>
-            Drop me a message
+            Drop a message
           </button>
         </div>
       </div>
