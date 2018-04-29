@@ -10,6 +10,7 @@ class About extends React.Component {
     this.state = {
       color: '',
     }
+    this.setTitleColor = this.setTitleColor.bind(this)
   }
 
   componentWillMount() {
@@ -21,11 +22,11 @@ class About extends React.Component {
   }
 
   setTitleColor(pathname) {
-    if (pathname === '/toolbox') {
+    if (pathname.includes('toolbox')) {
       this.setState({
         color: 'red',
       })
-    } else if (pathname === '/contact') {
+    } else if (pathname.includes('contact')) {
       this.setState({
         color: 'green',
       })
