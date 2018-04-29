@@ -7,7 +7,7 @@ import About from '../components/About'
 import logo from '../assets/logo.png'
 import './index.css'
 
-const Layout = ({ children, data }) => (
+const Layout = ({ children, data, location }) => (
   <div>
     <Helmet
       title={data.site.siteMetadata.title}
@@ -28,7 +28,7 @@ const Layout = ({ children, data }) => (
 
     <main>
       <section>
-        <About />
+        <About location={location} />
       </section>
       <section>{children()}</section>
     </main>
