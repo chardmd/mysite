@@ -39,6 +39,7 @@ class Tech extends React.Component {
           src={require(`../../assets/${i}.svg`)}
           alt={i}
           key={`skill-${i}`}
+          className="animated jackInTheBox"
         />
       )
     })
