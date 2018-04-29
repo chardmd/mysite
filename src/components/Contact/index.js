@@ -13,7 +13,7 @@ class Contact extends React.Component {
     return (
       <div className="Contact">
         <div className="content">
-          <h1>
+          <h1 className="animated fadeIn">
             Let's build software that solves business problems, increase
             revenue, and reduce costs.
           </h1>
