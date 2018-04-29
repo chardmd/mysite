@@ -18,7 +18,7 @@ class Contact extends React.Component {
             revenue, and reduce costs.
           </h1>
           <br />
-          <button className="button" onClick={this.handleClick}>
+          <button className="button animated tada" onClick={this.handleClick}>
             Drop me a message
           </button>
         </div>
