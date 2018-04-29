@@ -9,16 +9,20 @@ class About extends React.Component {
     super(props)
     this.state = {
       color: '',
+      title: '',
     }
     this.setTitleColor = this.setTitleColor.bind(this)
+    this.setTitle = this.setTitle.bind(this)
   }
 
   componentWillMount() {
     this.setTitleColor(this.props.location.pathname)
+    this.setTitle(this.props.location.pathname)
   }
 
   componentWillReceiveProps(nextProps) {
     this.setTitleColor(nextProps.location.pathname)
+    this.setTitle(nextProps.location.pathname)
   }
 
   setTitleColor(pathname) {
@@ -37,11 +41,27 @@ class About extends React.Component {
     }
   }
 
+  setTitle(pathname) {
+    if (pathname.includes('toolbox')) {
+      this.setState({
+        title: 'Full Stack Developer',
+      })
+    } else if (pathname.includes('contact')) {
+      this.setState({
+        title: 'Software Craftsman',
+      })
+    } else {
+      this.setState({
+        title: 'Software Engineer',
+      })
+    }
+  }
+
   render() {
     return (
       <div className="About">
         <div>
-          <h1>Software Engineer</h1>
+          <h1>{this.state.title}</h1>
           <h2 className={this.state.color}>Richard Dimalanta</h2>
           <Navigation />
           <p>
