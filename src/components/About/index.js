@@ -44,7 +44,7 @@ class About extends React.Component {
   setTitle(pathname) {
     if (pathname.includes('toolbox')) {
       this.setState({
-        title: 'Full Stack Developer',
+        title: 'Software Developer',
       })
     } else if (pathname.includes('contact')) {
       this.setState({
