@@ -48,7 +48,7 @@ class About extends React.Component {
       })
     } else if (pathname.includes('contact')) {
       this.setState({
-        title: 'Web Craftsman',
+        title: 'Software Craftsman',
       })
     } else {
       this.setState({
