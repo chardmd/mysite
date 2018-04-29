@@ -34,7 +34,13 @@ const images = [
 class Tech extends React.Component {
   render() {
     const renderedImages = images.map(i => {
-      return <img src={require(`../../assets/${i}.svg`)} alt={i} />
+      return (
+        <img
+          src={require(`../../assets/${i}.svg`)}
+          alt={i}
+          key={`skill-${i}`}
+        />
+      )
     })
 
     return (
