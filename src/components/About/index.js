@@ -8,11 +8,11 @@ class About extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      color: 'black',
+      color: '',
     }
   }
 
-  componentDidMount() {
+  componentWillMount() {
     this.setTitleColor(this.props.location.pathname)
   }
 
