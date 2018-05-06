@@ -40,7 +40,7 @@ class About extends React.Component {
   render() {
     return (
       <div className="About">
-        <div>
+        <div className="animated bounceInLeft">
           <h1>Software Engineer</h1>
           <h2 className={this.state.color}>Richard Dimalanta</h2>
           <Navigation />
