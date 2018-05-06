@@ -19,7 +19,7 @@ class Contact extends React.Component {
           </h1>
           <br />
           <button className="button animated tada" onClick={this.handleClick}>
-            Drop a message
+            Hey, you! Let’s connect.
           </button>
         </div>
       </div>
