@@ -15,10 +15,10 @@
 
 .Contact .content {
   z-index: 99999;
-  position: absolute;
   justify-content: center;
   text-align: center;
   flex-direction: column;
+  margin: 20px;
 }
 
 .Contact h1 {
@@ -64,7 +64,10 @@
 @media (max-width: 800px) {
   .Contact {
     width: 100%;
-    max-height: 444px;
+    text-align: center;
+  }
+  .Contact .button {
+    padding: 10px 50px;
   }
 }
 
