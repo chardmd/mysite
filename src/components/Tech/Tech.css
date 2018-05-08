@@ -25,7 +25,8 @@
 }
 
 .Tech img:hover {
-    transform: scale(1.3);
+    -webkit-animation: pulse 1s;
+    animation: pulse 1s;
 }
 
 @media (max-width: 800px) {
