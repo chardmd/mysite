@@ -25,6 +25,11 @@
     margin: 0;
 }
 
+.Social img:hover {
+    -webkit-animation: swing 1s;
+    animation: swing 1s;
+}
+
 @media (max-width: 800px) {
     .Social ul {
         justify-content: center;
