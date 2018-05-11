@@ -1,44 +1,54 @@
 .Social ul {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    list-style: none;
-    margin: 0;
-    font-size: 14px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  font-size: 14px;
 }
 
 .Social li {
-    margin-right: 16px;
+  margin-right: 16px;
 }
 
 .Social i:before {
-    font-size: 1.75em;
-    height: 2.5em;
-    line-height: 2.5em;
+  font-size: 1.75em;
+  height: 2.5em;
+  line-height: 2.5em;
 }
 
 .Social a {
-    color: #007aff;
+  color: #007aff;
 }
 
 .Social h3 {
-    margin: 0;
+  margin: 0;
 }
 
-.Social img:hover {
-    -webkit-animation: swing 1s;
-    animation: swing 1s;
+.Social .linkedin:hover {
+  -webkit-animation: swing 1s;
+  animation: swing 1s;
+}
+
+.Social .github:hover {
+  -webkit-animation: rubberBand 1s;
+  animation: rubberBand 1s;
+}
+
+.Social .twitter:hover {
+  -webkit-animation: wobble 1s;
+  animation: wobble 1s;
 }
 
 @media (max-width: 800px) {
-    .Social ul {
-        justify-content: center;
-        margin-right: 0;
-    }
-    .Social li {
-        margin: 0 8px;
-    }
-    .Social a {
-        font-weight: normal;
-    }
+  .Social ul {
+    justify-content: center;
+    margin-right: 0;
+  }
+  .Social li {
+    margin: 0 8px;
+  }
+  .Social a {
+    font-weight: normal;
+  }
 }

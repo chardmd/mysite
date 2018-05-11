@@ -17,17 +17,17 @@ const Social = () => (
           href="https://www.linkedin.com/in/chardmd"
           target="_blank"
         >
-          <img src={linkedinIcon} alt="linkedin" />
+          <img src={linkedinIcon} alt="linkedin" className="linkedin" />
         </OutboundLink>
       </li>
       <li>
         <OutboundLink href="https://github.com/chardmd" target="_blank">
-          <img src={githubIcon} alt="github" />
+          <img src={githubIcon} alt="github" className="github" />
         </OutboundLink>
       </li>
       <li>
         <OutboundLink href="https://twitter.com/iamchardmd" target="_blank">
-          <img src={twitterIcon} alt="twitter" />
+          <img src={twitterIcon} alt="twitter" className="twitter" />
         </OutboundLink>
       </li>
     </ul>
