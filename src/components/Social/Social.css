@@ -26,8 +26,8 @@
 }
 
 .Social .linkedin:hover {
-  -webkit-animation: swing 1s;
-  animation: swing 1s;
+  -webkit-animation: rubberBand 1s;
+  animation: rubberBand 1s;
 }
 
 .Social .github:hover {
@@ -36,8 +36,8 @@
 }
 
 .Social .twitter:hover {
-  -webkit-animation: wobble 1s;
-  animation: wobble 1s;
+  -webkit-animation: rubberBand 1s;
+  animation: rubberBand 1s;
 }
 
 @media (max-width: 800px) {
