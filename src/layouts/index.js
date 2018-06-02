@@ -14,12 +14,12 @@ const Layout = ({ children, data, location }) => (
       meta={[
         {
           name: 'description',
-          content: 'Software Engineer based in Sydney, Australia',
+          content: 'Full Stack Developer based in Sydney, Australia',
         },
         {
           name: 'keywords',
           content:
-            'Javascript,React,Angular,Vue,Typescript,Node.js,React.js,ES6',
+            'Javascript,React,Node.js,React.js,AWS,Azure,.Net Core,Docker,Sydney,Australia,AU,IT,Full Stack Developer,Richard Dimalanta',
         },
       ]}
     >
