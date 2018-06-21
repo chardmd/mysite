@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+https://heuristic-chandrasekhar-7b74ac.netlify.com/* https://www.chardmd.com/:splat 301!
