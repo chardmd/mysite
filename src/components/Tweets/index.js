@@ -6,10 +6,9 @@ class Tweets extends React.Component {
     return (
       <div className="Tweets">
         <div className="content">
-          <a
-            class="twitter-timeline"
-            href="https://twitter.com/iamchardmd?ref_src=twsrc%5Etfw"
-          />
+          <a className="twitter-timeline" href="https://twitter.com/iamchardmd">
+            &nbsp;
+          </a>
         </div>
       </div>
     )

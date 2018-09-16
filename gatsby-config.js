@@ -12,6 +12,13 @@ module.exports = {
         head: false,
       },
     },
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        navigateFallback: null,
+        navigateFallbackWhitelist: [],
+      },
+    },
     'gatsby-plugin-netlify',
     'gatsby-plugin-twitter',
   ],
