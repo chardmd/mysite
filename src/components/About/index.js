@@ -18,7 +18,7 @@ class About extends React.Component {
     } else if (pathname.includes('contact')) {
       color = 'green'
     } else if (pathname.includes('tweets')) {
-      color = 'black'
+      color = 'navy'
     } else {
       color = 'dark'
     }
