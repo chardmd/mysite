@@ -17,7 +17,7 @@ class About extends React.Component {
       color = 'tortoise'
     } else if (pathname.includes('contact')) {
       color = 'green'
-    } else if (pathname.includes('experience')) {
+    } else if (pathname.includes('tweets')) {
       color = 'black'
     } else {
       color = 'dark'
@@ -30,9 +30,9 @@ class About extends React.Component {
     if (pathname.includes('toolbox')) {
       title = 'Full Stack Dev'
     } else if (pathname.includes('contact')) {
-      title = 'Builder of Things'
-    } else if (pathname.includes('experience')) {
       title = 'Software Engineer'
+    } else if (pathname.includes('tweets')) {
+      title = 'Builder of Things'
     } else {
       title = 'Serial Maker'
     }
