@@ -37,6 +37,11 @@ const Layout = ({ children, location }) => (
           ]}
         >
           <link rel="icon" href={logo} />
+          <script
+            async
+            src="https://platform.twitter.com/widgets.js"
+            charset="utf-8"
+          />
         </Helmet>
         <main>
           <section>
