@@ -17,10 +17,10 @@ class About extends React.Component {
       color = 'tortoise'
     } else if (pathname.includes('contact')) {
       color = 'green'
-    } else if (pathname.includes('tweets')) {
-      color = 'gray'
-    } else {
+    } else if (pathname.includes('experience')) {
       color = 'black'
+    } else {
+      color = 'dark'
     }
     return color
   }
@@ -30,11 +30,11 @@ class About extends React.Component {
     if (pathname.includes('toolbox')) {
       title = 'Full Stack Dev'
     } else if (pathname.includes('contact')) {
-      title = 'Maker of Things'
-    } else if (pathname.includes('tweets')) {
-      title = 'Serial Builder'
-    } else {
+      title = 'Builder of Things'
+    } else if (pathname.includes('experience')) {
       title = 'Software Engineer'
+    } else {
+      title = 'Serial Maker'
     }
     return title
   }
