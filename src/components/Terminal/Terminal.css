@@ -83,7 +83,7 @@
 .Terminal .screen {
     background-color: #33485e;
     width: 80%;
-    height: 450px;
+    height: 80vh;
     margin: 0 auto;
     padding: 1px;
     overflow-y: auto;
@@ -110,6 +110,7 @@
 @media (max-width: 800px) {
     .Terminal {
         width: 100%;
+        height: 100vh;
     }
     .Terminal .content {
         padding: 20px 0;
