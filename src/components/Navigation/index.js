@@ -14,20 +14,20 @@ class Navigation extends React.Component {
               className={
                 !pathname.includes('toolbox') &&
                 !pathname.includes('contact') &&
-                !pathname.includes('tweets')
+                !pathname.includes('career')
                   ? 'activeLink'
                   : ''
               }
             >
-              Experience
+              Tweets
             </Link>
           </li>
           <li>
             <Link
-              to="/tweets"
-              className={pathname.includes('tweets') ? 'activeLink' : ''}
+              to="/career"
+              className={pathname.includes('career') ? 'activeLink' : ''}
             >
-              Tweets
+              Career
             </Link>
           </li>
           <li>
