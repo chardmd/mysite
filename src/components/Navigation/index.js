@@ -12,12 +12,22 @@ class Navigation extends React.Component {
             <Link
               to="/"
               className={
-                !pathname.includes('toolbox') && !pathname.includes('contact')
+                !pathname.includes('toolbox') &&
+                !pathname.includes('contact') &&
+                !pathname.includes('tweets')
                   ? 'activeLink'
                   : ''
               }
             >
               Experience
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/tweets"
+              className={pathname.includes('tweets') ? 'activeLink' : ''}
+            >
+              Tweets
             </Link>
           </li>
           <li>

@@ -5,6 +5,7 @@
   flex-direction: column;
   height: 100vh;
   overflow: hidden;
+  background: #eff6fb;
 }
 
 @media (max-width: 800px) {
@@ -42,11 +43,15 @@
 }
 
 .About .tortoise {
-  color: #2daab3;
+  color: #37848a;
 }
 
 .About .green {
   color: #15b358;
+}
+
+.About .gray {
+  color: #24292e;
 }
 
 .About h2 {
