@@ -1,48 +1,45 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 import './Navigation.css'
 
-const Navigation = () => (
-  <div className="Navigation">
-    <ul>
-      <li>
-        <Link
-          exact
-          to="/"
-          activeStyle={{
-            borderBottom: '2px solid #33485e',
-            paddingBottom: '2px',
-          }}
-        >
-          Experience
-        </Link>
-      </li>
-      <li>
-        <Link
-          exact
-          to="/toolbox"
-          activeStyle={{
-            borderBottom: '2px solid #33485e',
-            paddingBottom: '2px',
-          }}
-        >
-          Toolbox
-        </Link>
-      </li>
-      <li>
-        <Link
-          exact
-          to="/contact"
-          activeStyle={{
-            borderBottom: '2px solid #33485e',
-            paddingBottom: '2px',
-          }}
-        >
-          Contact
-        </Link>
-      </li>
-    </ul>
-  </div>
-)
+class Navigation extends React.Component {
+  render() {
+    const pathname = this.props.location.pathname
+    return (
+      <div className="Navigation">
+        <ul>
+          <li>
+            <Link
+              to="/"
+              className={
+                !pathname.includes('toolbox') && !pathname.includes('contact')
+                  ? 'activeLink'
+                  : ''
+              }
+            >
+              Experience
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/toolbox"
+              className={pathname.includes('toolbox') ? 'activeLink' : ''}
+            >
+              Toolbox
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/contact"
+              className={pathname.includes('contact') ? 'activeLink' : ''}
+            >
+              Contact
+            </Link>
+          </li>
+        </ul>
+      </div>
+    )
+  }
+}
 
 export default Navigation
