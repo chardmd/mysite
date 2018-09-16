@@ -28,13 +28,13 @@ class About extends React.Component {
   getHeadline(pathname) {
     let title = ''
     if (pathname.includes('toolbox')) {
-      title = 'Builder of Things'
+      title = 'Serial Builder'
     } else if (pathname.includes('contact')) {
       title = 'Full Stack Dev'
     } else if (pathname.includes('career')) {
       title = 'Software Engineer'
     } else {
-      title = 'Serial Maker'
+      title = 'Maker of Things'
     }
     return title
   }
