@@ -13,7 +13,6 @@
     "gatsby-plugin-offline": "^1.0.18",
     "gatsby-plugin-react-helmet": "next",
     "gatsby-plugin-sharp": "next",
-    "gatsby-plugin-twitter": "^1.0.20",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
     "react-helmet": "^5.2.0",
