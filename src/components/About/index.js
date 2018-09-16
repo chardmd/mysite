@@ -7,43 +7,44 @@ import './About.css'
 class About extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {
-      color: '',
-    }
-    this.setTitleColor = this.setTitleColor.bind(this)
+    this.getTitleColor = this.getTitleColor.bind(this)
+    this.getHeadline = this.getHeadline.bind(this)
   }
 
-  UNSAFE_componentWillMount() {
-    this.setTitleColor(this.props.location.pathname)
-  }
-
-  UNSAFE_componentWillReceiveProps(nextProps) {
-    this.setTitleColor(nextProps.location.pathname)
-  }
-
-  setTitleColor(pathname) {
+  getTitleColor(pathname) {
+    let color = ''
     if (pathname.includes('toolbox')) {
-      this.setState({
-        color: 'tortoise',
-      })
+      color = 'tortoise'
     } else if (pathname.includes('contact')) {
-      this.setState({
-        color: 'green',
-      })
+      color = 'green'
     } else {
-      this.setState({
-        color: 'black',
-      })
+      color = 'black'
     }
+    return color
+  }
+
+  getHeadline(pathname) {
+    let title = ''
+    if (pathname.includes('toolbox')) {
+      title = 'Full Stack Dev'
+    } else if (pathname.includes('contact')) {
+      title = 'Serial Maker'
+    } else {
+      title = 'Software Engineer'
+    }
+    return title
   }
 
   render() {
+    const pathname = this.props.location.pathname
+    const titleColor = this.getTitleColor(pathname)
+    const headline = this.getHeadline(pathname)
     return (
       <div className="About">
-        <div className="animated">
-          <h1>Software Engineer</h1>
-          <h2 className={this.state.color}>Richard Dimalanta</h2>
-          <Navigation location={this.props.location} match={this.props.match} />
+        <div>
+          <h1>{headline}</h1>
+          <h2 className={titleColor}>Richard Dimalanta</h2>
+          <Navigation location={this.props.location} />
           <p>
             Richard is skilled in building SaaS solutions using high performance
             web technologies. He has a wide range of experience in the tech
