@@ -1,11 +1,15 @@
 import React from 'react'
 import Layout from '../components/layout'
-import Tweets from '../components/Tweets'
+import Terminal from '../components/Terminal'
 
-const TimelinePage = props => (
-  <Layout location={props.location}>
-    <Tweets />
-  </Layout>
-)
+class IndexPage extends React.Component {
+  render() {
+    return (
+      <Layout location={this.props.location}>
+        <Terminal />
+      </Layout>
+    )
+  }
+}
 
-export default TimelinePage
+export default IndexPage
