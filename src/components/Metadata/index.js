@@ -1,13 +1,16 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 import './Metadata.css'
 
 const Metadata = () => (
   <div className="Metadata">
     <span>
       Handcrafted by{' '}
-      <Link exact to="/">
-        Richard <span>😎</span>
+      <Link to="/">
+        Richard{' '}
+        <span role="img" aria-label="cool">
+          😎
+        </span>
       </Link>
       <br />
       Currently based in Sydney, Australia

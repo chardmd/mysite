@@ -13,11 +13,11 @@ class About extends React.Component {
     this.setTitleColor = this.setTitleColor.bind(this)
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this.setTitleColor(this.props.location.pathname)
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     this.setTitleColor(nextProps.location.pathname)
   }
 
@@ -40,10 +40,10 @@ class About extends React.Component {
   render() {
     return (
       <div className="About">
-        <div className="animated bounceInUp">
+        <div className="animated">
           <h1>Software Engineer</h1>
           <h2 className={this.state.color}>Richard Dimalanta</h2>
-          <Navigation />
+          <Navigation location={this.props.location} match={this.props.match} />
           <p>
             Richard is skilled in building SaaS solutions using high performance
             web technologies. He has a wide range of experience in the tech
