@@ -4,8 +4,8 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import 'animate.css'
 
-import About from '../components/About'
-import logo from '../assets/logo.png'
+import About from '../About'
+import logo from '../../assets/logo.png'
 import './index.css'
 
 const Layout = ({ children, location }) => (
