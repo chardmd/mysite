@@ -1,4 +1,6 @@
 import React from 'react'
+import { StaticQuery, graphql } from 'gatsby'
+
 import Navigation from '../Navigation'
 import Footer from '../Footer'
 
@@ -43,22 +45,33 @@ class About extends React.Component {
     const pathname = this.props.location.pathname
     const titleColor = this.getTitleColor(pathname)
     const headline = this.getHeadline(pathname)
+
     return (
-      <div className="About">
-        <div>
-          <h1>{headline}</h1>
-          <h2 className={titleColor}>Richard Dimalanta</h2>
-          <Navigation location={this.props.location} />
-          <p>
-            Richard is skilled in building SaaS solutions using high performance
-            web technologies. He has a wide range of experience in the tech
-            industry and have worked across multiple countries such as
-            Singapore, Philippines, and currently Australia. He always aim to
-            build services that makes people's lives better.
-          </p>
-          <Footer />
-        </div>
-      </div>
+      <StaticQuery
+        query={graphql`
+          query AboutQuery {
+            site {
+              siteMetadata {
+                about
+                title
+              }
+            }
+          }
+        `}
+        render={data => (
+          <>
+            <div className="About">
+              <div>
+                <h1>{headline}</h1>
+                <h2 className={titleColor}>{data.site.siteMetadata.title}</h2>
+                <Navigation location={this.props.location} />
+                <p>{data.site.siteMetadata.about}</p>
+                <Footer />
+              </div>
+            </div>
+          </>
+        )}
+      />
     )
   }
 }
