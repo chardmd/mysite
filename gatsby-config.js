@@ -7,7 +7,7 @@ module.exports = {
     Singapore, Philippines, and currently Australia. He always aim
     to build services that makes people's lives better.`,
     title: 'Richard Dimalanta. Maker of Things',
-    description: 'Full Stack Developer based in Sydney, Australia',
+    description: 'Maker of Things. SaaS, Full Stack. Web Development',
     url: 'https://www.chardmd.com',
     twitter: '@iamchardmd',
   },
