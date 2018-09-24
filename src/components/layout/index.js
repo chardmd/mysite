@@ -15,6 +15,9 @@ const Layout = ({ children, location }) => (
         site {
           siteMetadata {
             title
+            url
+            description
+            twitter
           }
         }
       }
@@ -24,19 +27,32 @@ const Layout = ({ children, location }) => (
         <Helmet
           titleTemplate={`%s | ${data.site.siteMetadata.title}`}
           defaultTitle={data.site.siteMetadata.title}
-          meta={[
-            {
-              name: 'description',
-              content: 'Full Stack Developer based in Sydney, Australia',
-            },
-            {
-              name: 'keywords',
-              content:
-                'Javascript,React,Node.js,React.js,AWS,Azure,.Net Core,Docker,Sydney,Australia,AU,IT,Full Stack Developer,Richard Dimalanta',
-            },
-          ]}
         >
           <link rel="icon" href={logo} />
+
+          {/* General tags */}
+          <meta
+            name="description"
+            content={data.site.siteMetadata.description}
+          />
+          <meta name="image" content={logo} />
+
+          {/* OpenGraph tags */}
+          <meta property="og:url" content={data.site.siteMetadata.url} />
+          <meta property="og:title" content={data.site.siteMetadata.title} />
+          <meta property="og:description" content="" />
+          <meta property="og:image" content={logo} />
+          <meta property="fb:app_id" content="" />
+
+          {/* Twitter Card tags */}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta
+            name="twitter:creator"
+            content={data.site.siteMetadata.twitter}
+          />
+          <meta name="twitter:title" content={data.site.siteMetadata.title} />
+          <meta name="twitter:description" content="" />
+          <meta name="twitter:image" content={logo} />
         </Helmet>
         <main>
           <section>

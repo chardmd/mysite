@@ -52,8 +52,8 @@ class About extends React.Component {
           query AboutQuery {
             site {
               siteMetadata {
+                headline
                 about
-                title
               }
             }
           }
@@ -63,7 +63,9 @@ class About extends React.Component {
             <div className="About">
               <div>
                 <h1>{headline}</h1>
-                <h2 className={titleColor}>{data.site.siteMetadata.title}</h2>
+                <h2 className={titleColor}>
+                  {data.site.siteMetadata.headline}
+                </h2>
                 <Navigation location={this.props.location} />
                 <p>{data.site.siteMetadata.about}</p>
                 <Footer />
