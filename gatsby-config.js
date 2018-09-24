@@ -1,11 +1,15 @@
 module.exports = {
   siteMetadata: {
-    title: `Richard Dimalanta`,
+    headline: `Richard Dimalanta`,
     about: `Richard is skilled in building SaaS solutions using high
     performance web technologies. He has a wide range of experience
     in the tech industry and have worked across multiple countries such as
     Singapore, Philippines, and currently Australia. He always aim
     to build services that makes people's lives better.`,
+    title: 'Richard Dimalanta. Maker of Things',
+    description: 'Full Stack Developer based in Sydney, Australia',
+    url: 'https://www.chardmd.com',
+    twitter: '@iamchardmd',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
