@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import Drift from 'react-driftjs'
 import { StaticQuery, graphql } from 'gatsby'
 import 'animate.css'
 
@@ -18,6 +19,7 @@ const Layout = ({ children, location }) => (
             url
             description
             twitter
+            driftId
           }
         }
       }
@@ -59,6 +61,7 @@ const Layout = ({ children, location }) => (
             <About location={location} />
           </section>
           <section>{children}</section>
+          <Drift appId={data.site.siteMetadata.driftId} />
         </main>
       </>
     )}

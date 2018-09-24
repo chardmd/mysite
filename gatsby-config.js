@@ -10,6 +10,7 @@ module.exports = {
     description: 'Maker of Things. SaaS, Full Stack. Web Development',
     url: 'https://www.chardmd.com',
     twitter: '@iamchardmd',
+    driftId: 'nzed2gc9n3vk',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
