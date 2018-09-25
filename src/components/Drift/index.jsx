@@ -7,6 +7,7 @@ class Drift extends React.Component {
 
     this.addMainScript = this.addMainScript.bind(this)
     this.addIdentityVariables = this.addIdentityVariables.bind(this)
+    this.insertScript = this.insertScript.bind(this)
   }
 
   insertScript(scriptText) {
