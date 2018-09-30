@@ -5,7 +5,7 @@ const Metadata = () => (
   <div className="Metadata">
     <span>
       Handcrafted by{' '}
-      <a href="mailto:richard@chardmd.com" target="_blank">
+      <a href="mailto:richard@chardmd.com">
         Richard{' '}
         <span role="img" aria-label="cool">
           😎
