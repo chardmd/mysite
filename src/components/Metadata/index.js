@@ -1,15 +1,11 @@
 import React from 'react'
 import './Metadata.css'
 
-const handleClick = () => {
-  window.location.href = `mailto:richard@chardmd.com`
-}
-
 const Metadata = () => (
   <div className="Metadata">
     <span>
       Handcrafted by{' '}
-      <a onClick={handleClick}>
+      <a href="mailto:richard@chardmd.com" target="_blank">
         Richard{' '}
         <span role="img" aria-label="cool">
           😎
