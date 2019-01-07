@@ -3,8 +3,8 @@ module.exports = {
     headline: `Richard Dimalanta`,
     about: `Richard is skilled in building SaaS solutions using high
     performance web technologies. He has a wide range of experience
-    in the tech industry and have worked across multiple countries such as
-    Singapore, Philippines, and currently Australia. He always aim
+    in the tech industry and have worked across multiple markets such as
+    Australia, Singapore, and the Philippines. He always aim
     to build services that makes people's lives better.`,
     title: 'Richard Dimalanta. Maker of Things',
     description: 'Maker of Things. SaaS, Full Stack. Web Development',
