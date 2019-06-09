@@ -28,22 +28,56 @@ class Career extends React.Component {
     this.createFinalOutput = this.createFinalOutput.bind(this)
     this.clearTimeouts = this.clearTimeouts.bind(this)
     this.getLogColor = this.getLogColor.bind(this)
+    this.displayDriftWidget = this.displayDriftWidget.bind(this)
 
     this.state = {
       runTaskHidden: true,
       selectOptionClass: '',
       logs: [],
       finalOutput: false,
+      driftLoaded: false,
     }
     this.timeouts = []
   }
 
-  clearTimeouts() {
-    this.timeouts.forEach(clearTimeout)
+  componentDidUpdate() {
+    if (!this.state.driftLoaded) {
+      window.drift.on('ready', function(api, payload) {
+        api.showWelcomeMessage()
+      })
+      this.setState({ driftLoaded: true })
+    }
+  }
+
+  componentDidMount() {
+    if (window.drift) {
+      window.drift.on('ready', function(api, payload) {
+        api.showWelcomeMessage()
+      })
+    }
   }
 
   componentWillUnmount() {
     this.clearTimeouts()
+
+    //hide the drift component
+    if (window.drift) {
+      window.drift.on('ready', function(api, payload) {
+        api.hideWelcomeMessage()
+      })
+    }
+  }
+
+  displayDriftWidget() {
+    if (window.drift) {
+      window.drift.on('ready', function(api, payload) {
+        api.hideWelcomeMessage()
+      })
+    }
+  }
+
+  clearTimeouts() {
+    this.timeouts.forEach(clearTimeout)
   }
 
   createRunTask() {
