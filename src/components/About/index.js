@@ -3,31 +3,24 @@ import { StaticQuery, graphql } from 'gatsby'
 
 import Navigation from '../Navigation'
 import Footer from '../Footer'
+import { Container, Wrapper, Header, Header2 } from './styles'
 
-import './About.css'
-
-class About extends React.Component {
-  constructor(props) {
-    super(props)
-    this.getTitleColor = this.getTitleColor.bind(this)
-    this.getHeadline = this.getHeadline.bind(this)
-  }
-
-  getTitleColor(pathname) {
+const About = ({ location }) => {
+  const getTitleColor = () => {
     let color = ''
     if (pathname.includes('toolbox')) {
-      color = 'tortoise'
+      color = '#37848a'
     } else if (pathname.includes('contact')) {
-      color = 'green'
+      color = '#15b358'
     } else if (pathname.includes('career')) {
-      color = 'dark'
+      color = '#24292e'
     } else {
-      color = 'navy'
+      color = '#054486'
     }
     return color
   }
 
-  getHeadline(pathname) {
+  const getHeadline = pathname => {
     let title = ''
     if (pathname.includes('toolbox')) {
       title = 'Serial Builder'
@@ -41,40 +34,39 @@ class About extends React.Component {
     return title
   }
 
-  render() {
-    const pathname = this.props.location.pathname
-    const titleColor = this.getTitleColor(pathname)
-    const headline = this.getHeadline(pathname)
+  const pathname = location.pathname
+  const titleColor = getTitleColor(pathname)
+  const headline = getHeadline(pathname)
 
-    return (
-      <StaticQuery
-        query={graphql`
-          query AboutQuery {
-            site {
-              siteMetadata {
-                headline
-                about
-              }
+  return (
+    <StaticQuery
+      query={graphql`
+        query AboutQuery {
+          site {
+            siteMetadata {
+              headline
+              about
             }
           }
-        `}
-        render={data => (
-          <>
-            <div className="About">
-              <div>
-                <h1>{headline}</h1>
-                <h2 className={titleColor}>
-                  {data.site.siteMetadata.headline}
-                </h2>
-                <Navigation location={this.props.location} />
-                <p>{data.site.siteMetadata.about}</p>
-                <Footer />
-              </div>
-            </div>
-          </>
-        )}
-      />
-    )
-  }
+        }
+      `}
+      render={data => (
+        <>
+          <Container>
+            <Wrapper>
+              <Header>{headline}</Header>
+              <Header2 color={titleColor}>
+                {data.site.siteMetadata.headline}
+              </Header2>
+              <Navigation location={location} />
+              <p>{data.site.siteMetadata.about}</p>
+              <Footer />
+            </Wrapper>
+          </Container>
+        </>
+      )}
+    />
+  )
 }
+
 export default About

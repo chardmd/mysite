@@ -1,4 +1,7 @@
-.About {
+import styled from 'styled-components'
+import bgRight from '../../assets/header-bg-right.svg'
+
+export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,28 +13,21 @@
   background-size: cover;
   background-size: 95%;
   background-position: right top;
-  background-image: url('../../assets/header-bg-right.svg');
-}
-
-@media (max-width: 800px) {
-  .About {
+  background-image: url(${bgRight});
+  @media (max-width: 800px) {
     padding: 0;
     width: 100%;
     height: calc(100% - 444px);
     text-align: center;
   }
-}
+`
 
-.About > div {
+export const Wrapper = styled.div`
   padding: 60px;
   max-width: 640px;
-}
+`
 
-.About p {
-  color: #2a2d2d;
-}
-
-.About h1 {
+export const Header = styled.h1`
   margin: 0 0 0.4rem 0;
   padding: 0;
   color: #1da1f2;
@@ -41,25 +37,10 @@
   text-rendering: optimizeLegibility;
   font-size: 1.7rem;
   line-height: 1.1;
-}
+`
 
-.About .navy {
-  color: #054486;
-}
-
-.About .tortoise {
-  color: #37848a;
-}
-
-.About .green {
-  color: #15b358;
-}
-
-.About .dark {
-  color: #24292e;
-}
-
-.About h2 {
+export const Header2 = styled.h2`
+  color: ${props => props.color};
   margin: 0 0 0.45rem 0;
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -68,4 +49,4 @@
   text-rendering: optimizeLegibility;
   font-size: 3.1rem;
   letter-spacing: -0.027rem;
-}
+`
