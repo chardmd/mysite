@@ -5,7 +5,12 @@
   flex-direction: column;
   height: 100vh;
   overflow: hidden;
-  background: #eff6fb;
+  background-color: #eff6fb;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 68%;
+  background-position: 100% 15%;
+  background-image: url('../../assets/hero-media-illustration-light.svg');
 }
 
 @media (max-width: 800px) {
@@ -23,7 +28,7 @@
 }
 
 .About p {
-  color: #524e4e;
+  color: #2a2d2d;
 }
 
 .About h1 {
