@@ -1,12 +1,12 @@
 import React from 'react'
 import Layout from '../components/layout'
-import Terminal from '../components/Terminal'
+import Career from '../components/Career'
 
 class IndexPage extends React.Component {
   render() {
     return (
       <Layout location={this.props.location}>
-        <Terminal />
+        <Career />
       </Layout>
     )
   }

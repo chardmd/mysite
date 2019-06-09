@@ -1,12 +1,22 @@
 import React from 'react'
-import Typist from 'react-typist'
-import 'babel-polyfill'
-import './Terminal.css'
 import jsonLogs from './logs.json'
 import jsonOutput from './output.json'
 import jsonCompanies from './companies.json'
 
-class Terminal extends React.Component {
+import {
+  Container,
+  Content,
+  Bar,
+  BarItem,
+  Circle,
+  Screen,
+  Font,
+  TypeLine,
+  COLORS,
+  WrapTypist,
+} from './styles'
+
+class Career extends React.Component {
   constructor(props) {
     super(props)
     this.displayRunTask = this.displayRunTask.bind(this)
@@ -17,6 +27,7 @@ class Terminal extends React.Component {
     this.scrollToBottom = this.scrollToBottom.bind(this)
     this.createFinalOutput = this.createFinalOutput.bind(this)
     this.clearTimeouts = this.clearTimeouts.bind(this)
+    this.getLogColor = this.getLogColor.bind(this)
 
     this.state = {
       runTaskHidden: true,
@@ -62,7 +73,7 @@ class Terminal extends React.Component {
     const timeout = setTimeout(() => {
       this.setState(
         {
-          selectOptionClass: 'green',
+          selectOptionClass: COLORS.green,
         },
         () => {
           this.addLogItems()
@@ -97,15 +108,15 @@ class Terminal extends React.Component {
       return (
         <div key={`${index}-company-output`}>
           <div>
-            <span className="tortoise">Company&nbsp;</span>
+            <span style={{ color: COLORS.tortoise }}>Company&nbsp;</span>
             <span>{item.company}</span>
           </div>
           <div>
-            <span className="tortoise">Position&nbsp;</span>
+            <span style={{ color: COLORS.tortoise }}>Position&nbsp;</span>
             <span>{item.position}</span>
           </div>
           <div>
-            <span className="tortoise">Duration&nbsp;</span>
+            <span style={{ color: COLORS.tortoise }}>Duration&nbsp;</span>
             <span>{item.duration}</span>
           </div>
           <div>=======================================</div>
@@ -115,17 +126,33 @@ class Terminal extends React.Component {
 
     return (
       <div>
-        <div className="yellow">[All data downloaded] info --print && exit</div>
+        <div style={{ color: COLORS.yellow }}>
+          [All data downloaded] info --print && exit
+        </div>
         {template}
       </div>
     )
   }
 
+  getLogColor(logColor) {
+    switch (logColor) {
+      case 'green':
+        return COLORS.green
+      case 'yellow':
+        return COLORS.yellow
+      case 'purple':
+        return COLORS.purple
+      default:
+        return COLORS.green
+    }
+  }
+
   createLogs() {
     const template = this.state.logs.map((log, index) => {
+      const color = this.getLogColor(log.class)
       return (
         <div key={`${index}-company`}>
-          <span className={log.class}>{log.label}&nbsp;</span>
+          <span style={{ color }}>{log.label}&nbsp;</span>
           {log.desc}
         </div>
       )
@@ -141,37 +168,37 @@ class Terminal extends React.Component {
 
   render() {
     return (
-      <div className="Terminal">
-        <div className="content">
-          <ul className="bar">
-            <li>
-              <div className="redBg" />
-            </li>
-            <li>
-              <div className="yellowBg" />
-            </li>
-            <li>
-              <div className="greenBg" />
-            </li>
-          </ul>
-          <div
-            className="screen"
+      <Container>
+        <Content>
+          <Bar>
+            <BarItem>
+              <Circle bgColor={COLORS.red} />
+            </BarItem>
+            <BarItem>
+              <Circle bgColor={COLORS.yellow} />
+            </BarItem>
+            <BarItem>
+              <Circle bgColor={COLORS.green} />
+            </BarItem>
+          </Bar>
+          <Screen
             ref={el => {
               this.screenRef = el
             }}
           >
-            <div className="font">
-              <span className="yellow">chardmd.com</span>@192.168.8.5:~$
-              <Typist className="type" onTypingDone={this.displayRunTask}>
-                <Typist.Delay ms={700} avgTypingSpeed={40} />
-                <span className="typeLine">npm install work --global</span>
+            <Font>
+              <span style={{ color: COLORS.yellow }}>chardmd.com</span>
+              @192.168.8.5:~$
+              <WrapTypist onTypingDone={this.displayRunTask}>
+                <WrapTypist.Delay ms={700} avgTypingSpeed={40} />
+                <TypeLine>npm install work --global</TypeLine>
                 <br />
-              </Typist>
+              </WrapTypist>
               {!this.state.runTaskHidden ? (
                 <div>
                   <div className="task">
                     {this.createRunTask()}
-                    <div className={this.state.selectOptionClass}>
+                    <div style={{ color: this.state.selectOptionClass }}>
                       &gt;&nbsp;All (Install all options)
                     </div>
                   </div>
@@ -179,11 +206,11 @@ class Terminal extends React.Component {
                   {this.state.finalOutput && this.createFinalOutput()}
                 </div>
               ) : null}
-            </div>
-          </div>
-        </div>
-      </div>
+            </Font>
+          </Screen>
+        </Content>
+      </Container>
     )
   }
 }
-export default Terminal
+export default Career
