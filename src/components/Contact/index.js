@@ -11,7 +11,7 @@ class Contact extends React.Component {
         <div className="content">
           <h1 className="animated fadeIn">
             Richard will help you build software that solves business problems,
-            increase revenue, and reduce costs.
+            increase revenue, or reduce costs.
           </h1>
           <br />
           <button className="button animated tada" onClick={this.handleClick}>
