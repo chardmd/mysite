@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import jsonLogs from './logs.json'
 import jsonOutput from './output.json'
 import jsonCompanies from './companies.json'
@@ -16,128 +16,21 @@ import {
   WrapTypist,
 } from './styles'
 
-class Career extends React.Component {
-  constructor(props) {
-    super(props)
-    this.displayRunTask = this.displayRunTask.bind(this)
-    this.createRunTask = this.createRunTask.bind(this)
-    this.runTaskSelection = this.runTaskSelection.bind(this)
-    this.createLogs = this.createLogs.bind(this)
-    this.addLogItems = this.addLogItems.bind(this)
-    this.scrollToBottom = this.scrollToBottom.bind(this)
-    this.createFinalOutput = this.createFinalOutput.bind(this)
-    this.clearTimeouts = this.clearTimeouts.bind(this)
-    this.getLogColor = this.getLogColor.bind(this)
-    this.displayDriftWidget = this.displayDriftWidget.bind(this)
+const Career = () => {
+  const [runTaskHidden, setRunTaskHidden] = useState(true)
+  const [selectOptionClass, setSelectedOptionClass] = useState('')
+  const [logs, setLogs] = useState([])
+  const [finalOutput, setFinalOutput] = useState(false)
+  const [driftLoaded, setDriftLoaded] = useState(false)
+  const screenRef = useRef(null)
+  let timeouts = []
 
-    this.state = {
-      runTaskHidden: true,
-      selectOptionClass: '',
-      logs: [],
-      finalOutput: false,
-      driftLoaded: false,
-    }
-    this.timeouts = []
+  //clear timeouts
+  const clearTimeouts = () => {
+    timeouts.forEach(clearTimeout)
   }
 
-  componentDidUpdate() {
-    if (!this.state.driftLoaded) {
-      window.drift.on('ready', function(api, payload) {
-        api.showWelcomeMessage()
-      })
-      this.setState({ driftLoaded: true })
-    }
-  }
-
-  componentDidMount() {
-    if (window.drift) {
-      window.drift.on('ready', function(api, payload) {
-        api.showWelcomeMessage()
-      })
-    }
-  }
-
-  componentWillUnmount() {
-    this.clearTimeouts()
-
-    //hide the drift component
-    if (window.drift) {
-      window.drift.on('ready', function(api, payload) {
-        api.hideWelcomeMessage()
-      })
-    }
-  }
-
-  displayDriftWidget() {
-    if (window.drift) {
-      window.drift.on('ready', function(api, payload) {
-        api.hideWelcomeMessage()
-      })
-    }
-  }
-
-  clearTimeouts() {
-    this.timeouts.forEach(clearTimeout)
-  }
-
-  createRunTask() {
-    const template = jsonCompanies.map((company, index) => {
-      return <div key={`${index}-company`}>&gt;&nbsp;{company}</div>
-    })
-
-    return template
-  }
-
-  displayRunTask() {
-    const timeout = setTimeout(() => {
-      this.setState(
-        {
-          runTaskHidden: false,
-        },
-        () => {
-          this.runTaskSelection()
-        }
-      )
-    }, 500)
-
-    this.timeouts = this.timeouts.concat(timeout)
-  }
-
-  runTaskSelection() {
-    const timeout = setTimeout(() => {
-      this.setState(
-        {
-          selectOptionClass: COLORS.green,
-        },
-        () => {
-          this.addLogItems()
-        }
-      )
-    }, 500)
-    this.timeouts = this.timeouts.concat(timeout)
-  }
-
-  addLogItems() {
-    let timeout = null
-    for (let i = 0; i < jsonLogs.length; i++) {
-      timeout = setTimeout(() => {
-        this.setState({
-          logs: this.state.logs.concat(jsonLogs[i]),
-        })
-
-        //call final output
-        if (i === jsonLogs.length - 1) {
-          this.setState({
-            finalOutput: true,
-          })
-        }
-        this.scrollToBottom()
-      }, i * 160)
-      this.timeouts = this.timeouts.concat(timeout)
-    }
-  }
-
-  createFinalOutput() {
+  const createFinalOutput = () => {
     const template = jsonOutput.map((item, index) => {
       return (
         <div key={`${index}-company-output`}>
@@ -168,7 +61,7 @@ class Career extends React.Component {
     )
   }
 
-  getLogColor(logColor) {
+  const getLogColor = logColor => {
     switch (logColor) {
       case 'green':
         return COLORS.green
@@ -181,9 +74,9 @@ class Career extends React.Component {
     }
   }
 
-  createLogs() {
-    const template = this.state.logs.map((log, index) => {
-      const color = this.getLogColor(log.class)
+  const createLogs = () => {
+    const template = logs.map((log, index) => {
+      const color = getLogColor(log.class)
       return (
         <div key={`${index}-company`}>
           <span style={{ color }}>{log.label}&nbsp;</span>
@@ -194,57 +87,111 @@ class Career extends React.Component {
     return template
   }
 
-  scrollToBottom() {
-    if (this.screenRef) {
-      this.screenRef.scrollTop = this.screenRef.scrollHeight
+  const scrollToBottom = () => {
+    if (screenRef.current) {
+      screenRef.current.scrollTop = screenRef.current.scrollHeight
     }
   }
 
-  render() {
-    return (
-      <Container>
-        <Content>
-          <Bar>
-            <BarItem>
-              <Circle bgColor={COLORS.red} />
-            </BarItem>
-            <BarItem>
-              <Circle bgColor={COLORS.yellow} />
-            </BarItem>
-            <BarItem>
-              <Circle bgColor={COLORS.green} />
-            </BarItem>
-          </Bar>
-          <Screen
-            ref={el => {
-              this.screenRef = el
-            }}
-          >
-            <Font>
-              <span style={{ color: COLORS.yellow }}>chardmd.com</span>
-              @192.168.8.5:~$
-              <WrapTypist onTypingDone={this.displayRunTask}>
-                <WrapTypist.Delay ms={700} avgTypingSpeed={40} />
-                <TypeLine>npm install work --global</TypeLine>
-                <br />
-              </WrapTypist>
-              {!this.state.runTaskHidden ? (
-                <div>
-                  <div className="task">
-                    {this.createRunTask()}
-                    <div style={{ color: this.state.selectOptionClass }}>
-                      &gt;&nbsp;All (Install all options)
-                    </div>
-                  </div>
-                  {this.createLogs()}
-                  {this.state.finalOutput && this.createFinalOutput()}
-                </div>
-              ) : null}
-            </Font>
-          </Screen>
-        </Content>
-      </Container>
-    )
+  const addLogItems = () => {
+    let timeout = null
+    for (let i = 0; i < jsonLogs.length; i++) {
+      const item = jsonLogs[i]
+      timeout = setTimeout(() => {
+        setLogs(logs => logs.concat(item))
+        //call final output
+        if (i === jsonLogs.length - 1) {
+          setFinalOutput(true)
+        }
+        scrollToBottom()
+      }, i * 160)
+      timeouts = timeouts.concat(timeout)
+    }
   }
+
+  const createRunTask = () => {
+    const template = jsonCompanies.map((company, index) => {
+      return <div key={`${index}-company`}>&gt;&nbsp;{company}</div>
+    })
+    return template
+  }
+
+  const runTaskSelection = () => {
+    const timeout = setTimeout(() => {
+      setSelectedOptionClass(COLORS.green)
+      addLogItems()
+    }, 500)
+    timeouts = timeouts.concat(timeout)
+  }
+
+  const displayRunTask = () => {
+    const timeout = setTimeout(() => {
+      setRunTaskHidden(false)
+      runTaskSelection()
+    }, 500)
+    timeouts = timeouts.concat(timeout)
+  }
+
+  useEffect(() => {
+    if (!driftLoaded) {
+      window.drift.on('ready', function(api, payload) {
+        api.showWelcomeMessage()
+      })
+      setDriftLoaded(true)
+    }
+
+    return function cleanup() {
+      //clear timeouts
+      clearTimeouts()
+
+      //hide the drift component
+      if (window.drift) {
+        window.drift.on('ready', function(api, payload) {
+          api.hideWelcomeMessage()
+        })
+      }
+    }
+  }, [])
+
+  return (
+    <Container>
+      <Content>
+        <Bar>
+          <BarItem>
+            <Circle bgColor={COLORS.red} />
+          </BarItem>
+          <BarItem>
+            <Circle bgColor={COLORS.yellow} />
+          </BarItem>
+          <BarItem>
+            <Circle bgColor={COLORS.green} />
+          </BarItem>
+        </Bar>
+        <Screen ref={screenRef}>
+          <Font>
+            <span style={{ color: COLORS.yellow }}>chardmd.com</span>
+            @192.168.8.5:~$
+            <WrapTypist onTypingDone={displayRunTask}>
+              <WrapTypist.Delay ms={700} avgTypingSpeed={40} />
+              <TypeLine>npm install work --global</TypeLine>
+              <br />
+            </WrapTypist>
+            {!runTaskHidden ? (
+              <div>
+                <div className="task">
+                  {createRunTask()}
+                  <div style={{ color: selectOptionClass }}>
+                    &gt;&nbsp;All (Install all options)
+                  </div>
+                </div>
+                {createLogs()}
+                {finalOutput && createFinalOutput()}
+              </div>
+            ) : null}
+          </Font>
+        </Screen>
+      </Content>
+    </Container>
+  )
 }
 export default Career
