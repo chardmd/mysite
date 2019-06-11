@@ -32,22 +32,7 @@ const Toolbox = () => {
     'tomcat',
   ]
 
-  const actionList = [
-    'bounce',
-    'pulse',
-    'rubberBand',
-    'swing',
-    'heartBeat',
-    'flipInY',
-    'swing',
-    'rotateIn',
-    'jackInTheBox',
-    'lightSpeedIn',
-    'wobble',
-    'flip',
-    'slideUp',
-    'slideOutUp',
-  ]
+  const actionList = ['bounce', 'rubberBand', 'jackInTheBox', 'jello']
 
   const pickRandomAnimate = animateList =>
     animateList[Math.floor(Math.random() * animateList.length)]
@@ -62,7 +47,7 @@ const Toolbox = () => {
               src={require(`../../assets/${i}.svg`)}
               alt={i}
               key={`skill-${i}`}
-              className={`animated ${animate}`}
+              className={`animated ${animate} fast`}
             />
           )
         })}
