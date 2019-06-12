@@ -1,25 +1,24 @@
 import React from 'react'
-import './Contact.css'
+import { Container, Content, Header, Button } from './styles'
 
-class Contact extends React.Component {
-  handleClick = () => {
-    window.location.href = `mailto:richard@chardmd.com`
-  }
-  render() {
-    return (
-      <div className="Contact">
-        <div className="content">
-          <h1 className="animated fadeIn">
-            Richard will help you build software that solves business problems,
-            increase revenue, or reduce costs.
-          </h1>
-          <br />
-          <button className="button animated tada" onClick={this.handleClick}>
-            Hey, you! Let’s connect.
-          </button>
-        </div>
-      </div>
-    )
-  }
+const Contact = () => {
+  //open email client
+  const handleClick = () =>
+    (window.location.href = `mailto:richard@chardmd.com`)
+
+  return (
+    <Container>
+      <Content>
+        <Header className="animated fadeIn">
+          Richard will help you build software that solves business problems,
+          increase revenue, or reduce costs.
+        </Header>
+        <br />
+        <Button className="animated tada" onClick={handleClick}>
+          Hey, you! Let’s connect.
+        </Button>
+      </Content>
+    </Container>
+  )
 }
 export default Contact
