@@ -2,7 +2,8 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 
 import Navigation from '../Navigation'
-import Footer from '../Footer'
+import Social from '../Social'
+import Metadata from '../Metadata'
 import { Container, Wrapper, Header, Header2 } from './styles'
 
 const About = ({ location }) => {
@@ -60,7 +61,8 @@ const About = ({ location }) => {
               </Header2>
               <Navigation location={location} />
               <p>{data.site.siteMetadata.about}</p>
-              <Footer />
+              <Social />
+              <Metadata />
             </Wrapper>
           </Container>
         </>
