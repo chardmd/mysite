@@ -1,55 +1,47 @@
 import React from 'react'
-import { Link } from 'gatsby'
-import './Navigation.css'
+import { List, ListItem, LinkWrapper } from './styles'
 
-class Navigation extends React.Component {
-  render() {
-    const pathname = this.props.location.pathname
-    return (
-      <div className="Navigation">
-        <ul>
-          <li>
-            <Link
-              to="/"
-              className={
-                !pathname.includes('toolbox') &&
-                !pathname.includes('contact') &&
-                !pathname.includes('career')
-                  ? 'activeLink'
-                  : ''
-              }
-            >
-              Tweets
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/career"
-              className={pathname.includes('career') ? 'activeLink' : ''}
-            >
-              Career
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/toolbox"
-              className={pathname.includes('toolbox') ? 'activeLink' : ''}
-            >
-              Toolbox
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/contact"
-              className={pathname.includes('contact') ? 'activeLink' : ''}
-            >
-              Contact
-            </Link>
-          </li>
-        </ul>
-      </div>
-    )
-  }
+const Navigation = ({ location }) => {
+  const { pathname } = location
+  return (
+    <List>
+      <ListItem>
+        <LinkWrapper
+          to="/"
+          active={
+            !pathname.includes('toolbox') &&
+            !pathname.includes('contact') &&
+            !pathname.includes('career')
+              ? 1
+              : 0
+          }
+        >
+          Tweets
+        </LinkWrapper>
+      </ListItem>
+      <ListItem>
+        <LinkWrapper to="/career" active={pathname.includes('career') ? 1 : 0}>
+          Career
+        </LinkWrapper>
+      </ListItem>
+      <ListItem>
+        <LinkWrapper
+          to="/toolbox"
+          active={pathname.includes('toolbox') ? 1 : 0}
+        >
+          Toolbox
+        </LinkWrapper>
+      </ListItem>
+      <ListItem>
+        <LinkWrapper
+          to="/contact"
+          active={pathname.includes('contact') ? 1 : 0}
+        >
+          Contact
+        </LinkWrapper>
+      </ListItem>
+    </List>
+  )
 }
 
 export default Navigation
