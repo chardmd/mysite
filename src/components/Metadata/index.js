@@ -1,23 +1,21 @@
 import React from 'react'
-import './Metadata.css'
+import { Container, Link } from './styles'
 
 const Metadata = () => (
-  <div className="Metadata">
-    <span>
-      Handcrafted by{' '}
-      <a href="mailto:richard@chardmd.com">
-        Richard{' '}
-        <span role="img" aria-label="cool">
-          😎
-        </span>
-      </a>
-      <br />
-      Currently based in Sydney, Australia
-      <span role="img" aria-label="flag">
-        &nbsp;🇦🇺
+  <Container>
+    Handcrafted by{' '}
+    <Link href="mailto:richard@chardmd.com">
+      Richard{' '}
+      <span role="img" aria-label="cool">
+        😎
       </span>
+    </Link>
+    <br />
+    Currently based in Sydney, Australia
+    <span role="img" aria-label="flag">
+      &nbsp;🇦🇺
     </span>
-  </div>
+  </Container>
 )
 
 export default Metadata
