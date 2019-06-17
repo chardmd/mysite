@@ -53,6 +53,8 @@ export const Button = styled.button`
   color: white;
   letter-spacing: 0.2rem;
   cursor: pointer;
+  font: inherit;
+  margin: 0;
   :hover {
     background-color: #2ecc71;
   }

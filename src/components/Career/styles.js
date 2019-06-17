@@ -39,12 +39,13 @@ export const Bar = styled.ul`
   text-align: center;
   height: 25px;
   width: 80%;
-  background-color: #dad9d9;
-  margin: 0 auto;
+  background-color: rgb(218, 217, 217);
   font-family: monospace;
   display: flex;
   flex-direction: row;
+  margin: 0px auto;
   list-style: none;
+  padding: 0;
 `
 
 export const BarItem = styled.li`

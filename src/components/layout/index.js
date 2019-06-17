@@ -8,6 +8,7 @@ import 'animate.css'
 import About from '../About'
 import logo from '../../assets/logo.png'
 import './index.css'
+import { Main, Section } from './styles'
 
 const Layout = ({ children, location }) => (
   <StaticQuery
@@ -56,13 +57,13 @@ const Layout = ({ children, location }) => (
           <meta name="twitter:description" content="" />
           <meta name="twitter:image" content={logo} />
         </Helmet>
-        <main>
-          <section>
+        <Main>
+          <Section>
             <About location={location} />
-          </section>
-          <section>{children}</section>
+          </Section>
+          <Section>{children}</Section>
           <Drift appId={data.site.siteMetadata.driftId} />
-        </main>
+        </Main>
       </>
     )}
   />

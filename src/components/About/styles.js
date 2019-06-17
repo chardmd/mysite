@@ -41,7 +41,7 @@ export const Header = styled.h1`
 
 export const Header2 = styled.h2`
   color: ${props => props.color};
-  margin: 0 0 0.45rem 0;
+  margin: 0 0 0.5rem 0;
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
@@ -49,4 +49,13 @@ export const Header2 = styled.h2`
   text-rendering: optimizeLegibility;
   font-size: 3.1rem;
   letter-spacing: -0.027rem;
+`
+export const Paragraph = styled.p`
+  color: hsla(0, 0%, 0%, 0.8);
+  font-family: sans-serif;
+  font-weight: normal;
+  word-wrap: break-word;
+  font-kerning: normal;
+  padding: 0;
+  margin: 0 0 0.5rem 0;
 `
