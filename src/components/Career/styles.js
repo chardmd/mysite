@@ -13,7 +13,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  height: 100vh;
   background: #1fa2ff;
   /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #a6ffcb, #12d8fa, #1fa2ff);
