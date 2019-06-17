@@ -1,8 +1,6 @@
 import styled from 'styled-components'
 
 export const Main = styled.main`
-  display: -ms-flex;
-  display: -webkit-flex;
   display: flex;
   margin: 0;
   line-height: 1.6;

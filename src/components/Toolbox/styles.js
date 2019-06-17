@@ -4,15 +4,14 @@ export const Container = styled.div`
   background: #acb6e5;
   background: -webkit-linear-gradient(to right, #8dade8, #a6ffcb);
   background: linear-gradient(to right, #8dade8, #a6ffcb);
-  height: 100%;
   @media (max-width: 800px) {
+    height: 100%;
     width: 100%;
-    height: 100vh;
   }
 `
 
 export const Grid = styled.div`
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
