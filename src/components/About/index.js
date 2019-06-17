@@ -4,7 +4,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import Navigation from '../Navigation'
 import Social from '../Social'
 import Metadata from '../Metadata'
-import { Container, Wrapper, Header, Header2 } from './styles'
+import { Container, Wrapper, Header, Header2, Paragraph } from './styles'
 
 const About = ({ location }) => {
   const getTitleColor = () => {
@@ -60,7 +60,7 @@ const About = ({ location }) => {
                 {data.site.siteMetadata.headline}
               </Header2>
               <Navigation location={location} />
-              <p>{data.site.siteMetadata.about}</p>
+              <Paragraph>{data.site.siteMetadata.about}</Paragraph>
               <Social />
               <Metadata />
             </Wrapper>

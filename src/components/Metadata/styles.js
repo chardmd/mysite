@@ -8,4 +8,7 @@ export const Container = styled.div`
 export const Link = styled.a`
   color: #1c94e0;
   cursor: pointer;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
 `
