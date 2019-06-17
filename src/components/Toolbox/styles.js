@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   background: #acb6e5;
+  height: 100vh;
   background: -webkit-linear-gradient(to right, #8dade8, #a6ffcb);
   background: linear-gradient(to right, #8dade8, #a6ffcb);
   @media (max-width: 800px) {
@@ -11,7 +12,7 @@ export const Container = styled.div`
 `
 
 export const Grid = styled.div`
-  height: 100vh;
+  height: 95%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

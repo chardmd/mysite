@@ -45,7 +45,7 @@ export const Bar = styled.ul`
   flex-direction: row;
   margin: 0px auto;
   list-style: none;
-  padding: 0;
+  padding: 1px;
 `
 
 export const BarItem = styled.li`
