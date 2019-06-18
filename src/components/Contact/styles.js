@@ -16,6 +16,7 @@ export const Container = styled.div`
   @media (max-width: 800px) {
     width: 100%;
     text-align: center;
+    height: 100vh;
   }
 `
 
@@ -64,6 +65,6 @@ export const Button = styled.button`
     transform: translateY(4px);
   }
   @media (max-width: 800px) {
-    padding: 10px 50px;
+    padding: 20px 50px;
   }
 `

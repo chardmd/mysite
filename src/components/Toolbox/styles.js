@@ -6,7 +6,7 @@ export const Container = styled.div`
   background: -webkit-linear-gradient(to right, #8dade8, #a6ffcb);
   background: linear-gradient(to right, #8dade8, #a6ffcb);
   @media (max-width: 800px) {
-    height: 100%;
+    height: 100vh;
     width: 100%;
   }
 `
