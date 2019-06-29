@@ -4,6 +4,7 @@ import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import githubIcon from '../../assets/github.svg'
 import linkedinIcon from '../../assets/linkedin.svg'
 import twitterIcon from '../../assets/twitter.svg'
+import angellistIcon from '../../assets/angellist.svg'
 
 import { List, ListItem, Header, Image } from './styles'
 
@@ -25,6 +26,11 @@ const Social = () => (
     <ListItem>
       <OutboundLink href="https://twitter.com/iamchardmd" target="_blank">
         <Image src={twitterIcon} alt="twitter" className="twitter" />
+      </OutboundLink>
+    </ListItem>
+    <ListItem>
+      <OutboundLink href="https://angel.co/iamchardmd" target="_blank">
+        <Image src={angellistIcon} alt="angellist" className="angellist" />
       </OutboundLink>
     </ListItem>
   </List>
