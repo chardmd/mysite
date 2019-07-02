@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import bgRight from '../../assets/header-bg-right.svg'
 
 export const Container = styled.div`
   display: flex;
@@ -13,7 +12,6 @@ export const Container = styled.div`
   background-size: cover;
   background-size: 95%;
   background-position: right top;
-  background-image: url(${bgRight});
   @media (max-width: 800px) {
     padding: 0;
     width: 100%;
