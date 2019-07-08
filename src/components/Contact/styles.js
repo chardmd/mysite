@@ -29,6 +29,9 @@ export const Content = styled.div`
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     background-size: 320px 314px;
   }
+  @media (max-width: 800px) {
+    margin: 0;
+  }
 `
 
 export const Header = styled.h1`
@@ -66,5 +69,6 @@ export const Button = styled.button`
   }
   @media (max-width: 800px) {
     padding: 20px 50px;
+    width: 90%;
   }
 `
