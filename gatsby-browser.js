@@ -4,4 +4,12 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 
- // You can delete this file if you're not using it
+exports.onClientEntry = () => {
+  if (typeof twttr === 'undefined') {
+    const twitterscript = document.createElement('script')
+    twitterscript.src = 'https://platform.twitter.com/widgets.js'
+    twitterscript.async = true
+    twitterscript.id = 'twitter-wjs'
+    document.getElementsByTagName(`head`)[0].appendChild(twitterscript)
+  }
+}
