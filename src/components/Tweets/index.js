@@ -2,16 +2,14 @@ import React, { useEffect, useRef } from 'react'
 import { Container, Content, Battery, Liquid, Text } from './styles'
 
 const Tweets = () => {
-  const containerRef = useRef(null)
-
   useEffect(() => {
     if (typeof window.twttr !== 'undefined') {
-      window.twttr.widgets.load(document.getElementById(containerRef.current))
+      window.twttr.widgets.load()
     }
   }, [])
 
   return (
-    <Container ref={containerRef}>
+    <Container>
       <Content>
         <Text
           className="twitter-timeline"
