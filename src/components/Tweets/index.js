@@ -1,15 +1,24 @@
+/* global twttr */
 import React, { useEffect, useRef } from 'react'
 import { Container, Content, Battery, Liquid, Text } from './styles'
 
 const Tweets = () => {
+  const containerRef = useRef(null)
+
   useEffect(() => {
-    if (typeof window.twttr !== 'undefined') {
-      window.twttr.widgets.load()
+    if (typeof twttr === 'undefined') {
+      const twitterscript = document.createElement('script')
+      twitterscript.src = 'https://platform.twitter.com/widgets.js'
+      twitterscript.async = true
+      twitterscript.id = 'twitter-wjs'
+      containerRef.current.parentNode.appendChild(twitterscript)
+    } else {
+      twttr.widgets.load(document.getElementById(containerRef.current))
     }
   }, [])
 
   return (
-    <Container>
+    <Container ref={containerRef}>
       <Content>
         <Text
           className="twitter-timeline"
