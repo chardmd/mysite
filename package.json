@@ -1,8 +1,8 @@
 {
   "name": "mysite",
   "description": "Personal Info Site",
-  "version": "1.0.0",
-  "author": "Richard Dimalanta <richard.dimalanta@gmail.com>",
+  "version": "1.0.1",
+  "author": "Richard Dimalanta <iamchardmd@gmail.com>",
   "dependencies": {
     "animate.css": "^3.7.2",
     "babel-plugin-styled-components": "^1.10.0",
