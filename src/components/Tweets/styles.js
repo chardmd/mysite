@@ -9,9 +9,11 @@ export const Container = styled.div`
     overflow: hidden;
     height: 100%;
   }
+  background-color: #eff6fb;
 `
 
 export const Content = styled.div`
   z-index: 99999;
   width: 100%;
+  height: 100%;
 `
