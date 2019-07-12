@@ -7,7 +7,7 @@ export const Container = styled.div`
   overflow-y: scroll;
   border-left: 1px solid #e6ecf0;
   text-align: center;
-  background-color: #eff6fb;
+  background-color: #dce1e6;
   @media (max-width: 800px) {
     overflow: hidden;
     height: 100%;
@@ -27,7 +27,7 @@ export const Text = styled.a`
 
 export const Battery = styled.div`
   display: block;
-  margin: 40px auto 50px auto;
+  margin: 40px auto 30px auto;
   position: relative;
   width: 5.25rem;
   height: 9.5rem;
