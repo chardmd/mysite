@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    headline: `Richard Dimalanta`,
+    headline: `Richard M Dimalanta`,
     about: `Richard is skilled in building web-apps (SaaS) using high performance web technologies. He accumulated a wide range of experience
     working across global businesses and have gained international exposure living in Australia, Singapore, and the Philippines. 
     His skills in software development can bring significant value to the team and positive ROI to your organization. 
