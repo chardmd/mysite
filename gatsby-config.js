@@ -1,11 +1,14 @@
 module.exports = {
   siteMetadata: {
-    headline: `Richard M Dimalanta`,
-    about: `Richard is skilled in building web-apps (SaaS) using high performance web technologies. He accumulated a wide range of experience
-    working across global businesses and have gained international exposure living in Australia, Singapore, and the Philippines. 
-    His skills in software development can bring significant value to the team and positive ROI to your organization. 
-    He will help you build software that solves business problems, increase revenue or reduce costs.`,
-    title: 'Richard Dimalanta. Maker of Things',
+    headline: `Richard M. Dimalanta`,
+    about: `Richard is skilled in building web-apps (SaaS) using high cutting-edge technologies. 
+    He has been developing enterprise applications and distributed systems since 2011 and 
+    has gained a lot of experience working across global businesses. His skills in software development 
+    can bring significant value to the team and positive ROI to your organization. 
+    He has built and designed business software consisting of microservices, 
+    service-oriented, monolith, and serverless architecture. 
+    He will help you build software that increases the business' revenue / reduce costs.`,
+    title: 'Richard M. Dimalanta. Maker of Things',
     description: 'Maker of Things. SaaS, Full Stack. Web Development',
     url: 'https://www.chardmd.com',
     twitter: '@iamchardmd',
