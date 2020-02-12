@@ -10,7 +10,7 @@
     "font-awesome": "^4.7.0",
     "gatsby": "^2.13.15",
     "gatsby-image": "^2.2.5",
-    "gatsby-plugin-google-analytics": "^2.1.2",
+    "gatsby-plugin-hotjar": "^1.0.1",
     "gatsby-plugin-netlify": "^2.1.1",
     "gatsby-plugin-offline": "^2.2.2",
     "gatsby-plugin-react-helmet": "^3.1.1",
