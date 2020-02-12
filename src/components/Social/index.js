@@ -1,5 +1,4 @@
 import React from 'react'
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 import githubIcon from '../../assets/github.svg'
 import linkedinIcon from '../../assets/linkedin.svg'
@@ -14,24 +13,24 @@ const Social = () => (
       <Header>You can also find him on</Header>
     </ListItem>
     <ListItem>
-      <OutboundLink href="https://www.linkedin.com/in/chardmd" target="_blank">
+      <a href="https://www.linkedin.com/in/chardmd" target="_blank" rel="noopener noreferrer">
         <Image src={linkedinIcon} alt="linkedin" className="linkedin" />
-      </OutboundLink>
+      </a>
     </ListItem>
     <ListItem>
-      <OutboundLink href="https://github.com/chardmd" target="_blank">
+      <a href="https://github.com/chardmd" target="_blank" rel="noopener noreferrer">
         <Image src={githubIcon} alt="github" className="github" />
-      </OutboundLink>
+      </a>
     </ListItem>
     <ListItem>
-      <OutboundLink href="https://twitter.com/iamchardmd" target="_blank">
+      <a href="https://twitter.com/iamchardmd" target="_blank" rel="noopener noreferrer">
         <Image src={twitterIcon} alt="twitter" className="twitter" />
-      </OutboundLink>
+      </a>
     </ListItem>
     <ListItem>
-      <OutboundLink href="https://angel.co/iamchardmd" target="_blank">
+      <a href="https://angel.co/iamchardmd" target="_blank" rel="noopener noreferrer">
         <Image src={angellistIcon} alt="angellist" className="angellist" />
-      </OutboundLink>
+      </a>
     </ListItem>
   </List>
 )

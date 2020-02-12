@@ -1,7 +1,7 @@
 {
   "name": "mysite",
   "description": "Personal Info Site",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Richard Dimalanta <iamchardmd@gmail.com>",
   "dependencies": {
     "animate.css": "^3.7.2",
