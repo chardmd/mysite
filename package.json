@@ -1,8 +1,8 @@
 {
   "name": "mysite",
   "description": "Personal Info Site",
-  "version": "1.0.2",
-  "author": "Richard Dimalanta <iamchardmd@gmail.com>",
+  "version": "1.0.3",
+  "author": "Richard Dimalanta <hello@chardmd.com>",
   "dependencies": {
     "animate.css": "^3.7.2",
     "babel-plugin-styled-components": "^1.10.7",
@@ -26,7 +26,7 @@
   "keywords": [
     "react"
   ],
-  "license": "CC BY 4.0",
+  "license": "MIT",
   "scripts": {
     "build": "gatsby build && cp _redirects public/_redirects",
     "develop": "gatsby develop",
