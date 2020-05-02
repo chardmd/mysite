@@ -4,7 +4,7 @@ import { Container, Content, Header, Button } from './styles'
 const Contact = () => {
   //open email client
   const handleClick = () =>
-    (window.location.href = `mailto:richard@chardmd.com`)
+    (window.location.href = `mailto:hello@chardmd.com`)
 
   return (
     <Container>

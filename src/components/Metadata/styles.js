@@ -12,3 +12,13 @@ export const Link = styled.a`
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 `
+
+export const Divider = styled.span`
+  color: black;
+  font-weight: 400;
+  margin: 0 3px;
+`;
+
+export const Row = styled.div`
+  margin: 5px 0;
+`;

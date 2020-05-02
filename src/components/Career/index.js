@@ -25,11 +25,6 @@ const Career = () => {
   const screenRef = useRef(null)
   let timeouts = []
 
-  //clear timeouts
-  const clearTimeouts = () => {
-    timeouts.forEach(clearTimeout)
-  }
-
   const createFinalOutput = () => {
     const template = jsonOutput.map((item, index) => {
       return (
@@ -142,7 +137,7 @@ const Career = () => {
 
     return function cleanup() {
       //clear timeouts
-      clearTimeouts()
+      timeouts.forEach(clearTimeout)
 
       //hide the drift component
       if (window.drift) {
