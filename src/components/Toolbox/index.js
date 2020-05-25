@@ -32,22 +32,16 @@ const Toolbox = () => {
     'tomcat',
   ]
 
-  const actionList = ['bounce', 'rubberBand', 'jackInTheBox', 'jello']
-
-  const pickRandomAnimate = animateList =>
-    animateList[Math.floor(Math.random() * animateList.length)]
-
   return (
     <Container>
       <Grid>
         {images.map(i => {
-          const animate = pickRandomAnimate(actionList)
           return (
             <Img
               src={require(`../../assets/${i}.svg`)}
               alt={i}
               key={`skill-${i}`}
-              className={`animated ${animate} fast`}
+              className={`animated pulse fast`}
             />
           )
         })}
