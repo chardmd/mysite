@@ -18,12 +18,7 @@ const Social = () => (
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img
-          className={styles.image}
-          src={linkedinIcon}
-          alt="linkedin"
-          className="linkedin"
-        />
+        <img className={`${styles.image}`} src={linkedinIcon} alt="linkedin" />
       </a>
     </li>
     <li className={styles.listItem}>
@@ -32,12 +27,7 @@ const Social = () => (
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img
-          className={styles.image}
-          src={githubIcon}
-          alt="github"
-          className="github"
-        />
+        <img className={styles.image} src={githubIcon} alt="github" />
       </a>
     </li>
     <li className={styles.listItem}>
@@ -46,12 +36,7 @@ const Social = () => (
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img
-          className={styles.image}
-          src={twitterIcon}
-          alt="twitter"
-          className="twitter"
-        />
+        <img className={styles.image} src={twitterIcon} alt="twitter" />
       </a>
     </li>
     <li className={styles.listItem}>
@@ -60,12 +45,7 @@ const Social = () => (
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img
-          className={styles.image}
-          src={angellistIcon}
-          alt="angellist"
-          className="angellist"
-        />
+        <img className={styles.image} src={angellistIcon} alt="angellist" />
       </a>
     </li>
   </ul>
