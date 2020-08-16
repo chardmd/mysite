@@ -1,9 +1,5 @@
-# Project dependencies
+public
 .cache
 node_modules
-yarn-error.log
-
-# Build directory
-/public
-
-.netlify
+cypress/videos/
+cypress/screenshots/

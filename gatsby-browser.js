@@ -1,5 +1,7 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
+"use strict";
+
+exports.onInitialClientRender = () => {
+  window.___GATSBY_INITIAL_RENDER_COMPLETE = true;
+};
+
+require("./src/styles/init.scss");

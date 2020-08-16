@@ -1,7 +1,4 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+"use strict";
 
- // You can delete this file if you're not using it
+// see 'gatsby' folder for dynamic creation of pages and other customisation
+exports.createPages = require("./gatsby/create-pages");

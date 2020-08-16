@@ -1,0 +1,74 @@
+@import "../../styles/variables";
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  background-color: #eff6fb;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 95%;
+  background-position: right top;
+
+  @media (max-width: 800px) {
+    padding: 0;
+    width: 100%;
+    height: calc(100% - 444px);
+    text-align: center;
+  }
+}
+
+.wrapper {
+  padding: 60px;
+  max-width: 640px;
+}
+
+.header {
+  margin: 0 0 0.4rem 0;
+  padding: 0;
+  color: #1da1f2;
+  font-family: Lato, sans-serif;
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+  font-size: 1.7rem;
+  line-height: 1.1;
+}
+
+.header2 {
+  margin: 0 0 0.5rem 0;
+  padding: 0;
+  font-family: Lato, sans-serif;
+  font-weight: 800;
+  text-rendering: optimizeLegibility;
+  font-size: 2.8rem;
+  letter-spacing: -0.027rem;
+}
+
+.paragraph {
+  color: hsla(0, 0%, 0%, 0.8);
+  font-family: sans-serif;
+  font-weight: normal;
+  word-wrap: break-word;
+  font-kerning: normal;
+  padding: 0;
+  margin: 0 0 0.5rem 0;
+}
+
+.toolboxHeader {
+  color: $toolboxHeader;
+}
+
+.contactHeader {
+  color: $contactHeader;
+}
+
+.careerHeader {
+  color: $careerHeader;
+}
+
+.defaultHeader {
+  color: $defaultHeader;
+}

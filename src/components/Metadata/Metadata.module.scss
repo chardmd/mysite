@@ -1,0 +1,25 @@
+@import "../../styles/variables";
+
+.container {
+  font-size: 14px;
+  color: #524e4e;
+  font-family: Lato, sans-serif;
+}
+
+.link {
+  color: #1c94e0;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+.divider {
+  color: black;
+  font-weight: 400;
+  margin: 0 3px;
+}
+
+.row {
+  margin: 5px 0;
+}
