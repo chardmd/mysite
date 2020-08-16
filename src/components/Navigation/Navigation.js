@@ -6,7 +6,7 @@ import styles from "./Navigation.module.scss";
 const Navigation = ({ location }) => {
   const { pathname } = location;
   return (
-    <ul className={styles.list}>
+    <ul className={`${styles.list}`}>
       <li className={styles.listItem}>
         <Link
           className={styles.linkWrapper}

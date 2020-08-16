@@ -39,11 +39,18 @@ const About = ({ location }) => {
   const pathname = location.pathname;
   const titleColorHeader = getTitleColorHeader(pathname);
   const headline = getHeadline(pathname);
+
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
-        <h1 className={styles.header}>{headline}</h1>
-        <h2 className={`${styles.header2} ${styles[titleColorHeader]}`}>
+        <h1
+          className={`${styles.header} animate__animated animate__zoomInDown`}
+        >
+          {headline}
+        </h1>
+        <h2
+          className={`${styles.header2} ${styles[titleColorHeader]} animate__animated animate__zoomInDown`}
+        >
           {siteMetadata.headline}
         </h2>
         <Navigation location={location} />

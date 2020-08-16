@@ -1,14 +1,11 @@
 import React from "react";
 import SEO from "../components/SEO";
 import Career from "../components/Career";
-import Layout from "../components/Layout";
 
-const NotFoundTemplate = ({ location }) => (
+const NotFoundTemplate = () => (
   <>
     <SEO />
-    <Layout location={location}>
-      <Career seoTitle="Career" />
-    </Layout>
+    <Career seoTitle="Career" />
   </>
 );
 
