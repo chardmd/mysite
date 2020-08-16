@@ -12,9 +12,7 @@ const Navigation = ({ location }) => {
           className={styles.linkWrapper}
           to="/"
           activeClassName={
-            !pathname.includes("toolbox") &&
-            !pathname.includes("contact") &&
-            !pathname.includes("career")
+            pathname === "/" || pathname === null || pathname === undefined
               ? styles.activeLink
               : ""
           }
