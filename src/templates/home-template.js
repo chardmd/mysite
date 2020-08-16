@@ -5,12 +5,12 @@ import Tweets from "../components/Tweets";
 import SEO from "../components/SEO";
 import Layout from "../components/Layout";
 
-const Index = ({ location, data }) => {
+const Index = ({ location }) => {
   return (
     <>
       <SEO />
       <Layout location={location}>
-        <Tweets />
+        <Tweets seoTitle="Home" />
       </Layout>
     </>
   );

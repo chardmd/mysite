@@ -7,7 +7,7 @@ const NotFoundTemplate = ({ location }) => (
   <>
     <SEO />
     <Layout location={location}>
-      <Contact />
+      <Contact seoTitle="Contact" />
     </Layout>
   </>
 );

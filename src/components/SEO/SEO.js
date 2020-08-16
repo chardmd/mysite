@@ -1,23 +1,9 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { useStaticQuery, graphql } from "gatsby";
+import useSiteMetadata from "../../hooks/use-site-metadata";
 
 const SEO = ({ seoTitle, seoDescription, seoImage, seoSlug }) => {
-  const data = useStaticQuery(graphql`
-    {
-      site {
-        siteMetadata {
-          title
-          description
-          siteUrl
-          author
-        }
-      }
-    }
-  `);
-
-  const defaults = data.site.siteMetadata;
-
+  const defaults = useSiteMetadata();
   if (defaults.siteUrl === "" && typeof window !== "undefined") {
     defaults.siteUrl = window.location.origin;
   }
