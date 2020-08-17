@@ -126,12 +126,5 @@ module.exports = {
         sv: 6,
       },
     },
-    //replicate gatsby v1 layout to prevent layout re-render
-    {
-      resolve: `gatsby-plugin-layout`,
-      options: {
-        component: require.resolve(`./src/components/Layout`),
-      },
-    },
   ],
 };

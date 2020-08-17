@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import Navigation from "../Navigation";
 import Social from "../Social";
@@ -40,16 +40,18 @@ const About = ({ location }) => {
   const titleColorHeader = getTitleColorHeader(pathname);
   const headline = getHeadline(pathname);
 
+  const [zoomIn, setZoomIn] = useState("");
+
+  useEffect(() => {
+    setZoomIn(`animate__animated animate__zoomInDown`);
+  }, []);
+
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
-        <h1
-          className={`${styles.header} animate__animated animate__zoomInDown`}
-        >
-          {headline}
-        </h1>
+        <h1 className={`${styles.header} ${zoomIn}`}>{headline}</h1>
         <h2
-          className={`${styles.header2} ${styles[titleColorHeader]} animate__animated animate__zoomInDown`}
+          className={`${styles.header2} ${styles[titleColorHeader]} ${zoomIn}`}
         >
           {siteMetadata.headline}
         </h2>

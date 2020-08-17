@@ -14,15 +14,13 @@ import useSiteMetadata from "../../hooks/use-site-metadata";
 const Layout = ({ children, location }) => {
   const siteMetadata = useSiteMetadata();
   return (
-    <>
-      <main className={styles.main}>
-        <section className={styles.section}>
-          <About location={location} />
-        </section>
-        <section className={styles.section}>{children}</section>
-        <Drift appId={siteMetadata.driftId} />
-      </main>
-    </>
+    <main className={styles.main}>
+      <section className={styles.section}>
+        <About location={location} />
+      </section>
+      <section className={styles.section}>{children}</section>
+      <Drift appId={siteMetadata.driftId} />
+    </main>
   );
 };
 
