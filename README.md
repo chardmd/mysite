@@ -1,10 +1,24 @@
 # Personal Site
 
+## Codebase
+
+Mostly React and everything nice :bowtie:
+
+## Install
+
+`yarn`
+
+## Develop
+
+`yarn develop`
+
+## Build
+
+`yarn build`
+
 ## Live Site
 
 <a href="https://www.chardmd.com" target="_blank">https://www.chardmd.com</a>
-
-![Alt Text](screenshot.gif)
 
 ## License
 
