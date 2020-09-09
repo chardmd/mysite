@@ -55,17 +55,27 @@
 }
 
 .paragraph {
-  color: hsla(0, 0%, 0%, 0.8);
   font-family: Lato, sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
   margin: 0 0 0.5rem 0;
+  background: rgba(0, 151, 19, 0.1);
 
   @media (max-width: 800px) {
     padding-left: 30px;
     padding-right: 30px;
     padding-bottom: 10px;
+  }
+
+  span {
+    color: #000;
+    display: inline;
+    justify-content: flex-start;
+    /* Needs prefixing */
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    letter-spacing: 1px;
   }
 }
 

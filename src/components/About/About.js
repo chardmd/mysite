@@ -9,7 +9,7 @@ import Metadata from "../Metadata";
 import styles from "./About.module.scss";
 import useSiteMetadata from "../../hooks/use-site-metadata";
 
-const BOXES = 25;
+const BOXES = 15;
 const COLORS = [
   "#A2CCB6",
   "#FCEEB5",
@@ -136,7 +136,9 @@ const About = ({ location }) => {
           {siteMetadata.headline}
         </h2>
         <Navigation location={location} />
-        <p className={styles.paragraph}>{siteMetadata.about}</p>
+        <p className={styles.paragraph}>
+          <span>{siteMetadata.about}</span>
+        </p>
         <Social />
         <Metadata />
       </div>
