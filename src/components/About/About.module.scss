@@ -16,7 +16,7 @@
   @media (max-width: 800px) {
     padding: 0;
     width: 100%;
-    height: calc(100% - 444px);
+    height: 800px;
     text-align: center;
   }
 }
@@ -24,6 +24,7 @@
 .wrapper {
   padding: 60px;
   max-width: 640px;
+  position: absolute;
 }
 
 .header {
@@ -49,7 +50,7 @@
 
 .paragraph {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: sans-serif;
+  font-family: Lato, sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;

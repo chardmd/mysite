@@ -32,9 +32,12 @@
     "react-dom": "^16.3.2",
     "react-driftjs": "^1.1.11",
     "react-helmet": "^6.1.0",
+    "react-spring": "^8.0.27",
+    "react-three-fiber": "^4.2.21",
     "react-typist": "^2.0.5",
     "react-typography": "^0.16.19",
     "slug": "^0.9.4",
+    "three": "^0.120.1",
     "typeface-lato": "^0.0.75",
     "typography": "^0.16.19"
   },
