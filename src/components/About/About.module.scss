@@ -16,7 +16,7 @@
   @media (max-width: 800px) {
     padding: 0;
     width: 100%;
-    height: 800px;
+    height: 900px;
     text-align: center;
   }
 }
@@ -25,6 +25,10 @@
   padding: 60px;
   max-width: 640px;
   position: absolute;
+
+  @media (max-width: 800px) {
+    padding: 0;
+  }
 }
 
 .header {
@@ -46,6 +50,8 @@
   text-rendering: optimizeLegibility;
   font-size: 2.8rem;
   letter-spacing: -0.027rem;
+
+
 }
 
 .paragraph {
@@ -54,8 +60,13 @@
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
-  padding: 0;
   margin: 0 0 0.5rem 0;
+
+  @media (max-width: 800px) {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+  }
 }
 
 .toolboxHeader {
