@@ -2,7 +2,7 @@
 
 ## Codebase
 
-Mostly React and everything nice :bowtie:
+Mostly React and anything nice :bowtie:
 
 ## Install
 
