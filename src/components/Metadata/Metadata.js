@@ -20,10 +20,7 @@ const Metadata = () => {
         <span href={`mailto:${siteMetadata.email}`}>
           {siteMetadata.email}
           <span role="img" aria-label="flag">
-            &nbsp;🇵🇭
-          </span>
-          <span role="img" aria-label="flag">
-            🇦🇺
+            &nbsp;🌎
           </span>
         </span>
         <span className={styles.divider}>&nbsp;</span>
