@@ -117,17 +117,21 @@ const About = ({ location }) => {
   const headline = getHeadline(pathname);
 
   const [zoomIn, setZoomIn] = useState("");
+  const [activeCanvas, setActiveCanvas] = useState(false);
 
   useEffect(() => {
     setZoomIn(`animate__animated animate__zoomInDown`);
+    setActiveCanvas(true);
   }, []);
 
   return (
     <div className={styles.container}>
-      <Canvas shadowMap camera={{ position: [0, 0, 100], fov: 100 }}>
-        <Lights />
-        <Content />
-      </Canvas>
+      {activeCanvas && (
+        <Canvas shadowMap camera={{ position: [0, 0, 100], fov: 100 }}>
+          <Lights />
+          <Content />
+        </Canvas>
+      )}
       <div className={styles.wrapper}>
         <h1 className={`${styles.header} ${zoomIn}`}>{headline}</h1>
         <h2
