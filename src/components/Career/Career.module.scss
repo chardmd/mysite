@@ -1,0 +1,95 @@
+@import "../../styles/variables";
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #1fa2ff;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #a6ffcb, #12d8fa, #1fa2ff);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #a6ffcb, #12d8fa, #1fa2ff);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  overflow: hidden;
+
+  @media (max-width: 800px) {
+    width: 100%;
+    height: 100vh;
+  }
+}
+
+.content {
+  width: 100%;
+
+  @media (max-width: 800px) {
+    padding: 20px 0;
+  }
+}
+
+.bar {
+  text-align: center;
+  height: 25px;
+  width: 80%;
+  background-color: rgb(218, 217, 217);
+  font-family: monospace;
+  display: flex;
+  flex-direction: row;
+  margin: 0px auto;
+  list-style: none;
+  padding: 1px;
+}
+
+.barItem {
+  margin: 5px;
+}
+
+.circle {
+  border-radius: 100%;
+  width: 15px;
+  height: 15px;
+  position: relative;
+
+  &.yellowBg {
+    background-color: $yellow;
+  }
+
+  &.greenBg {
+    background-color: $green;
+  }
+
+  &.redBg {
+    background-color: $red;
+  }
+}
+
+.screen {
+  background-color: #33485e;
+  width: 80%;
+  height: 80vh;
+  margin: 0 auto;
+  padding: 1px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex-direction: column-reverse;
+}
+
+.font {
+  color: #fff;
+  font-family: monospace;
+  font-size: 15px;
+  text-align: left;
+  margin-left: 5px;
+}
+
+.typeLine {
+  margin-left: 4px;
+}
+
+.textTortoise {
+  color: #75e9f1;
+}
+
+.wrapTypist {
+  display: inline;
+}

@@ -1,0 +1,96 @@
+@import "../../styles/variables";
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  background-color: #eff6fb;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 95%;
+  background-position: right top;
+
+  @media (max-width: 800px) {
+    padding: 0;
+    width: 100%;
+    height: 900px;
+    text-align: center;
+  }
+}
+
+.wrapper {
+  padding: 60px;
+  max-width: 640px;
+  position: absolute;
+
+  @media (max-width: 800px) {
+    padding: 0;
+  }
+}
+
+.header {
+  margin: 0 0 0.4rem 0;
+  padding: 0;
+  color: #1da1f2;
+  font-family: Lato, sans-serif;
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+  font-size: 1.7rem;
+  line-height: 1.1;
+}
+
+.header2 {
+  margin: 0 0 0.5rem 0;
+  padding: 0;
+  font-family: Lato, sans-serif;
+  font-weight: 800;
+  text-rendering: optimizeLegibility;
+  font-size: 2.8rem;
+  letter-spacing: -0.027rem;
+
+
+}
+
+.paragraph {
+  font-family: Lato, sans-serif;
+  font-weight: normal;
+  word-wrap: break-word;
+  font-kerning: normal;
+  margin: 0 0 0.5rem 0;
+  background: #8d979a1a;
+
+  @media (max-width: 800px) {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+  }
+
+  span {
+    color: #000;
+    display: inline;
+    justify-content: flex-start;
+    /* Needs prefixing */
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    letter-spacing: 1px;
+  }
+}
+
+.toolboxHeader {
+  color: $toolboxHeader;
+}
+
+.contactHeader {
+  color: $contactHeader;
+}
+
+.careerHeader {
+  color: $careerHeader;
+}
+
+.defaultHeader {
+  color: $defaultHeader;
+}
