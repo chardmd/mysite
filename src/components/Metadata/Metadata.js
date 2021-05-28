@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from "./Metadata.module.scss";
+import * as styles from "./Metadata.module.scss";
 import useSiteMetadata from "../../hooks/use-site-metadata";
 
 const Metadata = () => {

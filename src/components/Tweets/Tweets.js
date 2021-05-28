@@ -1,7 +1,7 @@
 /* global twttr */
 import React, { useEffect, useRef } from "react";
 
-import styles from "./Tweets.module.scss";
+import * as styles from "./Tweets.module.scss";
 
 const Tweets = () => {
   const containerRef = useRef(null);

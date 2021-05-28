@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 
-import styles from "./Navigation.module.scss";
+import * as styles from "./Navigation.module.scss";
 
 const Navigation = ({ location }) => {
   const { pathname } = location;

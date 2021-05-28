@@ -5,7 +5,7 @@ import linkedinIcon from "../../assets/linkedin.svg";
 import twitterIcon from "../../assets/twitter.svg";
 import angellistIcon from "../../assets/angellist.svg";
 
-import styles from "./Social.module.scss";
+import * as styles from "./Social.module.scss";
 
 const Social = () => (
   <ul className={styles.list}>

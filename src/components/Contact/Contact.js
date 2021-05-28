@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from "./Contact.module.scss";
+import * as styles from "./Contact.module.scss";
 
 const Contact = () => {
   //open email client

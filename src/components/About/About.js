@@ -6,7 +6,7 @@ import { useSprings, a } from "react-spring/three";
 import Navigation from "../Navigation";
 import Social from "../Social";
 import Metadata from "../Metadata";
-import styles from "./About.module.scss";
+import * as styles from "./About.module.scss";
 import useSiteMetadata from "../../hooks/use-site-metadata";
 
 const BOXES = 15;

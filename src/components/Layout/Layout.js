@@ -7,7 +7,7 @@ import "typeface-work-sans";
 
 import About from "../About";
 
-import styles from "./Layout.module.scss";
+import * as styles from "./Layout.module.scss";
 
 import useSiteMetadata from "../../hooks/use-site-metadata";
 

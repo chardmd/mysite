@@ -3,7 +3,7 @@ import Typist from "react-typist";
 import jsonLogs from "./logs.json";
 import jsonOutput from "./output.json";
 
-import styles from "./Career.module.scss";
+import * as styles from "./Career.module.scss";
 
 const COLORS = {
   yellow: "#f0f000",
