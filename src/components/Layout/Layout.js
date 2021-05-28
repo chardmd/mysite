@@ -2,8 +2,8 @@
 import React from "react";
 import Drift from "react-driftjs";
 
-// Load the css for the lato font.
-import "typeface-lato";
+// Load the css for the work-sans font.
+import "typeface-work-sans";
 
 import About from "../About";
 
