@@ -37,7 +37,7 @@
     "react-typist": "^2.0.5",
     "react-typography": "^0.16.19",
     "slug": "^5.0.1",
-    "three": "^0.120.1",
+    "three": "^0.125.0",
     "typeface-work-sans": "^1.1.13",
     "typography": "^0.16.19"
   },
