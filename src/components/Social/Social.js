@@ -32,20 +32,20 @@ const Social = () => (
     </li>
     <li className={styles.listItem}>
       <a
-        href="https://twitter.com/iamchardmd"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img className={styles.image} src={twitterIcon} alt="twitter" />
-      </a>
-    </li>
-    <li className={styles.listItem}>
-      <a
         href="https://angel.co/iamchardmd"
         target="_blank"
         rel="noopener noreferrer"
       >
         <img className={styles.image} src={angellistIcon} alt="angellist" />
+      </a>
+    </li>
+    <li className={styles.listItem}>
+      <a
+        href="https://twitter.com/iamchardmd"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img className={styles.image} src={twitterIcon} alt="twitter" />
       </a>
     </li>
   </ul>
