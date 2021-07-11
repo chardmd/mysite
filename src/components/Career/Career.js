@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import Typist from "react-typist";
 import jsonLogs from "./logs.json";
 import jsonOutput from "./output.json";
@@ -18,7 +18,6 @@ const Career = () => {
   const [selectOptionClass, setSelectedOptionClass] = useState("");
   const [logs, setLogs] = useState([]);
   const [finalOutput, setFinalOutput] = useState(false);
-  const [driftLoaded, setDriftLoaded] = useState(false);
   const screenRef = useRef(null);
   let timeouts = [];
 
@@ -112,27 +111,6 @@ const Career = () => {
     }, 500);
     timeouts = timeouts.concat(timeout);
   };
-
-  useEffect(() => {
-    if (!driftLoaded) {
-      window.drift.on("ready", function (api, payload) {
-        api.showWelcomeMessage();
-      });
-      setDriftLoaded(true);
-    }
-
-    return function cleanup() {
-      //clear timeouts
-      timeouts.forEach(clearTimeout);
-
-      //hide the drift component
-      if (window.drift) {
-        window.drift.on("ready", function (api, payload) {
-          api.hideWelcomeMessage();
-        });
-      }
-    };
-  }, []);
 
   return (
     <div className={styles.container}>
