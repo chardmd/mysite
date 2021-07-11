@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Typist from "react-typist";
 import jsonLogs from "./logs.json";
 import jsonOutput from "./output.json";
@@ -19,7 +19,14 @@ const Career = () => {
   const [logs, setLogs] = useState([]);
   const [finalOutput, setFinalOutput] = useState(false);
   const screenRef = useRef(null);
-  let timeouts = [];
+  const [timeouts, setTimeouts] = useState([]);
+
+  useEffect(() => {
+    return function cleanup() {
+      //clear timeouts
+      timeouts.forEach(clearTimeout);
+    };
+  }, []);
 
   const createFinalOutput = () => {
     const template = jsonOutput.map((item, index) => {
@@ -92,7 +99,7 @@ const Career = () => {
         }
         scrollToBottom();
       }, i * 160);
-      timeouts = timeouts.concat(timeout);
+      setTimeouts(timeouts.concat(timeout));
     }
   };
 
@@ -101,7 +108,7 @@ const Career = () => {
       setSelectedOptionClass(COLORS.green);
       addLogItems();
     }, 500);
-    timeouts = timeouts.concat(timeout);
+    setTimeouts(timeouts.concat(timeout));
   };
 
   const displayRunTask = () => {
@@ -109,7 +116,7 @@ const Career = () => {
       setRunTaskHidden(false);
       runTaskSelection();
     }, 500);
-    timeouts = timeouts.concat(timeout);
+    setTimeouts(timeouts.concat(timeout));
   };
 
   return (

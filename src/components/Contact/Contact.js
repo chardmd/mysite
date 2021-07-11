@@ -18,9 +18,6 @@ const Contact = () => {
     }
 
     return function cleanup() {
-      //clear timeouts
-      timeouts.forEach(clearTimeout);
-
       //hide the drift component
       if (window.drift) {
         window.drift.on("ready", function (api, payload) {
