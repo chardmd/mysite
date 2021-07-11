@@ -3,7 +3,6 @@ import * as styles from "./Toolbox.module.scss";
 import javascript from "../../assets/javascript.svg";
 import redux from "../../assets/redux.svg";
 import nodejs from "../../assets/nodejs.svg";
-import vscode from "../../assets/vscode.svg";
 import css3 from "../../assets/css3.svg";
 import react from "../../assets/react.svg";
 import html5 from "../../assets/html5.svg";
@@ -27,28 +26,31 @@ import postgresql from "../../assets/postgresql.svg";
 import spring from "../../assets/spring.svg";
 import terminal from "../../assets/terminal.svg";
 import tomcat from "../../assets/tomcat.svg";
+import express from "../../assets/express.svg";
+import knex from "../../assets/knex.svg";
 
 const Toolbox = () => {
   const images = [
     javascript,
-    redux,
+    aws,
     nodejs,
-    vscode,
-    css3,
+    express,
     react,
+    redux,
+    mongodb,
+    docker,
+    gatsby,
+    netlify,
+    knex,
+    css3,
     html5,
     azure,
-    docker,
     webpack,
     firebase,
     material,
-    gatsby,
     redis,
-    mongodb,
     npm,
     angular,
-    netlify,
-    aws,
     git,
     java,
     jenkins,
