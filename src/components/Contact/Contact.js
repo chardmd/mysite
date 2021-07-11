@@ -4,7 +4,8 @@ import * as styles from "./Contact.module.scss";
 
 const Contact = () => {
   //open email client
-  const handleClick = () => (window.location.href = `mailto:hello@chardmd.com`);
+  const handleClick = () =>
+    (window.location.href = `mailto:hello@chardmd.com?subject=Hey, Richard, cool site! :)`);
 
   return (
     <div className={styles.container}>
@@ -18,7 +19,7 @@ const Contact = () => {
           className={`${styles.button} animate__animated animate__backInRight`}
           onClick={handleClick}
         >
-          Hey, you! Let’s connect.
+          Request my Resume & Portfolio
         </button>
       </div>
     </div>
