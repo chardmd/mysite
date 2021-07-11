@@ -10,13 +10,15 @@ const Contact = () => {
   return (
     <div className={styles.container}>
       <div className={styles.content}>
-        <h1 className={`${styles.header} animate__animated animate__fadeIn`}>
+        <h1
+          className={`${styles.header} animate__animated animate__fadeIn animate__slow`}
+        >
           Richard will help you build software that solves business problems,
           increase revenue, or reduce costs.
         </h1>
         <br />
         <button
-          className={`${styles.button} animate__animated animate__backInRight`}
+          className={`${styles.button} animate__animated animate__backInRight animate__fast`}
           onClick={handleClick}
         >
           Request his Resume & Portfolio
