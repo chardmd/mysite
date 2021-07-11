@@ -19,7 +19,7 @@ const Contact = () => {
           className={`${styles.button} animate__animated animate__backInRight`}
           onClick={handleClick}
         >
-          Request my Resume & Portfolio
+          Request his Resume & Portfolio
         </button>
       </div>
     </div>
