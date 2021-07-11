@@ -155,8 +155,8 @@ const Career = () => {
             <Typist className={styles.wrapTypist} onTypingDone={displayRunTask}>
               <Typist.Delay
                 className={styles.wrapTypist}
-                ms={700}
-                avgTypingSpeed={40}
+                ms={300}
+                avgTypingSpeed={50}
               />
               <span className={styles.typeLine}>npm install work --global</span>
               <br />

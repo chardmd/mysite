@@ -15,7 +15,7 @@ const Contact = () => {
         </h1>
         <br />
         <button
-          className={`${styles.button} animate__animated animate__tada`}
+          className={`${styles.button} animate__animated animate__backInRight`}
           onClick={handleClick}
         >
           Hey, you! Let’s connect.
