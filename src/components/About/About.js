@@ -39,7 +39,7 @@ const getHeadline = (pathname) => {
   if (pathname.includes("toolbox")) {
     title = "Serial Builder";
   } else if (pathname.includes("contact")) {
-    title = "Senior Developer";
+    title = "Technologist";
   } else if (pathname.includes("career")) {
     title = "Software Engineer";
   } else {

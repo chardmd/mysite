@@ -14,7 +14,6 @@ import material from "../../assets/material.svg";
 import gatsby from "../../assets/gatsby.svg";
 import redis from "../../assets/redis.svg";
 import mongodb from "../../assets/mongodb.svg";
-import npm from "../../assets/npm.svg";
 import angular from "../../assets/angular.svg";
 import netlify from "../../assets/netlify.svg";
 import aws from "../../assets/aws.svg";
@@ -28,29 +27,29 @@ import tomcat from "../../assets/tomcat.svg";
 import express from "../../assets/express.svg";
 import knex from "../../assets/knex.svg";
 import serverless from "../../assets/serverless.svg";
+import stimulus from "../../assets/stimulus.svg";
 
 const Toolbox = () => {
   const images = [
     javascript,
-    aws,
     nodejs,
     express,
-    react,
-    redux,
+    aws,
     serverless,
+    react,
     mongodb,
+    redux,
     docker,
+    firebase,
     gatsby,
     netlify,
     knex,
     css3,
-    html5,
     azure,
+    html5,
     webpack,
-    firebase,
     material,
     redis,
-    npm,
     angular,
     git,
     java,
@@ -58,6 +57,7 @@ const Toolbox = () => {
     mysql,
     postgresql,
     spring,
+    stimulus,
     tomcat,
   ];
   const animations = [
