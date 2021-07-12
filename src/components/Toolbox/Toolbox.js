@@ -60,36 +60,27 @@ const Toolbox = () => {
     stimulus,
     tomcat,
   ];
-  const animations = [
-    "bounce",
-    "headShake",
-    "swing",
-    "tada",
-    "heartBeat",
-    "wobble",
-    "flash",
-    "flip",
-    "jackInTheBox",
-    "rubberBand",
-  ];
 
   return (
-    <div className={styles.container}>
-      <div className={styles.grid}>
-        {images.map((image, i) => {
-          return (
-            <img
-              className={`${styles.img} animate__animated animate__${
-                animations[Math.floor(Math.random() * animations.length)]
-              } animate__slow`}
-              src={image}
-              alt={i}
-              key={`skill-${i}`}
-            />
-          );
-        })}
+    <>
+      <div className={styles.bg} />
+      <div className={styles.bg2} />
+      <div className={styles.bg3} />
+      <div className={styles.container}>
+        <div className={styles.grid}>
+          {images.map((image, i) => {
+            return (
+              <img
+                className={`${styles.img} animate__animated animate__jackInTheBox animate__slow`}
+                src={image}
+                alt={i}
+                key={`skill-${i}`}
+              />
+            );
+          })}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 export default Toolbox;
