@@ -19,14 +19,7 @@ const Career = () => {
   const [logs, setLogs] = useState([]);
   const [finalOutput, setFinalOutput] = useState(false);
   const screenRef = useRef(null);
-  const [timeouts, setTimeouts] = useState([]);
-
-  useEffect(() => {
-    return function cleanup() {
-      //clear timeouts
-      timeouts.forEach(clearTimeout);
-    };
-  }, []);
+  let timeouts = [];
 
   const createFinalOutput = () => {
     const template = jsonOutput.map((item, index) => {
@@ -99,7 +92,7 @@ const Career = () => {
         }
         scrollToBottom();
       }, i * 160);
-      setTimeouts(timeouts.concat(timeout));
+      timeouts = timeouts.concat(timeout);
     }
   };
 
@@ -108,7 +101,7 @@ const Career = () => {
       setSelectedOptionClass(COLORS.green);
       addLogItems();
     }, 500);
-    setTimeouts(timeouts.concat(timeout));
+    timeouts = timeouts.concat(timeout);
   };
 
   const displayRunTask = () => {
@@ -116,8 +109,15 @@ const Career = () => {
       setRunTaskHidden(false);
       runTaskSelection();
     }, 500);
-    setTimeouts(timeouts.concat(timeout));
+    timeouts = timeouts.concat(timeout);
   };
+
+  useEffect(() => {
+    return function cleanup() {
+      //clear timeouts
+      timeouts.forEach(clearTimeout);
+    };
+  }, []);
 
   return (
     <div className={styles.container}>
