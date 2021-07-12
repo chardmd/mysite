@@ -17,7 +17,7 @@ import mongodb from "../../assets/mongodb.svg";
 import angular from "../../assets/angular.svg";
 import netlify from "../../assets/netlify.svg";
 import aws from "../../assets/aws.svg";
-import git from "../../assets/git.svg";
+import terminal from "../../assets/terminal.svg";
 import java from "../../assets/java.svg";
 import jenkins from "../../assets/jenkins.svg";
 import mysql from "../../assets/mysql.svg";
@@ -51,7 +51,7 @@ const Toolbox = () => {
     material,
     redis,
     angular,
-    git,
+    terminal,
     java,
     jenkins,
     mysql,
