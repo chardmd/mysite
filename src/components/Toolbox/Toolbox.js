@@ -24,10 +24,10 @@ import jenkins from "../../assets/jenkins.svg";
 import mysql from "../../assets/mysql.svg";
 import postgresql from "../../assets/postgresql.svg";
 import spring from "../../assets/spring.svg";
-import terminal from "../../assets/terminal.svg";
 import tomcat from "../../assets/tomcat.svg";
 import express from "../../assets/express.svg";
 import knex from "../../assets/knex.svg";
+import serverless from "../../assets/serverless.svg";
 
 const Toolbox = () => {
   const images = [
@@ -37,6 +37,7 @@ const Toolbox = () => {
     express,
     react,
     redux,
+    serverless,
     mongodb,
     docker,
     gatsby,
@@ -57,7 +58,6 @@ const Toolbox = () => {
     mysql,
     postgresql,
     spring,
-    terminal,
     tomcat,
   ];
 
