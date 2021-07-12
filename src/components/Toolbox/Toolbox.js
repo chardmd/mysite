@@ -60,6 +60,18 @@ const Toolbox = () => {
     spring,
     tomcat,
   ];
+  const animations = [
+    "bounce",
+    "headShake",
+    "swing",
+    "tada",
+    "heartBeat",
+    "wobble",
+    "flash",
+    "flip",
+    "jackInTheBox",
+    "rubberBand",
+  ];
 
   return (
     <div className={styles.container}>
@@ -67,7 +79,9 @@ const Toolbox = () => {
         {images.map((image, i) => {
           return (
             <img
-              className={`${styles.img} animate__animated animate__heartBeat animate__slow`}
+              className={`${styles.img} animate__animated animate__${
+                animations[Math.floor(Math.random() * animations.length)]
+              } animate__slow`}
               src={image}
               alt={i}
               key={`skill-${i}`}
