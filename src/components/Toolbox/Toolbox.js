@@ -71,7 +71,7 @@ const Toolbox = () => {
           {images.map((image, i) => {
             return (
               <img
-                className={`${styles.img} animate__animated animate__jackInTheBox animate__slow`}
+                className={`${styles.img} animate__animated animate__flipInX`}
                 src={image}
                 alt={i}
                 key={`skill-${i}`}
