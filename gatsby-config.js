@@ -12,7 +12,6 @@ module.exports = {
     policyDate: siteConfig.policyDate,
     email: siteConfig.email,
     headline: siteConfig.headline,
-    about: siteConfig.about,
     twitter: siteConfig.twitter,
     driftId: siteConfig.driftId,
   },

@@ -13,7 +13,6 @@ const useSiteMetadata = () => {
             copyright
             email
             headline
-            about
             twitter
             driftId
           }
