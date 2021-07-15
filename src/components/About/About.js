@@ -146,11 +146,11 @@ const About = ({ location }) => {
             applications and distributed systems since 2011. He capitalised on
             his technical experience helping various companies across Australia
             🇦🇺 in building software solutions that are{" "}
-            <span className={styles.highLight1}>secure</span>,{" "}
-            <span className={styles.highLight2}>scalable</span>, and{" "}
-            <span className={styles.highLight3}>highly reliable</span>. His
-            software development skills can bring significant value to the team
-            and a positive ROI to your organization. He can help you deliver
+            <span className={styles.highLight1}>highly scable</span>,{" "}
+            <span className={styles.highLight2}>reliable</span>, and{" "}
+            <span className={styles.highLight3}>secure</span>. His software
+            development skills can bring significant value to the team and a
+            positive ROI to your organization. He can help you deliver
             enterprise applications that will increase the business' revenue or
             reduce costs.
           </span>
