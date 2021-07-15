@@ -141,7 +141,19 @@ const About = ({ location }) => {
         </h2>
         <Navigation location={location} />
         <p className={styles.paragraph}>
-          <span>{siteMetadata.about}</span>
+          <span>
+            Richard is a Seasoned Software Engineer developing enterprise-grade
+            applications and distributed systems since 2011. He capitalised on
+            his technical experience helping various companies across Australia
+            🇦🇺 in building software solutions that are{" "}
+            <span className={styles.highLight1}>secure</span>,{" "}
+            <span className={styles.highLight2}>scalable</span>, and{" "}
+            <span className={styles.highLight3}>highly reliable</span>. His
+            software development skills can bring significant value to the team
+            and a positive ROI to your organization. He can help you deliver
+            enterprise applications that will increase the business' revenue or
+            reduce costs.
+          </span>
         </p>
         <Social />
         <Metadata />
