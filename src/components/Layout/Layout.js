@@ -3,7 +3,7 @@ import React from "react";
 import Drift from "react-driftjs";
 
 // Load the css for the work-sans font.
-import "typeface-work-sans";
+import "fontsource-grandstander/latin.css";
 
 import About from "../About";
 

@@ -3,7 +3,7 @@ import Typography from "typography";
 const options = {
   googleFonts: [
     {
-      name: "Work Sans",
+      name: "Grandstander",
       styles: ["400", "400i", "700", "700i"],
     },
   ],
@@ -12,8 +12,8 @@ const options = {
   headerColor: "hsla(0,0%,0%,0.8)",
   bodyColor: "hsla(0,0%,0%,0.7)",
   blockMarginBottom: 0.75,
-  headerFontFamily: ["Work Sans", "sans-serif"],
-  bodyFontFamily: ["Work Sanss", "sans-serif"],
+  headerFontFamily: ["Grandstander", "cursive"],
+  bodyFontFamily: ["Grandstander", "cursive"],
   overrideStyles: () => ({
     html: {
       overflowY: "scroll",
