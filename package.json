@@ -1,7 +1,7 @@
 {
   "name": "mysite",
-  "private": true,
-  "description": "Personal Website",
+  "private": false,
+  "description": "Personal Website - Anything nice :)",
   "version": "3.0.0",
   "author": "Richard Dimalanta <hello@chardmd.com>",
   "dependencies": {
@@ -14,9 +14,8 @@
     "gatsby-image": "^3.6.0",
     "gatsby-plugin-catch-links": "^3.6.0",
     "gatsby-plugin-google-gtag": "^3.6.0",
-    "gatsby-plugin-hotjar": "^1.0.1",
     "gatsby-plugin-manifest": "^3.6.0",
-    "gatsby-plugin-netlify": "^3.6.1",
+    "gatsby-plugin-netlify": "^3.9.0",
     "gatsby-plugin-nprogress": "^3.6.0",
     "gatsby-plugin-offline": "^4.6.0",
     "gatsby-plugin-react-helmet": "^4.6.0",
@@ -30,6 +29,7 @@
     "normalize-scss": "^7.0.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
+    "react-device-detect": "^1.17.0",
     "react-dom": "^17.0.2",
     "react-driftjs": "^1.1.11",
     "react-helmet": "^6.1.0",

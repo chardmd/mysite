@@ -8,7 +8,7 @@ const Metadata = () => {
   return (
     <div className={styles.container}>
       <div className={styles.row}>
-        Designed & handcrafted by{" "}
+        Handcrafted by{" "}
         <a className={styles.link} href="mailto:hello@chardmd.com">
           Richard&nbsp;
           <span role="img" aria-label="cool">

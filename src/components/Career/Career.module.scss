@@ -13,9 +13,9 @@
     height: 100vh;
   }
 
-  background: linear-gradient(-45deg, #a6ffcb, #12d8fa, #5b86e5, #fabea7, #ebd684, #8bcdcd);
+  background: linear-gradient(-90deg, #a6ffcb, #12d8fa, #5b86e5, #fabea7, #ebd684, #8bcdcd, #76e7a3, #ebd684, #fabea7);
   background-size: 400% 400%;
-  animation: gradient 4s ease infinite;
+  animation: gradient 5s ease infinite;
 }
 
 @keyframes gradient {

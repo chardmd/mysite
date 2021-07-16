@@ -7,7 +7,7 @@ const Contact = () => {
 
   //open email client
   const handleClick = () =>
-    (window.location.href = `mailto:hello@chardmd.com?subject=Hey, Richard, cool site! :)`);
+    (window.location.href = `mailto:hello@chardmd.com?subject=Wazzup Richard, cool site! :)`);
 
   useEffect(() => {
     if (!driftLoaded) {
@@ -30,11 +30,14 @@ const Contact = () => {
   return (
     <div className={styles.container}>
       <div className={styles.content}>
-        <h1
-          className={`${styles.header} animate__animated animate__fadeIn animate__slow`}
-        >
-          Richard will help you build software that solves business problems,
-          increase revenue, or reduce costs.
+        <h1 className={`${styles.header}`}>
+          <div className="animate__animated animate__fadeIn animate__slow">
+            <div className="animate__animated animate__tada animate__slow">
+              Yo!
+            </div>
+            Richard will help you build software solutions that solve business
+            problems, increase revenue, or reduce costs.
+          </div>
         </h1>
         <br />
         <button

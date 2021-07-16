@@ -1007,6 +1007,13 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
+"@babel/runtime@^7.14.0":
+  version "7.14.6"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.14.6.tgz#535203bc0892efc7dec60bdc27b2ecf6e409062d"
+  integrity sha512-/PCB2uJ7oM44tz8YhC4Z/6PeOKXp4K588f+5M3clr1M4zbqztlo0XEfJ2LEzj/FgwfgGcIdl8n7YYjTCI0BYwg==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
 "@babel/standalone@^7.12.6":
   version "7.14.4"
   resolved "https://registry.yarnpkg.com/@babel/standalone/-/standalone-7.14.4.tgz#b50522a9119bea33f0d8e13e7f7d51274fad0530"
@@ -1848,6 +1855,11 @@
   version "7.0.7"
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.7.tgz#98a993516c859eb0d5c4c8f098317a9ea68db9ad"
   integrity sha512-cxWFQVseBm6O9Gbw1IWb8r6OS4OhSt3hPZLkFApLjM8TEXROBuQGLAH2i2gZpcXdLBIrpXuTDhH7Vbm1iXmNGA==
+
+"@types/json-schema@^7.0.7":
+  version "7.0.8"
+  resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.8.tgz#edf1bf1dbf4e04413ca8e5b17b3b7d7d54b59818"
+  integrity sha512-YSBPTLTVm2e2OoQIDYx8HaeWJ5tTToLH67kXR7zYNGupXMEHa2++G8k+DczX2cFVgalypqtyZIcU19AFcmOpmg==
 
 "@types/json5@^0.0.29":
   version "0.0.29"
@@ -6098,13 +6110,6 @@ gatsby-plugin-google-gtag@^3.6.0:
     "@babel/runtime" "^7.12.5"
     minimatch "^3.0.4"
 
-gatsby-plugin-hotjar@^1.0.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-hotjar/-/gatsby-plugin-hotjar-1.1.1.tgz#b910209c80fb2a0df9e0dc1b52de7270d9831b31"
-  integrity sha512-zEuZuZPokvBZvfKg7W0MjPoydFnD8NqhgB0Rm32A7HTWu44vvH+UYt0NsvnyINYmICS9ftv+y/k3WAAzkAIUNw==
-  dependencies:
-    babel-runtime "^6.26.0"
-
 gatsby-plugin-manifest@^3.6.0:
   version "3.6.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-3.6.0.tgz#e7ca7d51daea1b9bfa358663b891a6a9673e0bf8"
@@ -6116,12 +6121,12 @@ gatsby-plugin-manifest@^3.6.0:
     semver "^7.3.5"
     sharp "^0.28.1"
 
-gatsby-plugin-netlify@^3.6.1:
-  version "3.6.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify/-/gatsby-plugin-netlify-3.6.1.tgz#84a5b27248a02298d5dcf906868de4bd9e3e5e7a"
-  integrity sha512-q3AIIQdlHew6Hd7NJf99StGF76W5z7Z8sB5uBODbjm7W7xYvBab7WRuc6ejeH8poXCv6amk7ywiQV/iaFfNTRA==
+gatsby-plugin-netlify@^3.9.0:
+  version "3.9.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify/-/gatsby-plugin-netlify-3.9.0.tgz#c01f07dcecfe29f4d026e5352a1fbbecf585dd0a"
+  integrity sha512-umhw3NciYFgQzlhgUMZqCsKPPx2e3/ck95J3iFk377XcWG6QjWcZi9ikkrhnqBcns9ETBV14zuA2v6/vnNuPLA==
   dependencies:
-    "@babel/runtime" "^7.12.5"
+    "@babel/runtime" "^7.14.0"
     fs-extra "^8.1.0"
     kebab-hash "^0.1.2"
     lodash "^4.17.21"
@@ -11064,6 +11069,13 @@ react-dev-utils@^11.0.3:
     strip-ansi "6.0.0"
     text-table "0.2.0"
 
+react-device-detect@^1.17.0:
+  version "1.17.0"
+  resolved "https://registry.yarnpkg.com/react-device-detect/-/react-device-detect-1.17.0.tgz#a00b4fd6880cebfab3fd8a42a79dc0290cdddca9"
+  integrity sha512-bBblIStwpHmoS281JFIVqeimcN3LhpoP5YKDWzxQdBIUP8S2xPvHDgizLDhUq2ScguLfVPmwfF5y268EEQR60w==
+  dependencies:
+    ua-parser-js "^0.7.24"
+
 react-dom@^17.0.2:
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-17.0.2.tgz#ecffb6845e3ad8dbfcdc498f0d0a939736502c23"
@@ -11864,7 +11876,16 @@ schema-utils@^2.6.5:
     ajv "^6.12.4"
     ajv-keywords "^3.5.2"
 
-schema-utils@^3.0, schema-utils@^3.0.0:
+schema-utils@^3.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/schema-utils/-/schema-utils-3.1.0.tgz#95986eb604f66daadeed56e379bfe7a7f963cdb9"
+  integrity sha512-tTEaeYkyIhEZ9uWgAjDerWov3T9MgX8dhhy2r0IGeeX4W8ngtGl1++dUve/RUqzuaASSh7shwCDJjEzthxki8w==
+  dependencies:
+    "@types/json-schema" "^7.0.7"
+    ajv "^6.12.5"
+    ajv-keywords "^3.5.2"
+
+schema-utils@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/schema-utils/-/schema-utils-3.0.0.tgz#67502f6aa2b66a2d4032b4279a2944978a0913ef"
   integrity sha512-6D82/xSzO094ajanoOSbe4YvXWMfn2A//8Y1+MUqFAJul5Bs+yn36xbK9OtNDcRVSBJ9jjeoXftM6CfztsjOAA==
@@ -13407,6 +13428,11 @@ typography@^0.16.19:
     modularscale "^1.0.2"
     object-assign "^4.1.0"
     typography-normalize "^0.16.19"
+
+ua-parser-js@^0.7.24:
+  version "0.7.28"
+  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.28.tgz#8ba04e653f35ce210239c64661685bf9121dec31"
+  integrity sha512-6Gurc1n//gjp9eQNXjD9O3M/sMwVtN5S8Lv9bvOYBfKfDNiIIhqiyi01vMBO45u4zkDE420w/e0se7Vs+sIg+g==
 
 unbox-primitive@^1.0.1:
   version "1.0.1"

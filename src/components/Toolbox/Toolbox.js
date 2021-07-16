@@ -1,4 +1,5 @@
 import React from "react";
+import { isSafari } from "react-device-detect";
 import * as styles from "./Toolbox.module.scss";
 import javascript from "../../assets/javascript.svg";
 import redux from "../../assets/redux.svg";
@@ -28,6 +29,7 @@ import express from "../../assets/express.svg";
 import knex from "../../assets/knex.svg";
 import serverless from "../../assets/serverless.svg";
 import stimulus from "../../assets/stimulus.svg";
+import Deck from "../Deck";
 
 const Toolbox = () => {
   const images = [
@@ -68,10 +70,13 @@ const Toolbox = () => {
       <div className={styles.bg3} />
       <div className={styles.container}>
         <div className={styles.grid}>
+          <Deck />
           {images.map((image, i) => {
             return (
               <img
-                className={`${styles.img} animate__animated animate__flipInX`}
+                className={`${styles.img} ${
+                  !isSafari && "animate__animated animate__flipInX"
+                }`}
                 src={image}
                 alt={i}
                 key={`skill-${i}`}

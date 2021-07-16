@@ -90,6 +90,11 @@
     color: white;
     margin: 10px 20px;
     letter-spacing: 0.1rem;
+    display: flex;
+
+    @media (max-width: 800px) {
+        font-size: 1.8rem;
+    }
 }
 
 .button {
@@ -119,5 +124,6 @@
     @media (max-width: 800px) {
         padding: 20px 50px;
         width: 90%;
+        font-size: 0.8rem;
     }
 }

@@ -144,15 +144,15 @@ const About = ({ location }) => {
           <span>
             Richard is a Seasoned Software Engineer developing enterprise-grade
             applications and distributed systems since 2011. He capitalised on
-            his technical experience helping various companies across Australia
-            🇦🇺 in building software solutions that are{" "}
+            his technical experience helping startups and big companies in
+            Australia 🇦🇺 in building software solutions that are{" "}
             <span className={styles.highLight1}>highly scable</span>,{" "}
             <span className={styles.highLight2}>reliable</span>, and{" "}
             <span className={styles.highLight3}>secure</span>. His software
             development skills can bring significant value to the team and a
-            positive ROI to your organization. He can help you deliver
-            enterprise applications that will increase the business' revenue or
-            reduce costs.
+            positive ROI to the business. He can help you deliver enterprise
+            applications that can increase the company's revenue or reduce
+            costs.
           </span>
         </p>
         <Social />

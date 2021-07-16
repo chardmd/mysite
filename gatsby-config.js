@@ -117,13 +117,5 @@ module.exports = {
     // Automatically generates a _headers file and a _redirects file
     // at the root of the public folder to configure HTTP headers and redirects on Netlify.
     "gatsby-plugin-netlify",
-    //add hotjar
-    {
-      resolve: `gatsby-plugin-hotjar`,
-      options: {
-        id: 1685806,
-        sv: 6,
-      },
-    },
   ],
 };

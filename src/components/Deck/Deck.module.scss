@@ -1,0 +1,32 @@
+@import "../../styles/variables";
+
+.wrapper {
+  position: absolute;
+  height: 100vh;
+  will-change: transform;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item {
+  background-color: #fff;
+  background-size: auto 85%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 45vh;
+  max-width: 300px;
+  padding: 1rem;
+  height: 35vh;
+  max-height: 570px;
+  will-change: transform;
+  border-radius: 10px;
+  box-shadow: 0 12.5px 100px -10px rgba(50, 50, 73, 0.4), 0 10px 10px -10px rgba(176, 176, 180, 0.3);
+
+  @media (max-width: 800px) {
+    width: 25vh;
+    max-width: 25vh;
+    padding: 1rem;
+    height: 30vh;
+  }
+}
