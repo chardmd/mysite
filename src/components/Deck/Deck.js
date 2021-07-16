@@ -1,6 +1,5 @@
 import React from "react";
 import { useSprings, animated, interpolate } from "react-spring";
-import { isMobile } from "react-device-detect";
 import javascript from "../../assets/javascript.svg";
 import nodejs from "../../assets/nodejs.svg";
 import react from "../../assets/react.svg";
@@ -34,8 +33,9 @@ const Deck = () => {
     <animated.div
       key={i}
       style={{
-        transform: interpolate([x, y], (x, y) =>
-          isMobile ? `translate3d(0px,0px,0)` : `translate3d(${x}px,${y}px,0)`
+        transform: interpolate(
+          [x, y],
+          (x, y) => `translate3d(${x}px,${y}px,0)`
         ),
       }}
       className={styles.wrapper}
