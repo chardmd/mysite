@@ -26,7 +26,7 @@ const to = (i) => ({
   y: i * -4,
   scale: 1,
   rot: -10 + Math.random() * 21,
-  delay: i * 150,
+  delay: i * 100,
 });
 const from = (i) => ({ x: 0, rot: 0, scale: 1.5, y: -950 });
 const transform = (r, s) =>

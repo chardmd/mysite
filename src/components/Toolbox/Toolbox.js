@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { isSafari } from "react-device-detect";
 import * as styles from "./Toolbox.module.scss";
 import javascript from "../../assets/javascript.svg";
 import redux from "../../assets/redux.svg";
@@ -34,6 +33,8 @@ import Deck from "../Deck";
 const Toolbox = () => {
   const [tools, setTools] = useState([]);
 
+  const [flipInX, setFlipInX] = useState(styles.grid);
+
   useEffect(() => {
     setTimeout(() => {
       setTools([
@@ -66,6 +67,7 @@ const Toolbox = () => {
         stimulus,
         tomcat,
       ]);
+      setFlipInX(`${styles.grid} animate__animated animate__fadeIn`);
     }, 2000);
   }, []);
 
@@ -75,14 +77,12 @@ const Toolbox = () => {
       <div className={styles.bg2} />
       <div className={styles.bg3} />
       <div className={styles.container}>
-        <div className={styles.grid}>
+        <div className={flipInX}>
           {tools.length === 0 && <Deck />}
           {tools.map((image, i) => {
             return (
               <img
-                className={`${styles.img} ${
-                  !isSafari && "animate__animated animate__flipInX"
-                }`}
+                className={styles.img}
                 src={image}
                 alt={i}
                 key={`skill-${i}`}
