@@ -9,7 +9,7 @@ const Metadata = () => {
     <div className={styles.container}>
       <div className={styles.row}>
         Handcrafted by{" "}
-        <a className={styles.link} href="mailto:hello@chardmd.com">
+        <a className={styles.link} href="#">
           Richard&nbsp;
           <span role="img" aria-label="cool">
             😎
