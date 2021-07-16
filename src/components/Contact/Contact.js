@@ -32,9 +32,6 @@ const Contact = () => {
       <div className={styles.content}>
         <h1 className={`${styles.header}`}>
           <div className="animate__animated animate__fadeIn animate__slow">
-            <div className="animate__animated animate__tada animate__slow">
-              Yo!
-            </div>
             Richard will help you build software solutions that solve business
             problems, increase revenue, or reduce costs.
           </div>
