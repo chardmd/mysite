@@ -7,12 +7,14 @@ import docker from "../../assets/docker.svg";
 import mysql from "../../assets/mysql.svg";
 import mongodb from "../../assets/mongodb.svg";
 import serverless from "../../assets/serverless.svg";
+import firebase from "../../assets/firebase.svg";
 import aws from "../../assets/aws.svg";
 import * as styles from "./Deck.module.scss";
 
 const toolCards = [
   serverless,
   docker,
+  firebase,
   mysql,
   react,
   mongodb,
