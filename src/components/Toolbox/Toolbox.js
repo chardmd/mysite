@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { isSafari } from "react-device-detect";
 import * as styles from "./Toolbox.module.scss";
 import javascript from "../../assets/javascript.svg";
@@ -32,36 +32,42 @@ import stimulus from "../../assets/stimulus.svg";
 import Deck from "../Deck";
 
 const Toolbox = () => {
-  const images = [
-    javascript,
-    nodejs,
-    express,
-    aws,
-    serverless,
-    react,
-    mongodb,
-    redux,
-    docker,
-    firebase,
-    gatsby,
-    netlify,
-    knex,
-    css3,
-    azure,
-    html5,
-    webpack,
-    material,
-    redis,
-    angular,
-    terminal,
-    java,
-    jenkins,
-    mysql,
-    postgresql,
-    spring,
-    stimulus,
-    tomcat,
-  ];
+  const [tools, setTools] = useState([]);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setTools([
+        javascript,
+        nodejs,
+        express,
+        aws,
+        serverless,
+        react,
+        mongodb,
+        redux,
+        docker,
+        firebase,
+        gatsby,
+        netlify,
+        knex,
+        css3,
+        azure,
+        html5,
+        webpack,
+        material,
+        redis,
+        angular,
+        terminal,
+        java,
+        jenkins,
+        mysql,
+        postgresql,
+        spring,
+        stimulus,
+        tomcat,
+      ]);
+    }, 2000);
+  }, []);
 
   return (
     <>
@@ -70,8 +76,8 @@ const Toolbox = () => {
       <div className={styles.bg3} />
       <div className={styles.container}>
         <div className={styles.grid}>
-          <Deck />
-          {images.map((image, i) => {
+          {tools.length === 0 && <Deck />}
+          {tools.map((image, i) => {
             return (
               <img
                 className={`${styles.img} ${

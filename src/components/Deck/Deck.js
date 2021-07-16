@@ -6,10 +6,20 @@ import react from "../../assets/react.svg";
 import docker from "../../assets/docker.svg";
 import mysql from "../../assets/mysql.svg";
 import mongodb from "../../assets/mongodb.svg";
+import serverless from "../../assets/serverless.svg";
 import aws from "../../assets/aws.svg";
 import * as styles from "./Deck.module.scss";
 
-const toolCards = [docker, mysql, react, mongodb, aws, javascript, nodejs];
+const toolCards = [
+  serverless,
+  docker,
+  mysql,
+  react,
+  mongodb,
+  aws,
+  javascript,
+  nodejs,
+];
 
 const to = (i) => ({
   x: 0,
