@@ -1,11 +1,25 @@
 @import "../../styles/variables";
 
 .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
     height: 100vh;
+    background: #36d1dc;
+    background: -webkit-linear-gradient(to bottom, #5b86e5, #101111);
+    background: linear-gradient(to bottom, #5b86e5, #a6ffcb);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    padding: 2rem;
 
     @media (max-width: 800px) {
-        height: 100vh;
         width: 100%;
+        text-align: center;
+        height: 100vh;
     }
 }
 
@@ -26,55 +40,4 @@
     margin: 0.5rem 0.5rem;
     animation-fill-mode: both;
     z-index: 0;
-}
-
-
-
-.bg {
-    animation: slide 3s ease-in-out infinite alternate;
-    background-image: linear-gradient(-60deg, #8bcdcd 50%, #76e7a3 50%, #ebd684 50%, #fabea7 50%);
-    bottom: 0;
-    left: -50%;
-    opacity: .5;
-    position: fixed;
-    right: -50%;
-    top: 0;
-    z-index: -1;
-}
-
-.bg2 {
-    animation: slide 3s ease-in-out infinite alternate;
-    background-image: linear-gradient(-60deg, #8bcdcd 50%, #76e7a3 50%, #ebd684 50%, #fabea7 50%);
-    bottom: 0;
-    left: -50%;
-    opacity: .5;
-    position: fixed;
-    right: -50%;
-    top: 0;
-    z-index: -1;
-    animation-direction: alternate-reverse;
-    animation-duration: 4s;
-}
-
-.bg3 {
-    animation: slide 3s ease-in-out infinite alternate;
-    background-image: linear-gradient(-60deg, #8bcdcd 50%, #76e7a3 50%, #ebd684 50%, #fabea7 50%);
-    bottom: 0;
-    left: -50%;
-    opacity: .5;
-    position: fixed;
-    right: -50%;
-    top: 0;
-    z-index: -1;
-    animation-duration: 5s;
-}
-
-@keyframes slide {
-    0% {
-        transform: translateX(-25%);
-    }
-
-    100% {
-        transform: translateX(25%);
-    }
 }

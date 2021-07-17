@@ -72,26 +72,21 @@ const Toolbox = () => {
   }, []);
 
   return (
-    <>
-      <div className={styles.bg} />
-      <div className={styles.bg2} />
-      <div className={styles.bg3} />
-      <div className={styles.container}>
-        <div className={flipInX}>
-          {tools.length === 0 && <Deck />}
-          {tools.map((image, i) => {
-            return (
-              <img
-                className={styles.img}
-                src={image}
-                alt={i}
-                key={`skill-${i}`}
-              />
-            );
-          })}
-        </div>
+    <div className={styles.container}>
+      <div className={flipInX}>
+        {tools.length === 0 && <Deck />}
+        {tools.map((image, i) => {
+          return (
+            <img
+              className={styles.img}
+              src={image}
+              alt={i}
+              key={`skill-${i}`}
+            />
+          );
+        })}
       </div>
-    </>
+    </div>
   );
 };
 export default Toolbox;

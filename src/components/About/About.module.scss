@@ -24,7 +24,8 @@
 .wrapper {
   padding: 60px;
   max-width: 640px;
-  position: absolute;
+  position: relative;
+  z-index: 1;
 
   @media (max-width: 800px) {
     padding: 0;

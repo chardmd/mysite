@@ -127,7 +127,14 @@ const About = ({ location }) => {
   return (
     <div className={styles.container}>
       {activeCanvas && (
-        <Canvas shadowMap camera={{ position: [0, 0, 100], fov: 100 }}>
+        <Canvas
+          shadowMap
+          camera={{ position: [0, 0, 100], fov: 100 }}
+          style={{
+            position: "fixed",
+            zIndex: 0,
+          }}
+        >
           <Lights />
           <Content />
         </Canvas>
