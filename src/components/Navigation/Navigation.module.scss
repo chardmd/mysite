@@ -10,10 +10,20 @@
   padding: 0;
   list-style-position: outside;
   list-style-image: none;
+
+  @media (max-width: 800px) {
+    justify-content: center;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
 }
 
 .listItem {
   margin-right: 16px;
+
+  @media (max-width: 800px) {
+    margin: 0 8px;
+  }
 }
 
 .linkWrapper {
@@ -26,6 +36,10 @@
 
   &:hover {
     outline-width: 0;
+  }
+
+  @media (max-width: 800px) {
+    font-weight: normal;
   }
 
   &.activeLink {

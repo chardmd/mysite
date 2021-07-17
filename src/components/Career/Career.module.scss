@@ -7,6 +7,12 @@
   height: 100vh;
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   overflow: hidden;
+
+  @media (max-width: 800px) {
+    width: 100%;
+    height: 100vh;
+  }
+
   background: linear-gradient(-90deg, #a6ffcb, #12d8fa, #5b86e5, #fabea7, #ebd684, #8bcdcd, #76e7a3, #ebd684, #fabea7);
   background-size: 400% 400%;
   animation: gradient 5s ease infinite;
@@ -28,6 +34,10 @@
 
 .content {
   width: 100%;
+
+  @media (max-width: 800px) {
+    padding: 20px 0;
+  }
 }
 
 .bar {
