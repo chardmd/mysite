@@ -1,5 +1,6 @@
 "use strict";
 
+// eslint-disable-next-line import/extensions
 const siteConfig = require("./config.js");
 
 module.exports = {
