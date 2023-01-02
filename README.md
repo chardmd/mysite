@@ -4,17 +4,23 @@
 
 Mostly React and anything nice :bowtie:
 
+![Alt Text](preview.png)
+
 ## Install
 
-`yarn`
+`npm run install`
 
 ## Develop
 
-`yarn develop`
+`npm run develop`
 
 ## Build
 
-`yarn build`
+`npm run build`
+
+## Serve
+
+`npm run serve`
 
 ## Live Site
 
