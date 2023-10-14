@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "gatsby";
-
 import * as styles from "./Navigation.module.scss";
 
 const Navigation = ({ location }) => {
   const { pathname } = location;
+
   return (
-    <ul className={`${styles.list}`}>
+    <ul className={styles.list}>
       <li className={styles.listItem}>
         <Link
           className={styles.linkWrapper}

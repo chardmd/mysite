@@ -1,16 +1,16 @@
 import React from "react";
-
 import * as styles from "./Metadata.module.scss";
 import useSiteMetadata from "../../hooks/use-site-metadata";
 
 const Metadata = () => {
   const siteMetadata = useSiteMetadata();
+
   return (
     <div className={styles.container}>
       <div className={styles.row}>
         Handcrafted by{" "}
         <a className={styles.link} href="#">
-          Richard&nbsp;
+          Richard{" "}
           <span role="img" aria-label="cool">
             😎
           </span>
@@ -29,6 +29,7 @@ const Metadata = () => {
           className={styles.link}
           href="https://github.com/chardmd/mysite"
           target="_blank"
+          rel="noopener noreferrer"
         >
           Open Source!
         </a>

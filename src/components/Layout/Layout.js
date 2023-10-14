@@ -1,14 +1,10 @@
 /* eslint-disable no-confusing-arrow */
 import React from "react";
 import Drift from "react-driftjs";
-
-// Load the CSS for the work-sans font.
 import "fontsource-grandstander/latin.css";
 
 import About from "../About";
-
 import * as styles from "./Layout.module.scss";
-
 import useSiteMetadata from "../../hooks/use-site-metadata";
 
 const Layout = ({ children, location }) => {

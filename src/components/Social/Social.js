@@ -1,10 +1,7 @@
 import React from "react";
-
 import githubIcon from "../../assets/github.svg";
 import linkedinIcon from "../../assets/linkedin.svg";
-import twitterIcon from "../../assets/twitter.svg";
 import angellistIcon from "../../assets/angellist.svg";
-
 import * as styles from "./Social.module.scss";
 
 const Social = () => (
@@ -18,7 +15,7 @@ const Social = () => (
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img className={`${styles.image}`} src={linkedinIcon} alt="linkedin" />
+        <img className={styles.image} src={linkedinIcon} alt="LinkedIn" />
       </a>
     </li>
     <li className={styles.listItem}>
@@ -27,7 +24,7 @@ const Social = () => (
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img className={styles.image} src={githubIcon} alt="github" />
+        <img className={styles.image} src={githubIcon} alt="GitHub" />
       </a>
     </li>
     <li className={styles.listItem}>
@@ -36,7 +33,7 @@ const Social = () => (
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img className={styles.image} src={angellistIcon} alt="angellist" />
+        <img className={styles.image} src={angellistIcon} alt="AngelList" />
       </a>
     </li>
   </ul>
