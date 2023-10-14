@@ -1,9 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
-import Deck from "../Deck";
 import Typist from "react-typist";
+import Deck from "../Deck";
 import jsonLogs from "./logs.json";
 import jsonOutput from "./output.json";
-
 import * as styles from "./Experience.module.scss";
 
 const COLORS = {
@@ -20,37 +19,8 @@ const Experience = () => {
   const [logs, setLogs] = useState([]);
   const [finalOutput, setFinalOutput] = useState(false);
   const screenRef = useRef(null);
-
   const [deckLoaded, setDeckLoaded] = useState(false);
-
-  let timeouts = [];
-
-  const createFinalOutput = () => {
-    const template = jsonOutput.map((item, index) => {
-      return (
-        <div key={`${index}-company-output`}>
-          <div>
-            <span style={{ color: COLORS.tortoise }}>Position&nbsp;</span>
-            <span>{item.position}</span>
-          </div>
-          <div>
-            <span style={{ color: COLORS.tortoise }}>Duration&nbsp;</span>
-            <span>{item.duration}</span>
-          </div>
-          <div>=======================================</div>
-        </div>
-      );
-    });
-
-    return (
-      <div>
-        <div style={{ color: COLORS.yellow }}>
-          [All data downloaded] info --print && exit
-        </div>
-        {template}
-      </div>
-    );
-  };
+  const timeouts = [];
 
   const getLogColor = (logColor) => {
     switch (logColor) {
@@ -65,19 +35,6 @@ const Experience = () => {
     }
   };
 
-  const createLogs = () => {
-    const template = logs.map((log, index) => {
-      const color = getLogColor(log.class);
-      return (
-        <div key={`${index}-company`}>
-          <span style={{ color }}>{log.label}&nbsp;</span>
-          {log.desc}
-        </div>
-      );
-    });
-    return template;
-  };
-
   const scrollToBottom = () => {
     if (screenRef.current) {
       screenRef.current.scrollTop = screenRef.current.scrollHeight;
@@ -85,18 +42,16 @@ const Experience = () => {
   };
 
   const addLogItems = () => {
-    let timeout = null;
     for (let i = 0; i < jsonLogs.length; i++) {
       const item = jsonLogs[i];
-      timeout = setTimeout(() => {
-        setLogs((logs) => logs.concat(item));
-        //call final output
+      const timeout = setTimeout(() => {
+        setLogs((prevLogs) => [...prevLogs, item]);
         if (i === jsonLogs.length - 1) {
           setFinalOutput(true);
         }
         scrollToBottom();
       }, i * 160);
-      timeouts = timeouts.concat(timeout);
+      timeouts.push(timeout);
     }
   };
 
@@ -105,7 +60,7 @@ const Experience = () => {
       setSelectedOptionClass(COLORS.green);
       addLogItems();
     }, 500);
-    timeouts = timeouts.concat(timeout);
+    timeouts.push(timeout);
   };
 
   const displayRunTask = () => {
@@ -113,15 +68,15 @@ const Experience = () => {
       setRunTaskHidden(false);
       runTaskSelection();
     }, 500);
-    timeouts = timeouts.concat(timeout);
+    timeouts.push(timeout);
   };
 
-  useEffect(() => {
-    return function cleanup() {
-      //clear timeouts
+  useEffect(
+    () => () => {
       timeouts.forEach(clearTimeout);
-    };
-  }, []);
+    },
+    []
+  );
 
   useEffect(() => {
     setTimeout(() => {
@@ -129,16 +84,45 @@ const Experience = () => {
     }, 2000);
   }, []);
 
+  const createFinalOutput = () => (
+    <div>
+      <div style={{ color: COLORS.yellow }}>
+        [All data downloaded] info --print && exit
+      </div>
+      {jsonOutput.map((item, index) => (
+        <div key={`${index}-company-output`}>
+          <div>
+            <span style={{ color: COLORS.tortoise }}>Position&nbsp;</span>
+            <span>{item.position}</span>
+          </div>
+          <div>
+            <span style={{ color: COLORS.tortoise }}>Duration&nbsp;</span>
+            <span>{item.duration}</span>
+          </div>
+          <div>=======================================</div>
+        </div>
+      ))}
+    </div>
+  );
+
+  const createLogs = () =>
+    logs.map((log, index) => {
+      const color = getLogColor(log.class);
+      return (
+        <div key={`${index}-company`}>
+          <span style={{ color }}>{log.label}&nbsp;</span>
+          {log.desc}
+        </div>
+      );
+    });
+
   return (
     <div className={styles.container}>
       {!deckLoaded ? (
         <Deck />
       ) : (
         <div
-          className={
-            styles.content +
-            " animate__animated animate__bounceIn animate__faster"
-          }
+          className={`${styles.content} animate__animated animate__bounceIn animate__faster`}
         >
           <ul className={styles.bar}>
             <li className={styles.barItem}>
@@ -169,7 +153,7 @@ const Experience = () => {
                 </span>
                 <br />
               </Typist>
-              {!runTaskHidden ? (
+              {!runTaskHidden && (
                 <div>
                   <div className="task">
                     <div style={{ color: selectOptionClass }}>
@@ -179,7 +163,7 @@ const Experience = () => {
                   {createLogs()}
                   {finalOutput && createFinalOutput()}
                 </div>
-              ) : null}
+              )}
             </div>
           </div>
         </div>
@@ -187,4 +171,5 @@ const Experience = () => {
     </div>
   );
 };
+
 export default Experience;
