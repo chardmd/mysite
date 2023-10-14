@@ -28,7 +28,7 @@
 
 .linkWrapper {
   padding-bottom: 2px;
-  color: #1c94e0;
+  color: #0000FF;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
@@ -43,7 +43,7 @@
   }
 
   &.activeLink {
-    border-bottom: 3px solid #efa536;
+    border-bottom: 3px solid #FF4500;
   }
 
 }

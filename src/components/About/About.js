@@ -11,13 +11,16 @@ import Metadata from "../Metadata";
 
 const BOXES = 15;
 const COLORS = [
-  "#A2CCB6",
-  "#FCEEB5",
-  "#8bcdcd",
-  "#99f3bd",
-  "lightpink",
-  "lightblue",
-  "#fabea7",
+  "#98FB98", // Mint Green
+  "#B0E0E6", // Powder Blue
+  "#FFD700", // Gold
+  "#00FFFF", // Aqua
+  "#FFA07A", // Light Salmon
+  "#A2CCB6", // Light Sage Green
+  "#FCEEB5", // Pale Yellow
+  "#8bcdcd", // Light Teal
+  "#99f3bd", // Pastel Green
+  "#fabea7", // Peachy Pink
 ];
 
 const getTitleColorHeader = (pathname) => {
