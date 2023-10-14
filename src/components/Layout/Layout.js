@@ -2,7 +2,7 @@
 import React from "react";
 import Drift from "react-driftjs";
 
-// Load the css for the work-sans font.
+// Load the CSS for the work-sans font.
 import "fontsource-grandstander/latin.css";
 
 import About from "../About";
@@ -13,6 +13,7 @@ import useSiteMetadata from "../../hooks/use-site-metadata";
 
 const Layout = ({ children, location }) => {
   const siteMetadata = useSiteMetadata();
+
   return (
     <main className={styles.main}>
       <section className={styles.section}>

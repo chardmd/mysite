@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 import * as THREE from "three";
 import { Canvas } from "react-three-fiber";
 import { useSprings, a } from "react-spring/three";
+import * as styles from "./About.module.scss";
+import useSiteMetadata from "../../hooks/use-site-metadata";
 
 import Navigation from "../Navigation";
 import Social from "../Social";
 import Metadata from "../Metadata";
-import * as styles from "./About.module.scss";
-import useSiteMetadata from "../../hooks/use-site-metadata";
 
 const BOXES = 15;
 const COLORS = [
@@ -21,29 +21,14 @@ const COLORS = [
 ];
 
 const getTitleColorHeader = (pathname) => {
-  let colorHeader = "";
-  if (pathname.includes("toolbox")) {
-    colorHeader = "toolboxHeader";
-  } else if (pathname.includes("contact")) {
-    colorHeader = "contactHeader";
-  } else if (pathname.includes("experience")) {
-    colorHeader = "experienceHeader";
-  } else {
-    colorHeader = "defaultHeader";
-  }
-  return colorHeader;
+  if (pathname.includes("contact")) return "contactHeader";
+
+  return "defaultHeader";
 };
 
 const getHeadline = (pathname) => {
-  let title = "";
-  if (pathname.includes("toolbox")) {
-    title = "Serial Builder";
-  } else if (pathname.includes("contact")) {
-    title = "Technologist";
-  } else {
-    title = "Maker of Things";
-  }
-  return title;
+  if (pathname.includes("contact")) return "Technologist";
+  return "Maker of Things";
 };
 
 const random = (i) => {
@@ -56,12 +41,10 @@ const random = (i) => {
   };
 };
 
-const data = new Array(BOXES).fill().map(() => {
-  return {
-    color: COLORS[Math.round(Math.random() * (COLORS.length - 1))],
-    args: [0.1 + Math.random() * 9, 0.1 + Math.random() * 9, 10],
-  };
-});
+const data = new Array(BOXES).fill().map(() => ({
+  color: COLORS[Math.round(Math.random() * (COLORS.length - 1))],
+  args: [0.1 + Math.random() * 9, 0.1 + Math.random() * 9, 10],
+}));
 
 function Content() {
   const [springs, set] = useSprings(BOXES, (i) => ({
@@ -71,12 +54,10 @@ function Content() {
   }));
   useEffect(
     () =>
-      void setInterval(
-        () => set((i) => ({ ...random(i), delay: i * 40 })),
-        3000
-      ),
+      setInterval(() => set((i) => ({ ...random(i), delay: i * 40 })), 3000),
     []
   );
+
   return data.map((d, index) => (
     <a.mesh key={index} {...springs[index]} castShadow receiveShadow>
       <boxBufferGeometry attach="geometry" args={d.args} />
@@ -110,7 +91,7 @@ function Lights() {
 
 const About = ({ location }) => {
   const siteMetadata = useSiteMetadata();
-  const pathname = location.pathname;
+  const { pathname } = location;
   const titleColorHeader = getTitleColorHeader(pathname);
   const headline = getHeadline(pathname);
 
@@ -118,7 +99,7 @@ const About = ({ location }) => {
   const [activeCanvas, setActiveCanvas] = useState(false);
 
   useEffect(() => {
-    setZoomIn(`animate__animated animate__zoomInDown`);
+    setZoomIn("animate__animated animate__zoomInDown");
     setActiveCanvas(true);
   }, []);
 
@@ -148,10 +129,10 @@ const About = ({ location }) => {
         <p className={styles.paragraph}>
           <span>
             I am a Seasoned Software Engineer developing enterprise-grade
-            applications and distributed systems since 2011. I capitalised on my
+            applications and distributed systems since 2011. I capitalized on my
             technical experience helping startups and big companies in Australia
             🇦🇺 in building software solutions that are{" "}
-            <span className={styles.highLight1}>highly scable</span>,{" "}
+            <span className={styles.highLight1}>highly scalable</span>,{" "}
             <span className={styles.highLight2}>reliable</span>, and{" "}
             <span className={styles.highLight3}>secure</span>. My software
             development skills can bring significant value to the team and a
