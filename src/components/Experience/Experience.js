@@ -123,7 +123,6 @@ const Experience = () => {
     };
   }, []);
 
-  //how to show the Deck component after 1 seconds
   useEffect(() => {
     setTimeout(() => {
       setDeckLoaded(true);
@@ -138,7 +137,7 @@ const Experience = () => {
         <div
           className={
             styles.content +
-            " animate__animated animate__fadeInBottomRight animate__faster"
+            " animate__animated animate__bounceIn animate__faster"
           }
         >
           <ul className={styles.bar}>
@@ -166,7 +165,7 @@ const Experience = () => {
                   avgTypingSpeed={50}
                 />
                 <span className={styles.typeLine}>
-                  npm install work --global
+                  npm install work-experience --global
                 </span>
                 <br />
               </Typist>

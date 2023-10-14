@@ -7,7 +7,7 @@ const Contact = () => {
 
   //open email client
   const handleClick = () =>
-    (window.location.href = `mailto:hello@chardmd.com?subject=Wazzup Richard, cool site! :)`);
+    (window.location.href = `mailto:hello@chardmd.com?subject=Hey Richard!`);
 
   useEffect(() => {
     if (!driftLoaded) {
@@ -31,7 +31,7 @@ const Contact = () => {
     <div className={styles.container}>
       <div className={styles.content}>
         <h1 className={`${styles.header}`}>
-          <div className="animate__animated animate__fadeIn animate__slow">
+          <div className="animate__animated animate__fadeIn animate__fast">
             I specialise in web apps, cloud computing, and open-source
             technologies. I’m here to collaborate with you, whether you’re a
             startup striving to make your mark or an established corporation
@@ -40,7 +40,7 @@ const Contact = () => {
         </h1>
         <br />
         <button
-          className={`${styles.button} animate__animated animate__fadeIn animate__fast`}
+          className={`${styles.button} animate__animated animate__fadeIn animate__faster`}
           onClick={handleClick}
         >
           Feel free to reach out for my portfolio

@@ -9,6 +9,8 @@ import mongodb from "../../assets/mongodb.svg";
 import serverless from "../../assets/serverless.svg";
 import firebase from "../../assets/firebase.svg";
 import aws from "../../assets/aws.svg";
+import java from "../../assets/java.svg";
+import angular from "../../assets/angular.svg";
 import * as styles from "./Deck.module.scss";
 
 const toolCards = [
@@ -20,7 +22,9 @@ const toolCards = [
   mongodb,
   aws,
   javascript,
+  java,
   nodejs,
+  angular,
 ];
 
 const to = (i) => ({
