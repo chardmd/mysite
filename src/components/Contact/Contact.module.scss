@@ -6,12 +6,7 @@
     justify-content: center;
     height: 100%;
     height: 100vh;
-    background: #36d1dc;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #5b86e5, #36d1dc);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #5b86e5, #36d1dc);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #0a0a46;
     overflow: hidden;
 
     @media (max-width: 800px) {
@@ -38,7 +33,7 @@
         background-repeat: no-repeat;
         background-size: 50% 50%, 50% 50%;
         background-position: 0 0, 100% 0, 100% 100%, 0 100%;
-        background-image: linear-gradient(#76e7a3, #76e7a3), linear-gradient(#8bcdcd, #8bcdcd), linear-gradient(#fabea7, #fabea7), linear-gradient(#ebd684, #ebd684);
+        background-image: linear-gradient(#ff326e, #ff326e), linear-gradient(#007aff, #007aff), linear-gradient(#9932CC, #9932CC), linear-gradient(#FFD700, #FFD700);
         animation: rotate 60s linear infinite;
     }
 
