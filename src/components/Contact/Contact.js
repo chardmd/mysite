@@ -7,7 +7,7 @@ const Contact = () => {
 
   //open email client
   const handleClick = () =>
-    (window.location.href = `mailto:hello@chardmd.com?subject=Hey Richard!`);
+    (window.location.href = `mailto:hello@chardmd.com?subject=Hey Richard, I want to see your portfolio!`);
 
   useEffect(() => {
     if (!driftLoaded) {
@@ -43,7 +43,7 @@ const Contact = () => {
           className={`${styles.button} animate__animated animate__fadeIn animate__faster`}
           onClick={handleClick}
         >
-          Feel free to reach out for my portfolio
+          Request My Portfolio 📥
         </button>
       </div>
     </div>
