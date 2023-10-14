@@ -1,11 +1,11 @@
 import React from "react";
 import SEO from "../components/SEO";
-import Career from "../components/Career";
+import Experience from "../components/Experience";
 
 const NotFoundTemplate = () => (
   <>
     <SEO />
-    <Career seoTitle="Career" />
+    <Experience seoTitle="Experience" />
   </>
 );
 

@@ -26,8 +26,8 @@ const getTitleColorHeader = (pathname) => {
     colorHeader = "toolboxHeader";
   } else if (pathname.includes("contact")) {
     colorHeader = "contactHeader";
-  } else if (pathname.includes("career")) {
-    colorHeader = "careerHeader";
+  } else if (pathname.includes("experience")) {
+    colorHeader = "experienceHeader";
   } else {
     colorHeader = "defaultHeader";
   }
@@ -39,8 +39,6 @@ const getHeadline = (pathname) => {
   if (pathname.includes("toolbox")) {
     title = "Serial Builder";
   } else if (pathname.includes("contact")) {
-    title = "Software Engineer";
-  } else if (pathname.includes("career")) {
     title = "Technologist";
   } else {
     title = "Maker of Things";
@@ -149,15 +147,15 @@ const About = ({ location }) => {
         <Navigation location={location} />
         <p className={styles.paragraph}>
           <span>
-            Richard is a Seasoned Software Engineer developing enterprise-grade
-            applications and distributed systems since 2011. He capitalised on
-            his technical experience helping startups and big companies in
-            Australia 🇦🇺 in building software solutions that are{" "}
+            I am a Seasoned Software Engineer developing enterprise-grade
+            applications and distributed systems since 2011. I capitalised on my
+            technical experience helping startups and big companies in Australia
+            🇦🇺 in building software solutions that are{" "}
             <span className={styles.highLight1}>highly scable</span>,{" "}
             <span className={styles.highLight2}>reliable</span>, and{" "}
-            <span className={styles.highLight3}>secure</span>. His software
+            <span className={styles.highLight3}>secure</span>. My software
             development skills can bring significant value to the team and a
-            positive ROI to the business. He can help you deliver enterprise
+            positive ROI to the business. I can help you deliver enterprise
             applications that can increase the company's revenue or reduce
             costs.
           </span>

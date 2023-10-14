@@ -17,27 +17,7 @@ const Navigation = ({ location }) => {
               : ""
           }
         >
-          Tweets
-        </Link>
-      </li>
-      <li className={styles.listItem}>
-        <Link
-          className={styles.linkWrapper}
-          to="/career"
-          activeClassName={pathname.includes("career") ? styles.activeLink : ""}
-        >
-          Career
-        </Link>
-      </li>
-      <li className={styles.listItem}>
-        <Link
-          className={styles.linkWrapper}
-          to="/toolbox"
-          activeClassName={
-            pathname.includes("toolbox") ? styles.activeLink : ""
-          }
-        >
-          Toolbox
+          Explore
         </Link>
       </li>
       <li className={styles.listItem}>
@@ -48,7 +28,7 @@ const Navigation = ({ location }) => {
             pathname.includes("contact") ? styles.activeLink : ""
           }
         >
-          Contact
+          Connect
         </Link>
       </li>
     </ul>

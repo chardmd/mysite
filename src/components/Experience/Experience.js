@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
+import Deck from "../Deck";
 import Typist from "react-typist";
 import jsonLogs from "./logs.json";
 import jsonOutput from "./output.json";
 
-import * as styles from "./Career.module.scss";
+import * as styles from "./Experience.module.scss";
 
 const COLORS = {
   yellow: "#f0f000",
@@ -13,12 +14,15 @@ const COLORS = {
   tortoise: "#75e9f1",
 };
 
-const Career = () => {
+const Experience = () => {
   const [runTaskHidden, setRunTaskHidden] = useState(true);
   const [selectOptionClass, setSelectedOptionClass] = useState("");
   const [logs, setLogs] = useState([]);
   const [finalOutput, setFinalOutput] = useState(false);
   const screenRef = useRef(null);
+
+  const [deckLoaded, setDeckLoaded] = useState(false);
+
   let timeouts = [];
 
   const createFinalOutput = () => {
@@ -119,48 +123,69 @@ const Career = () => {
     };
   }, []);
 
+  //how to show the Deck component after 1 seconds
+  useEffect(() => {
+    setTimeout(() => {
+      setDeckLoaded(true);
+    }, 2000);
+  }, []);
+
   return (
     <div className={styles.container}>
-      <div className={styles.content}>
-        <ul className={styles.bar}>
-          <li className={styles.barItem}>
-            <div className={`${styles.circle} ${styles.redBg}`} />
-          </li>
-          <li className={styles.barItem}>
-            <div className={`${styles.circle} ${styles.yellowBg}`} />
-          </li>
-          <li className={styles.barItem}>
-            <div className={`${styles.circle} ${styles.greenBg}`} />
-          </li>
-        </ul>
-        <div className={styles.screen} ref={screenRef}>
-          <div className={styles.font}>
-            <span style={{ color: COLORS.yellow }}>chardmd.com</span>
-            @192.168.8.5:~$
-            <Typist className={styles.wrapTypist} onTypingDone={displayRunTask}>
-              <Typist.Delay
+      {!deckLoaded ? (
+        <Deck />
+      ) : (
+        <div
+          className={
+            styles.content +
+            " animate__animated animate__fadeInBottomRight animate__faster"
+          }
+        >
+          <ul className={styles.bar}>
+            <li className={styles.barItem}>
+              <div className={`${styles.circle} ${styles.redBg}`} />
+            </li>
+            <li className={styles.barItem}>
+              <div className={`${styles.circle} ${styles.yellowBg}`} />
+            </li>
+            <li className={styles.barItem}>
+              <div className={`${styles.circle} ${styles.greenBg}`} />
+            </li>
+          </ul>
+          <div className={styles.screen} ref={screenRef}>
+            <div className={styles.font}>
+              <span style={{ color: COLORS.yellow }}>chardmd.com</span>
+              @192.168.8.5:~$
+              <Typist
                 className={styles.wrapTypist}
-                ms={300}
-                avgTypingSpeed={50}
-              />
-              <span className={styles.typeLine}>npm install work --global</span>
-              <br />
-            </Typist>
-            {!runTaskHidden ? (
-              <div>
-                <div className="task">
-                  <div style={{ color: selectOptionClass }}>
-                    &gt;&nbsp;All (Install all options)
+                onTypingDone={displayRunTask}
+              >
+                <Typist.Delay
+                  className={styles.wrapTypist}
+                  ms={300}
+                  avgTypingSpeed={50}
+                />
+                <span className={styles.typeLine}>
+                  npm install work --global
+                </span>
+                <br />
+              </Typist>
+              {!runTaskHidden ? (
+                <div>
+                  <div className="task">
+                    <div style={{ color: selectOptionClass }}>
+                      &gt;&nbsp;All (Install all options)
+                    </div>
                   </div>
+                  {createLogs()}
+                  {finalOutput && createFinalOutput()}
                 </div>
-                {createLogs()}
-                {finalOutput && createFinalOutput()}
-              </div>
-            ) : null}
+              ) : null}
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };
-export default Career;
+export default Experience;

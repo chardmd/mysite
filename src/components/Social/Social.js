@@ -10,7 +10,7 @@ import * as styles from "./Social.module.scss";
 const Social = () => (
   <ul className={styles.list}>
     <li className={styles.listItem}>
-      <h3 className={styles.header}>You can also find him on</h3>
+      <h3 className={styles.header}>You can also find me on</h3>
     </li>
     <li className={styles.listItem}>
       <a
@@ -37,15 +37,6 @@ const Social = () => (
         rel="noopener noreferrer"
       >
         <img className={styles.image} src={angellistIcon} alt="angellist" />
-      </a>
-    </li>
-    <li className={styles.listItem}>
-      <a
-        href="https://twitter.com/iamchardmd"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img className={styles.image} src={twitterIcon} alt="twitter" />
       </a>
     </li>
   </ul>

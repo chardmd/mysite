@@ -32,19 +32,18 @@ const Contact = () => {
       <div className={styles.content}>
         <h1 className={`${styles.header}`}>
           <div className="animate__animated animate__fadeIn animate__slow">
-            <div className="animate__animated animate__tada animate__slow">
-              Yo!
-            </div>
-            Richard will help you build software solutions that solve business
-            problems, increase revenue, or reduce costs.
+            I specialise in web apps, cloud computing, and open-source
+            technologies. I’m here to collaborate with you, whether you’re a
+            startup striving to make your mark or an established corporation
+            aiming to drive innovation.
           </div>
         </h1>
         <br />
         <button
-          className={`${styles.button} animate__animated animate__backInRight animate__fast`}
+          className={`${styles.button} animate__animated animate__fadeIn animate__fast`}
           onClick={handleClick}
         >
-          Request his Resume & Portfolio
+          Feel free to reach out for my portfolio
         </button>
       </div>
     </div>

@@ -5,17 +5,7 @@ const createPages = async ({ actions }) => {
 
   createPage({
     path: "/",
-    component: path.resolve("./src/templates/home-template.js"),
-  });
-
-  createPage({
-    path: "/career",
-    component: path.resolve("./src/templates/career-template.js"),
-  });
-
-  createPage({
-    path: "/toolbox",
-    component: path.resolve("./src/templates/toolbox-template.js"),
+    component: path.resolve("./src/templates/experience-template.js"),
   });
 
   createPage({
