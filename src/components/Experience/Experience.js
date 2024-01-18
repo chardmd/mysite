@@ -93,6 +93,10 @@ const Experience = () => {
         <div key={`${index}-company-output`}>
           <div>
             <span style={{ color: COLORS.tortoise }}>Position&nbsp;</span>
+            <span>{item.company}</span>
+          </div>
+          <div>
+            <span style={{ color: COLORS.tortoise }}>Position&nbsp;</span>
             <span>{item.position}</span>
           </div>
           <div>

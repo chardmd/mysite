@@ -1,5 +1,5 @@
 import React from "react";
-import { useSprings, animated, interpolate } from "@react-spring/web";
+import { useSprings, animated, to } from "@react-spring/web";
 import javascript from "../../assets/javascript.svg";
 import nodejs from "../../assets/nodejs.svg";
 import react from "../../assets/react.svg";
@@ -31,14 +31,14 @@ const toolCards = [
   javascript,
 ];
 
-const to = (i) => ({
+const deckTo = (i) => ({
   x: 0,
   y: i * -4,
   scale: 1,
   rot: -10 + Math.random() * 21,
   delay: i * 100,
 });
-const from = (i) => ({ x: 0, rot: 0, scale: 1.5, y: -950 });
+const from = () => ({ x: 0, rot: 0, scale: 1.5, y: -950 });
 const transform = (r, s) =>
   `perspective(1501px) rotateX(31deg) rotateY(${
     r / 10
@@ -46,23 +46,20 @@ const transform = (r, s) =>
 
 const Deck = () => {
   const [props] = useSprings(toolCards.length, (i) => ({
-    ...to(i),
+    ...deckTo(i),
     from: from(i),
   }));
   return props.map(({ x, y, rot, scale }, i) => (
     <animated.div
       key={i}
       style={{
-        transform: interpolate(
-          [x, y],
-          (x, y) => `translate3d(${x}px,${y}px,0)`
-        ),
+        transform: to([x, y], (x, y) => `translate3d(${x}px,${y}px,0)`),
       }}
       className={styles.wrapper}
     >
       <animated.img
         style={{
-          transform: interpolate([rot, scale], transform),
+          transform: to([rot, scale], transform),
         }}
         src={toolCards[i]}
         className={styles.item}
