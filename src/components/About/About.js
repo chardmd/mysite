@@ -109,13 +109,13 @@ const About = ({ location }) => {
 
   const [{ background }] = useSpring(
     () => ({
-      from: { background: "#E0FFFF" },
+      from: { background: "#c8a2c8" },
       to: [
-        { background: "#E0FFFF" },
-        { background: "#b2e6f2" },
-        { background: "#7bc6e8" },
-        { background: "#468db4" },
-        { background: "#2d5d7b" },
+        { background: "#c8a2c8" },
+        { background: "#f4c2c2" },
+        { background: "#f7b267" },
+        { background: "#a1c89d" },
+        { background: "#7eb6d0" },
       ],
       config: config.molasses,
       loop: {
