@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import * as THREE from "three";
-import { Canvas } from "react-three-fiber";
-import { useSprings, a } from "react-spring/three";
+import { Canvas } from "@react-three/fiber";
+import { useSprings, a } from "@react-spring/three";
 import * as styles from "./About.module.scss";
 import useSiteMetadata from "../../hooks/use-site-metadata";
 
@@ -9,12 +9,10 @@ import Navigation from "../Navigation";
 import Social from "../Social";
 import Metadata from "../Metadata";
 
-const BOXES = 15;
+const BOXES = 18;
 const COLORS = [
   "#98FB98", // Mint Green
   "#B0E0E6", // Powder Blue
-  "#FFD700", // Gold
-  "#00FFFF", // Aqua
   "#FFA07A", // Light Salmon
   "#A2CCB6", // Light Sage Green
   "#FCEEB5", // Pale Yellow
@@ -38,14 +36,14 @@ const random = (i) => {
   const r = Math.random();
   return {
     position: [100 - Math.random() * 200, 100 - Math.random() * 200, i * 1.5],
-    color: COLORS[Math.round(Math.random() * (COLORS.length - 1))],
+    color: COLORS[Math.floor(Math.random() * COLORS.length)],
     scale: [1 + r * 14, 1 + r * 14, 1],
     rotation: [0, 0, THREE.Math.degToRad(Math.round(Math.random()) * 45)],
   };
 };
 
 const data = new Array(BOXES).fill().map(() => ({
-  color: COLORS[Math.round(Math.random() * (COLORS.length - 1))],
+  color: COLORS[Math.floor(Math.random() * COLORS.length)],
   args: [0.1 + Math.random() * 9, 0.1 + Math.random() * 9, 10],
 }));
 
@@ -55,11 +53,14 @@ function Content() {
     ...random(i),
     config: { mass: 20, tension: 150, friction: 50 },
   }));
-  useEffect(
-    () =>
-      setInterval(() => set((i) => ({ ...random(i), delay: i * 40 })), 3000),
-    []
-  );
+  useEffect(() => {
+    const interval = setInterval(
+      () => set((i) => ({ ...random(i), delay: i * 40 })),
+      3000
+    );
+
+    return () => clearInterval(interval);
+  }, []);
 
   return data.map((d, index) => (
     <a.mesh key={index} {...springs[index]} castShadow receiveShadow>
@@ -67,7 +68,7 @@ function Content() {
       <a.meshStandardMaterial
         attach="material"
         color={springs[index].color}
-        roughness={0.75}
+        roughness={0.5}
         metalness={0.5}
       />
     </a.mesh>
@@ -77,16 +78,15 @@ function Content() {
 function Lights() {
   return (
     <group>
-      <pointLight intensity={0.3} />
-      <ambientLight intensity={2} />
+      <pointLight intensity={0.5} />
+      <ambientLight intensity={1.85} />
       <spotLight
         castShadow
         intensity={0.2}
         angle={Math.PI / 7}
         position={[150, 150, 250]}
         penumbra={1}
-        shadow-mapSize-width={2048}
-        shadow-mapSize-height={2048}
+        shadow-mapSize={2048}
       />
     </group>
   );
@@ -110,7 +110,8 @@ const About = ({ location }) => {
     <div className={styles.container}>
       {activeCanvas && (
         <Canvas
-          shadowMap
+          flat
+          shadows
           camera={{ position: [0, 0, 100], fov: 100 }}
           style={{
             position: "fixed",

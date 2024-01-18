@@ -1,5 +1,5 @@
 import React from "react";
-import { useSprings, animated, interpolate } from "react-spring";
+import { useSprings, animated, interpolate } from "@react-spring/web";
 import javascript from "../../assets/javascript.svg";
 import nodejs from "../../assets/nodejs.svg";
 import react from "../../assets/react.svg";

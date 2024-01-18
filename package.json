@@ -24,6 +24,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "@react-spring/three": "^9.7.3",
+    "@react-spring/web": "^9.7.3",
+    "@react-three/fiber": "^8.15.14",
     "animate.css": "^4.1.0",
     "core-js": "^3.13.0",
     "fontsource-grandstander": "^4.0.0",
@@ -53,8 +56,6 @@
     "react-dom": "^18.2.0",
     "react-driftjs": "^1.1.11",
     "react-helmet": "^6.1.0",
-    "react-spring": "8.0.27",
-    "react-three-fiber": "4.2.21",
     "react-typist": "^2.0.5",
     "react-typography": "^0.16.19",
     "slug": "^5.0.1",
