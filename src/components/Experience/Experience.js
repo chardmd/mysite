@@ -42,6 +42,7 @@ const Experience = () => {
   };
 
   const addLogItems = () => {
+    // eslint-disable-next-line no-plusplus
     for (let i = 0; i < jsonLogs.length; i++) {
       const item = jsonLogs[i];
       const timeout = setTimeout(() => {

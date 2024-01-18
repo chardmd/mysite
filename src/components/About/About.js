@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import * as THREE from "three";
+import { useSpring, animated, config } from "@react-spring/web";
 import { Canvas } from "@react-three/fiber";
 import { useSprings, a } from "@react-spring/three";
 import * as styles from "./About.module.scss";
@@ -106,8 +107,27 @@ const About = ({ location }) => {
     setActiveCanvas(true);
   }, []);
 
+  const [{ background }] = useSpring(
+    () => ({
+      from: { background: "#E0FFFF" },
+      to: [
+        { background: "#E0FFFF" },
+        { background: "#b2e6f2" },
+        { background: "#7bc6e8" },
+        { background: "#468db4" },
+        { background: "#2d5d7b" },
+      ],
+      config: config.molasses,
+      loop: {
+        reverse: true,
+      },
+    }),
+    []
+  );
+
   return (
     <div className={styles.container}>
+      <animated.div className={styles.background} style={{ background }} />
       {activeCanvas && (
         <Canvas
           flat
