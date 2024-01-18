@@ -92,7 +92,7 @@ const Experience = () => {
       {jsonOutput.map((item, index) => (
         <div key={`${index}-company-output`}>
           <div>
-            <span style={{ color: COLORS.tortoise }}>Position&nbsp;</span>
+            <span style={{ color: COLORS.tortoise }}>Company&nbsp;</span>
             <span>{item.company}</span>
           </div>
           <div>
