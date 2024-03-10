@@ -13,6 +13,8 @@ import java from "../../assets/java.svg";
 import knex from "../../assets/knex.svg";
 import express from "../../assets/express.svg";
 import angular from "../../assets/angular.svg";
+import typescript from "../../assets/typescript.svg";
+import nextjs from "../../assets/nextjs.svg";
 import * as styles from "./Deck.module.scss";
 
 const toolCards = [
@@ -24,11 +26,13 @@ const toolCards = [
   mongodb,
   aws,
   express,
+  nextjs,
   knex,
   java,
   nodejs,
   angular,
   javascript,
+  typescript,
 ];
 
 const deckTo = (i) => ({
@@ -36,7 +40,7 @@ const deckTo = (i) => ({
   y: i * -4,
   scale: 1,
   rot: -10 + Math.random() * 21,
-  delay: i * 100,
+  delay: i * 110,
 });
 const from = () => ({ x: 0, rot: 0, scale: 1.5, y: -950 });
 const transform = (r, s) =>
