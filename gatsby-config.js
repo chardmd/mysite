@@ -13,8 +13,12 @@ module.exports = {
     policyDate: siteConfig.policyDate,
     email: siteConfig.email,
     headline: siteConfig.headline,
-    twitter: siteConfig.twitter,
     driftId: siteConfig.driftId,
+    social: {
+      linkedin: false,
+      github: true,
+      angel: true,
+    },
   },
   plugins: [
     // This plugin exposes helper functions for processing

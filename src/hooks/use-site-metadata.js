@@ -13,8 +13,12 @@ const useSiteMetadata = () => {
             copyright
             email
             headline
-            twitter
             driftId
+            social {
+              linkedin
+              github
+              angel
+            }
           }
         }
       }

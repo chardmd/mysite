@@ -9,6 +9,5 @@ module.exports = {
   googleAnalyticsId: "UA-175524956-1",
   email: "hello@chardmd.com",
   headline: "Richard M. Dimalanta",
-  twitter: "@iamchardmd",
   driftId: "nzed2gc9n3vk",
 };
