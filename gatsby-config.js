@@ -15,7 +15,7 @@ module.exports = {
     headline: siteConfig.headline,
     driftId: siteConfig.driftId,
     social: {
-      linkedin: false,
+      linkedin: true,
       github: true,
       angel: true,
     },
