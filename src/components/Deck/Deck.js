@@ -42,7 +42,7 @@ const deckTo = (i) => ({
   rot: -10 + Math.random() * 21,
   delay: i * 110,
 });
-const from = () => ({ x: 0, rot: 0, scale: 1.5, y: -950 });
+const from = () => ({ x: 0, rot: 0, scale: 1.5, y: -1600 });
 const transform = (r, s) =>
   `perspective(1501px) rotateX(31deg) rotateY(${
     r / 10
