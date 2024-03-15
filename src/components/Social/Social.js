@@ -18,7 +18,7 @@ const Social = () => {
       {linkedin && (
         <li className={styles.listItem}>
           <a
-            href="https://www.linkedin.com/in/chardmd"
+            href="https://www.linkedin.com/in/chardmd1"
             target="_blank"
             rel="noopener noreferrer"
           >
