@@ -1,32 +1,30 @@
 [
   {
+    "company": "Commonwealth Bank of Australia",
+    "position": "Staff Sofware Engineer"
+  },
+  {
     "company": "Bill",
-    "position": "Staff Sofware Engineer",
-    "duration": "November 2021 - December 2023"
+    "position": "Staff Sofware Engineer"
   },
   {
     "company": "Fujifilm Australia",
-    "position": "Senior Developer",
-    "duration": "December 2018 - November 2021"
+    "position": "Senior Developer"
   },
   {
     "company": "A2B Australia / Cabcharge",
-    "position": "Full Stack Engineer",
-    "duration": "March 2017 - November 2018"
+    "position": "Full Stack Engineer"
   },
   {
     "company": "S2T Unlocking Cyberspace",
-    "position": "Senior Frontend Engineer",
-    "duration": "July 2016 - Feb 2017"
+    "position": "Senior Software Engineer"
   },
   {
     "company": "SK Planet Inc.",
-    "position": "Senior Software Engineer",
-    "duration": "July 2014 - June 2016"
+    "position": "Senior Software Engineer"
   },
   {
     "company": "TwistResources",
-    "position": "Software Engineer",
-    "duration": "April 2011 - May 2014"
+    "position": "Software Engineer"
   }
 ]

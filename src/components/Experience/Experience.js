@@ -100,10 +100,6 @@ const Experience = () => {
             <span style={{ color: COLORS.tortoise }}>Position&nbsp;</span>
             <span>{item.position}</span>
           </div>
-          <div>
-            <span style={{ color: COLORS.tortoise }}>Duration&nbsp;</span>
-            <span>{item.duration}</span>
-          </div>
           <div>=======================================</div>
         </div>
       ))}
